@@ -3,9 +3,9 @@
     Trabajo integrador del curso de Desarrollador Web FullStack de Digital House
 
 ## Breve Descripcion
-Pagina web de venta online de productos tecnologicos como celulares, TV/Audio/Video, electrodomesticos, gaming e informatica.
+    Pagina web de venta online de productos tecnologicos como celulares, TV/Audio/Video, electrodomesticos, gaming e informatica.
     
-Publico: El sitio web va a estar orientado a personas de 18 a 60 anios.
+    Publico: El sitio web va a estar orientado a personas de 18 a 60 anios.
 
 
 ## Integrantes
