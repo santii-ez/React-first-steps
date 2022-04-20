@@ -9,6 +9,6 @@ Publico: El sitio web va a estar orientado a personas de 18 a 60 anios.
 
 
 ## Integrantes
-    1) __Pablo Resch__ : Soy de Cordoba, Rio Cuarto. Estudie Economia, pero actualmente me encuentro viviendo en Australia. Me encanta jugar al Futbol, leer , viajar , conocer gente y vivir nuevas experiencias.
-    2) __Jorgelina Abdo__ : Soy de Salta Capital, pero estoy viviendo y trabajando alrededor de Australia. En cuanto a mis hobbies me gusta jugar al futbol, pintar y viajar.
+    1) **Pablo Resch**: Soy de Cordoba, Rio Cuarto. Estudie Economia, pero actualmente me encuentro viviendo en Australia. Me encanta jugar al Futbol, leer , viajar , conocer gente y vivir nuevas experiencias.
+    2) **Jorgelina Abdo** : Soy de Salta Capital, pero estoy viviendo y trabajando alrededor de Australia. En cuanto a mis hobbies me gusta jugar al futbol, pintar y viajar.
 
