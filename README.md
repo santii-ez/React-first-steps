@@ -11,6 +11,7 @@
     1) **Pablo Resch**: Soy de Cordoba, Rio Cuarto. Estudie Economia, pero actualmente me encuentro viviendo en Australia. Me encanta jugar al Futbol, leer , viajar , conocer gente y vivir nuevas experiencias.
     2) **Jorgelina Abdo** : Soy de Salta Capital, pero estoy viviendo y trabajando alrededor de Australia. En cuanto a mis hobbies me gusta jugar al futbol, pintar y viajar.
     3) **Santiago Garcia**: Soy de Mendoza Capital. Me encanta el trabajo en grupo y aprender del conocimiento de los demás.
+    4)
 
 
 ## Sitios de referencia
