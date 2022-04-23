@@ -11,7 +11,7 @@
     1) **Pablo Resch**: Soy de Cordoba, Rio Cuarto. Estudie Economia, pero actualmente me encuentro viviendo en Australia. Me encanta jugar al Futbol, leer , viajar , conocer gente y vivir nuevas experiencias.
     2) **Jorgelina Abdo** : Soy de Salta Capital, pero estoy viviendo y trabajando alrededor de Australia. En cuanto a mis hobbies me gusta jugar al futbol, pintar y viajar.
     3) **Santiago Garcia**: Soy de Mendoza Capital. Me encanta el trabajo en grupo y aprender del conocimiento de los demás.
-    4)
+    4)**Peter Sauma**: Soy de Mendoza, Malargüe. Estuduié en una Técnica química y cuando terminé los estudios secundarios me mudé a Godoy Cruz para continuar con Ingeniería Química, en la mitad de la carrera obtube el título entermedio de Técnico y decidí cambiarme a Producción Industrial y Automatización. Me apasionan las industrias de proceso y la automatizació, pero debido a la falta de trabajo y luego de pensar bien la situación decidí metreme a este curso para continuar desarrollando mi perfil como programador, pero dentro de las páginas web.
 
 
 ## Sitios de referencia
