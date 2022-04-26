@@ -22,4 +22,3 @@ El proyecto integrador requiere la creacion de un e-commerce, por lo cual, hemos
 </ol>
    
 Los sitios web de referencia han sido elegidos por ser los mejores posicionados a nivel nacional en el rubro de e-commerce de tecnologia. Ademas, cabe destacar, la simplicidad de estilo y de navegacion de estos proponen.  
-
