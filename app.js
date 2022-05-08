@@ -6,7 +6,7 @@ const path = require('path')
 //Declaracion de puertos
 const port = 3000
 
-//montar el servidor
+//montar el servidor                                                                                                                                                                                                                                                                                                                             
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
     console.log(__dirname)
@@ -23,14 +23,14 @@ const public = path.join(__dirname, 'public/')
 // hhtp routes
 const hhtpRaiz = '/'
 const htppHome = '/home'
-const httpCarrito = '/Carrito'
-const httpLogIn = '/logIn'
+const httpCarrito = '/carrito'
+const httpLogIn = '/login'
 const httpProducto = '/producto'
 
 // html
 const homeHtml = 'home.html'
 const carritoHtml = 'carrito.html'
-const logInHtml ='logIn.html'
+const logInHtml ='login.html'
 const productoHtml = 'producto.html'
 
 
