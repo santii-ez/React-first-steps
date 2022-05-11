@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap');
+
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+/*tipografía del body, interlineado y altura*/
+body{
+    font-family: 'Raleway', sans-serif ;
+    font-size: 12px;
+    
+    height: 100%;
+}
+/*tipografia de la estructura interna del body*/
+header{
+    background-color: white;
+    padding-bottom: 15px;
+}
+main {
+    width: 90%;
+    margin: auto;
+    background-color: #4D4c7D;
+}
+
+
+article {
+    margin-bottom: 10px;
+    padding: 15px;
+}
+footer{
+    background-color: beige;
+}
+
+p{
+    font-size: 12px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h6{
+    font-size: 18px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+.logo-login{
+    padding-top: 10px;
+    width: 33%;
+    
+}
+.logo-login img {
+    width: 20vw ;
+}
+.search-bar{
+    width:35vw;
+}
+.carrito-compra-login{
+    width: 35vw;
+   text-align: center;
+    
+}
+.carrito-compra-login i{
+    border:#827397 solid ;
+    border-radius: 20px;
+    padding: 3px;
+    color: #827397;
+   
+    
+}
+
+.burger-menu{
+   text-align: left;
+   padding: 15px;
+ 
+
+    
+}
+.background-violet{
+    background-color: #827397;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.header-login{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.categoria{
+
+    background-color: #827397;
+
+}
+
+.search input[type=text]{
+    width:300px;
+    height:25px;
+    border-radius:25px;
+    border: solid;  
+    
+}
+.search-bar input{
+    width: 20vw;
+    margin: auto;
+}
+   
+.search{
+    float:right;
+    margin:7px;
+     
+}
+
+
+      
+

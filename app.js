@@ -30,7 +30,7 @@ const httpProducto = '/producto'
 // html
 const homeHtml = 'home.html'
 const carritoHtml = 'carrito.html'
-const logInHtml ='login.html'
+const loginHtml ='login.html'
 const productoHtml = 'producto.html'
 
 
@@ -50,7 +50,7 @@ app.get(httpCarrito, (req, res) => {
 })
 
 app.get(httpLogIn, (req, res) => {
-    res.sendFile(path.join(views, logInHtml))
+    res.sendFile(path.join(views, loginHtml))
 })
 
 app.get(httpProducto, (req, res) => {
