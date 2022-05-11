@@ -5,17 +5,109 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>TecnoMundo</title> 
-        <link href="css/style.css" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/e27ee0d4d1.js" crossorigin="anonymous"></script> 
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" /> 
+        <link href="css/style-carrito.css" rel="stylesheet"> 
     </head>
     <body>
         <header>
-            <h1>Hola Mundo</h1>
+          <div class="header-logo"><img src="" alt="Logo-TecnoMundo"></div>
         </header>
         <main>
+          <div class="shopping-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h1>Mi Carrito</h1>
+          </div>
+          <Section class="cart-container">
+            <article class="cart-items">
+              <div class="img-items">
+                <img src="images/lavarropas-carga-frontal-6kg-800-rpm-drean-next-6-08-eco-170255.jpg" alt="imagen-item-1">
+              </div>
+              <div class="description-item">
+                <h4 class="description">Lavarropas Carga Frontal 6Kg 800 RPM Drean Next</h4>
+                  <div class="counter"> 
+                    <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
+                    <div class=number>2</div>
+                    <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
+                  </div>
+                  <div class="price">
+                    <div class="amount">$ 50.00</div>
+                    <div class="remove-button"><button type="button">Remove</button></div>
+                  </div>
+              </div>
+            </article>
+            <article class="cart-items">
+              <div class="img-items">
+                <img src="images/lavarropas-carga-frontal-6kg-800-rpm-drean-next-6-08-eco-170255.jpg" alt="imagen-item-1">
+              </div>
+              <div class="description-item">
+                <h4 class="description">Lavarropas Carga Frontal 6Kg 800 RPM Drean Next</h4>
+                  <div class="counter"> 
+                    <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
+                    <div class=number>2</div>
+                    <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
+                  </div>
+                  <div class="price">
+                    <div class="amount">$ 50.00</div>
+                    <div class="remove-button"><button type="button">Remove</button></div>
+                  </div>
+              </div>
+            </article>
+          </Section>
+          <section class="discount-checkout">
+            <article class="discount">
+              <div class="titulo">
+                <h3 class="discount-code">Codigo de Descuento</h3>
+              </div>
+              <div class="discount-container">
+                <form>
+                  <label for="discount">
+                    <input class="discount-box" type="text" name="discount" id="discount" />
+                  </label>
+                    <input class="discount-button" type="submit" value="Aplicar"/>
+                </form>
+              </div>
+            </article>
+            <article class="checkout">
+              <div class="subtotal-box">
+                <div class="flex-grow-70"><h4 class="subtotal">Subtotal</h4></div>
+                <div><h4 class="price-total">100.00</h4></div>
+              </div>
+              <div class="total-box">
+                <div class="flex-grow-70"><h4 class="total">Total</h4></div>
+                <div><h4 class="price-total">100.00</h4></div>
+              </div>
+              <div class="checkout-buttom"><button>Finalizar Compra</button></div>
+              <div class="checkout-continue"><button>Continuar Comprando</button></div>              
+            </article>
+          </section>
+          <section class="suggestion">
+            <div class="suggestion-title-box"><h2 class="suggestion-title">A personas como tu le interesaron los siguientes productos</h2></div>
+            <article class="item-suggested s-item-1">
+              <div class="img-price-container"><img  src="images/lavarropas-carga-frontal-6kg-800-rpm-drean-next-6-08-eco-170255.jpg" alt="item-suggested"/>
+              <h4 class="flex-grow-40">25.000</h4></div>
+              <div class="description-container"><h4>Lavarropas Carga Frontal 6Kg 800 RPM Drean Next</h4></div>
+            </article>
+            <article class="item-suggested s-item-2">
+              <div class="img-price-container"><img  src="images/lavarropas-carga-frontal-6kg-800-rpm-drean-next-6-08-eco-170255.jpg" alt="item-suggested"/>
+              <h4 class="flex-grow-40">25.000</h4></div>
+              <div class="description-container"><h4>Lavarropas Carga Frontal 6Kg 800 RPM Drean Next</h4></div>
+            </article>
+            <article class="item-suggested s-item-3">
+              <div class="img-price-container"><img  src="images/lavarropas-carga-frontal-6kg-800-rpm-drean-next-6-08-eco-170255.jpg" alt="item-suggested"/>
+              <h4 class="flex-grow-40">25.000</h4></div>
+              <div class="description-container"><h4>Lavarropas Carga Frontal 6Kg 800 RPM Drean Next</h4></div>
+            </article>  
+          </section>
         </main>
         <footer>
+          <div class="footer-container">
+            <div class="footer-logo"><img src="" alt="Logo-TecnoMundo"></div>
+            <div><h4>Al comprar se aceptan los <a href="#"> Términos y Condiciones</a></h4></div>
+            <div><h5>Copyright 2022 | Todos los derechos reservados Tecnomundo.com. Tecnomundo S.A.C.I. e I. | Mendoza | Argentina</h5></div>
+            <div><p>Las fotos son a modo ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la verificación de stock. Los precios online y los planes de financiación para los productos presentados/publicados en www.fravega.com.ar y/o www.fravega.com son válidos exclusivamente para la compra vía internet en las páginas antes mencionadas. Las especificaciones técnicas y descripciones están sujetas a cambios sin previo aviso.</p></div>
+          </div>
+          <div class="data-fiscal-container"><a href="https://www.afip.gob.ar"><img src="images/data-fiscal.jpg" alt="data-fiscal"/></a></div>
         </footer>
     </body>
 </html>
