@@ -1,0 +1,42 @@
+/*se importa la tipografía Roboto de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap');
+
+
+/*tipografía del body, interlineado y altura*/
+body{
+    font-family: 'Raleway', sans-serif ;
+    height: 100%;
+}
+/*tipografia de la estructura interna del body*/
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+article {
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+p{
+    font-size: 12px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+h6{
+    font-size: 18px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+
+
+
+
+
