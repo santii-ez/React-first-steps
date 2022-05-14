@@ -25,13 +25,13 @@ const hhtpRaiz = '/'
 const htppHome = '/home'
 const httpCarrito = '/carrito'
 const httpLogIn = '/login'
-const httpProducto = '/producto'
+const httpProducto = '/productDetail'
 
 // html
 const homeHtml = 'home.html'
 const carritoHtml = 'carrito.html'
 const loginHtml ='login.html'
-const productoHtml = 'producto.html'
+const productoHtml = 'productDetail.html'
 
 
 // Define the static file path

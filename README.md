@@ -21,7 +21,15 @@ El proyecto integrador requiere la creacion de un e-commerce, por lo cual, hemos
 <li> Musimundo: https://www.musimundo.com/ </li>
 </ol>
    
-Los sitios web de referencia han sido elegidos por ser los mejores posicionados a nivel nacional en el rubro de e-commerce de tecnologia. Ademas, cabe destacar, la simplicidad de estilo y de navegacion de estos proponen.  
+Los sitios web de referencia han sido elegidos por ser los mejores posicionados a nivel nacional en el rubro de e-commerce de tecnologia. Ademas, cabe destacar, la simplicidad de estilo y de navegacion de estos proponen.
+
+## Estilos visulaes definidos por el grupo
+
+paleta de colores: https://colorhunt.co/palette/e9d5da8273974d4c7d363062
+#E9D5DA
+#827397
+#4D4C7D
+#363062
 
 ## git ignore 
 --Ignore Mac system files
@@ -47,7 +55,7 @@ Instalar 'node_modules' en el proyecto
 
 _source: https://expressjs.com/es/starter/installing.html_
 
-npm install express --save
+npm install express -save
 
 
 Instalar 'nodemon'
