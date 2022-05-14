@@ -23,3 +23,36 @@ El proyecto integrador requiere la creacion de un e-commerce, por lo cual, hemos
    
 Los sitios web de referencia han sido elegidos por ser los mejores posicionados a nivel nacional en el rubro de e-commerce de tecnologia. Ademas, cabe destacar, la simplicidad de estilo y de navegacion de estos proponen.  
 
+## git ignore 
+--Ignore Mac system files
+.DS_store
+
+--Ignore node_modules folder
+node_modules
+
+--Ignore all text files
+*.txt
+
+--Ignore files related to API keys
+.env
+
+### Pre-requisitos 📋
+
+--node.js
+--express
+
+### Instalación 🔧
+
+Instalar 'node_modules' en el proyecto
+
+_source: https://expressjs.com/es/starter/installing.html_
+
+npm install express --save
+
+
+Instalar 'nodemon'
+
+_source: https://www.npmjs.com/package/nodemon_
+
+npm install --save-dev nodemon
+
