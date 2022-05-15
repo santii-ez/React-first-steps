@@ -25,13 +25,13 @@ const hhtpRaiz = '/'
 const htppHome = '/home'
 const httpCarrito = '/carrito'
 const httpLogIn = '/login'
-const httpProducto = '/producto'
+const httpProducto = '/productDetail'
 
 // html
 const homeHtml = 'home.html'
 const carritoHtml = 'carrito.html'
-const logInHtml ='login.html'
-const productoHtml = 'producto.html'
+const loginHtml ='login.html'
+const productoHtml = 'productDetail.html'
 
 
 // Define the static file path
@@ -50,7 +50,7 @@ app.get(httpCarrito, (req, res) => {
 })
 
 app.get(httpLogIn, (req, res) => {
-    res.sendFile(path.join(views, logInHtml))
+    res.sendFile(path.join(views, loginHtml))
 })
 
 app.get(httpProducto, (req, res) => {
