@@ -48,8 +48,16 @@ h5{
 .border-radius5{
     border-radius: 5px;
 }
-    
-
+/*flexbox*/
+.flex-grow-30 {
+    flex-grow: 0.3;
+  }
+.flex-grow-50 {
+    flex-grow: 0.5;
+}
+.flex-grow-100 {
+    flex-grow: 1;
+}
 /*>>>>>>HEADER<<<<<<*/
 header{
     background-color: white;
@@ -171,6 +179,16 @@ input[type=submit] {
     flex-direction: column;    
   }
 
+  /*>>flexbox main<<*/
+  
+.fotos{
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+.fotosSecundarias{
+    flex-direction: row;
+}
 
 /*>>>>>>FOOTER<<<<<<*/
 
@@ -197,9 +215,11 @@ footer{
 }
 
 /* DESKTOP */
-@media (min-width: 769px) {
-  
+/*@media (min-width: 769px) {
+    .fotoPincipal{
+        order: 1;
+    }  
 }
-
+*/
       
 
