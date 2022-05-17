@@ -417,10 +417,11 @@ input[type=submit] {
 
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
 
     .header-menu{
         display: flex;
+        
         width: 100vw;
         height: 60px;
         background-color: #827397;
@@ -429,6 +430,7 @@ input[type=submit] {
     }
     .menu{
         display: flex;
+        justify-content: center;
         margin: auto;
         height: 100%;
         width: 100%;
