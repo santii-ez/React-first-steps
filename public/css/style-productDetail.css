@@ -4,6 +4,17 @@
 
 
 
+
+
+
+
+
+
+
+
+      
+
+
 */
 
 
@@ -12,6 +23,7 @@ body{
     font-family: 'Raleway', sans-serif ;
     font-size: 12px;
     background-color: #363062;
+    width: 100%;
     height: 100%;
 }
 p{
@@ -35,22 +47,36 @@ h5{
     padding: 0px;
     box-sizing: border-box;
 }
-/*>>atributos body<<*/
-.background-violet{
-    background-color: #827397;
+
+input {
+    width: 90%;
+    height: 5vh;
+    padding: 12px 20px;
+    margin: 8px ;
+    box-sizing: border-box;
+    border: 2px solid beige;
+    opacity: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px #000000;
+    display: flex;
+    text-align: center;
 }
 
-.color-blanco{
+input[type=submit] {
+    background-color:#827397;
+    border: solid 1px;
     color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: center;
+    cursor: pointer;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
 }
 
-.padding5{
-    padding: 5px;
-}
+/*>>atributos body<<*/
 
-.border-radius5{
-    border-radius: 5px;
-}
 /*flexbox*/
 .flex-grow-30 {
     flex-grow: 0.3;
@@ -63,19 +89,42 @@ h5{
 .flex-grow-100 {
     flex-grow: 1;
 }
+  /*boton whatsapp*/
+  .btn-whatsapp img {
+    display:block;
+    width:50px;
+    height:50px;
+    position: fixed;
+    right:20px;
+    bottom:20px;
+    z-index: 999;
+}
+
 /*>>>>>>HEADER<<<<<<*/
 header{
     background-color: white;
     padding-bottom: 15px;
     position: fixed;
     z-index: 2;
+    width: 100%;
 }
 
 nav{
     display: none;
 }
 
+article label{
+    font-weight: bold;
+}
+
 /*>>atributos header<<*/
+.background-violet{
+    background-color: #827397;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .header-menu{
     display: none;
 }
@@ -93,6 +142,26 @@ nav{
     flex-grow: 0.5;
 }
 
+.search-bar button {
+    background-color: whitesmoke;
+    color: black;
+    float: right;
+    padding: 0px 10px;
+    margin-right: 16px;
+    margin-left: 5px;
+    font-size: 8px;
+    border: solid #bebebe ;
+    cursor: pointer;
+    border-radius: 10px;
+    block-size: 40px;
+    margin-top: 5px;    
+} 
+
+.search-bar form{
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+}
 
 .carrito-compra-login{
     flex-grow: 0.3;
@@ -132,8 +201,6 @@ nav{
     
 }
 
-
-
 .categoria{
     background-color: #827397;
 }
@@ -142,8 +209,7 @@ nav{
     width:300px;
     height:25px;
     border-radius:25px;
-    border: solid;  
-    
+    border: none;  
 }
 
 .search-bar input{
@@ -154,18 +220,21 @@ nav{
 .search{
     float:right;
     margin:7px;     
-}
+}  
 
 .formulario {
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    padding: 10vw;
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;    
+    text-align: center;
+    padding-top: 80px;
+    border: 0px 3px 0px 3px solid whitesmoke; 
 }
+
 
 /* hover */
 
@@ -175,36 +244,13 @@ nav{
     transition: 0.5s;
     border: solid rgb(251, 121, 74);
     border-radius:25px ;
-
 }
-
-input {
-    width: 90%;
-    height: 5vh;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid beige;
-    opacity: 5px;
-    border-radius: 4px;
-    box-shadow: 2px 2px 4px #000000;
-    display: flex;
-    text-align: center;    
-}
-
-input[type=submit] {
-    background-color:#827397;
-    border: none;
+.search-bar button:hover{
+    background-color: rgb(251, 121, 74);
     color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: center;
-    cursor: pointer;
-    opacity: 0.5;
-    display: flex;
-    flex-direction: column;    
-  }
-
+    transition: 0.5s;
+    border: solid rgb(251, 121, 74);
+}
 
 /*>>>>>>MAIN<<<<<<*/
 
@@ -250,19 +296,24 @@ footer{
         background-color: #827397;
         padding: 0px 20px;
         justify-content: center;
+    
     }
     .menu{
         display: flex;
         margin: auto;
-        height: 100%;   
+        height: 100%;
+           
     }
+    
     nav {
         display: flex;
         height: 100%;
     }
+    
     nav > ul {
         height: 100%;
         display: flex;
+        
     }
     nav > ul > li{
         display: flex;
@@ -270,6 +321,7 @@ footer{
         list-style: none;
         text-align: center;
     }
+    
     nav > ul > li >a {
         text-decoration: none;
         width: 100%;
@@ -281,27 +333,46 @@ footer{
         text-transform: uppercase;
         font-size: 14px;
         transition: all 300ms ease;
+    
     }
     nav > ul > li >a:hover{
         transform: scale(1.1);
         background-color: rgb(251, 121, 74);
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     }
+
+ 
     .burger-menu {
         display: none;
     }
+
     .carrito-compra-login{
         padding-right: 15px;
     }
+
     .formulario{
         display: flex;
         flex-direction: row;
         padding-top: 20vw ;
-        justify-content: space-around; 
+        justify-content: space-around;
+        
+        
     }
+   .formulario-login form{
+    padding-bottom: 30px; 
+     
+    }
+
+    .formulario-registro form{
+        padding-top: 40px;
+    }
+
+
+   
+ 
+
 }
 
-/* DESKTOP */
 @media (min-width: 750px) {
 
     .header-menu{
@@ -310,26 +381,33 @@ footer{
         height: 60px;
         background-color: #827397;
         padding: 0px 20px
+    
     }
     .menu{
         display: flex;
         margin: auto;
         height: 100%;
+        
+    
     }
+    
     nav {
         display: flex;
         height: 100%;
     }
+    
     nav > ul {
         height: 100%;
         display: flex;
+        
     }
     nav > ul > li{
         display: flex;
         height: 100%;
         list-style: none;
         
-    }  
+    }
+    
     nav > ul > li >a {
         text-decoration: none;
         width: 100%;
@@ -349,9 +427,103 @@ footer{
         background-color: rgb(251, 121, 74);
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     }
+
+    .burger-menu {
+        display: none;
+    }
+
     .carrito-compra-login{
         padding-right: 15px;
     }
+
+    section{
+
+        display: flex;
+        flex-direction: row;
+
+     
+    }
+
 }
-      
+
+/*descktop*/
+@media (min-width: 1200px) {
+
+    .header-menu{
+        display: flex;
+        
+        width: 100vw;
+        height: 60px;
+        background-color: #827397;
+        padding: 0px 20px
+    
+    }
+    .menu{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+    
+    }
+    
+    nav {
+        display: flex;
+        height: 100%;
+    }
+    
+    nav > ul {
+        height: 100%;
+        display: flex;
+        
+    }
+    nav > ul > li{
+        display: flex;
+        height: 100%;
+        list-style: none;
+        
+    }
+    
+    nav > ul > li >a {
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+        padding: 25px;
+        text-transform: uppercase;
+        font-size: 14px;
+        transition: all 300ms ease;
+    
+    }
+    nav > ul > li >a:hover{
+        transform: scale(1.1);
+        background-color: rgb(251, 121, 74);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    .carrito-compra-login{
+        padding-right: 15px;
+    }
+
+    section{
+
+        display: flex;
+        flex-direction: row;
+
+     
+    }
+
+}
+
+
+
+
+
 
