@@ -31,6 +31,11 @@ paleta de colores: https://colorhunt.co/palette/e9d5da8273974d4c7d363062
 #4D4C7D
 #363062
 
+## Trello del Grupo
+
+https://trello.com/b/tnZQsdB9/tecnomundodh
+
+
 ## git ignore 
 --Ignore Mac system files
 .DS_store
