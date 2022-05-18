@@ -1,13 +1,94 @@
 /*se importa la tipografía Roboto de google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap');
 
-
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
 /*tipografía del body, interlineado y altura*/
 body{
-    font-family: 'Raleway', sans-serif ;
     height: 100%;
+    margin: 0;
 }
 /*tipografia de la estructura interna del body*/
+
+header {
+    /* background-color: white; */
+    width: 100%;
+    position: block fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 5px;
+}
+
+.hamburguer-buttom {
+    margin: 10px;
+    position: relative;
+    color: black;
+    justify-content: center;
+}
+
+.hamburguer-menu {
+    vertical-align: middle;
+    
+}
+
+.logo {
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+i h4 {
+    margin: 0;
+}
+
+.header-items-r ul {
+    display: flex;
+    align-items: flex-start;
+    list-style-type: none;
+}
+
+.header-items-r ul li {
+    margin: 0 10px;
+}
+
+.desplegable {
+    display: none;
+    background-color: rgba(52, 14, 55, 0.5);
+    width: 48%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.desplegable ul {
+    list-style-type: none;
+    padding: 100px 0px 20px 0px;
+
+}
+
+.desplegable ul li a{
+    color: white;
+    display: block;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+
+.search-bar {
+    
+}
 
 main {
     width: 90%;
@@ -19,24 +100,159 @@ article {
     padding: 15px;
 }
 
+a {
+    color: black;
+}
+
 p{
     font-size: 12px;
 }
 
-h2{
-    font-size: 24px;
+/* main */
+.carrusel {
+    width: 100%;
 }
 
-h6{
-    font-size: 18px;
+.carrusel-logo {
+    display: block;
+    width: 100%;
+    height: 250px;
+    margin: auto;
 }
 
-h5{
-    font-size: 16px;
+.descripcion-carrusel {
+    position: relative;
+    bottom: 40px;
+    left: 30px;
+}
+    /* info */
+.info {
+    width: 100%;
 }
 
+.info ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+}
 
+.info-li {
+    text-align: center;
+}
 
+    /* sections */
+    main {
+        margin: auto;
+        width: 90%;
+    }
+    
+    section {
+        display: flex;
+        justify-content: space-around;
+    }
 
+    .carrusel, .info {
+        display: block;
+    }
+    
+    .article02, .article03, .article04 {
+        display: none;
+    }
 
+    .descriptionProduct {
+        border-top: solid 1px #ebebeb;
+        padding: 15px;
+        display: flex;
+    }
+    
+    .price {
+        flex-grow: 0.3;
+    }
+    
+    .discount {
+        flex-grow: 0.7;
+    }
+    
+    main section article i{
+        display: block;
+        font-size: 16px;
+        padding: 5px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #39b54a;
+        background-color: #FFF;
+        border-radius: 50%;
+        /* position: relative;
+        left: 220px;
+        top: 20px; */
+    }
+    
+    article {
+        margin-bottom: 10px;
+        padding: 10px;
+        box-shadow: 0px 0px 10px rgb(202, 143, 228);
+    }
+    
+    .article04 {
+        margin-right: 0px;
+    }
+    
+    .imgProduct img {
+        width: 100%;
+        height: auto;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h4 {
+        font-size: 18px;
+    }
+    
+    h5 {
+        font-size: 15px;
+        margin: 0;
+    }
+    
+    h6 {
+        font-size: 14px;
+        margin: 0;
+    }
 
+  /* footer */
+
+  footer {
+    font-size: 9px;
+  }
+
+  .contenedor-footer {
+      display: flex;
+      margin-top: 20px;
+      padding: 10px;
+      justify-content: space-around;
+  }
+
+  .logo-footer {
+      margin-top: 15px
+  }
+
+    /* tabs */
+    @media (min-width: 361px) {
+        .article02 {
+            display: block;
+        }
+
+        article {
+            margin: 15px;
+            flex-grow: 0.5;
+        }
+    }
+    /* desktop */
+    @media (min-width: 769px) {
+        .article03, .article04 {
+            display: block;
+        }
+    }
