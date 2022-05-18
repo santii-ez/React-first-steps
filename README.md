@@ -22,3 +22,51 @@ El proyecto integrador requiere la creacion de un e-commerce, por lo cual, hemos
 </ol>
    
 Los sitios web de referencia han sido elegidos por ser los mejores posicionados a nivel nacional en el rubro de e-commerce de tecnologia. Ademas, cabe destacar, la simplicidad de estilo y de navegacion de estos proponen.  
+Los sitios web de referencia han sido elegidos por ser los mejores posicionados a nivel nacional en el rubro de e-commerce de tecnologia. Ademas, cabe destacar, la simplicidad de estilo y de navegacion de estos proponen.
+
+## Estilos visulaes definidos por el grupo
+
+paleta de colores: https://colorhunt.co/palette/e9d5da8273974d4c7d363062
+#E9D5DA
+#827397
+#4D4C7D
+#363062
+
+## Trello del Grupo
+
+https://trello.com/b/tnZQsdB9/tecnomundodh
+
+
+## git ignore 
+--Ignore Mac system files
+.DS_store
+
+--Ignore node_modules folder
+node_modules
+
+--Ignore all text files
+*.txt
+
+--Ignore files related to API keys
+.env
+
+### Pre-requisitos 📋
+
+--node.js
+--express
+
+### Instalación 🔧
+
+Instalar 'node_modules' en el proyecto
+
+_source: https://expressjs.com/es/starter/installing.html_
+
+npm install express -save
+
+
+Instalar 'nodemon'
+
+_source: https://www.npmjs.com/package/nodemon_
+
+npm install --save-dev nodemon
+
