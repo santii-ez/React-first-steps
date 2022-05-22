@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap');
-btn
+
 /*>>>>>>BODY<<<<<<*/
 body{
     font-family: 'Raleway', sans-serif ;
@@ -37,6 +37,9 @@ i{
     box-sizing: border-box;
 }
 
+
+/*>>atributos inputs<<*/
+
 input {
     width: 90%;
     height: 5vh;
@@ -64,26 +67,6 @@ input[type=submit] {
     justify-content: center;
 }
 
-/*>>atributos body<<*/
-
-/*flexbox*/
-.flex-grow-30 {
-    flex-grow: 0.3;
-}
-
-.flex-grow-50 {
-    flex-grow: 0.5;
-}
-
-.flex-grow-70 {
-    flex-grow: 0.7;
-}
-
-.flex-grow-100 {
-    flex-grow: 1;
-}
-
-
 /*>>>boton whatsapp<<*/
   .btn-whatsapp img {
     display:block;
@@ -92,7 +75,7 @@ input[type=submit] {
     position: fixed;
     right:20px;
     bottom:20px;
-    z-index: 3;
+    z-index: 3;/*ES UNA BUENA PRACTICA PONER UN Z INDEX UN NUMERO MAS ALTO QUE EL Z INDEX MÁS ALTO*/
 }
 
 /*>>>>>>HEADER<<<<<<*/
@@ -114,7 +97,7 @@ article label{
 }
 
 /*>>atributos header<<*/
-.background-violet{
+.background-violet {
     background-color: #827397;
     color: white;
     padding: 5px;
@@ -152,9 +135,6 @@ article label{
     block-size: 40px;
     margin-top: 5px;    
 }
-
-
-
 
 .search-bar form{
     display: flex;
@@ -253,12 +233,12 @@ article label{
 }
 
 /*>>>>>>MAIN<<<<<<*/
-
+/*JOR ESTE MAIN TIENE PROPIEDADES DISTINTAS AL TUYO*/
 main {
-    width: 100%; 
+    width: 100%; /*LE PUSE UN WIDTH AL 100% DEL BODY XQ SINO ME QUEDABA MAL*/
     background-color: #363062;
     display: flex;
-    padding-top: 20vh;
+    padding-top: 20vh;/*LO TENGO EN VW XQ EL HEDER ME PISA EL MAIN, HAY 2 MEDIAQUIERE A LOS 600 px Y A LOS 1200 px PARA ADAPTARSE A ESAS MEDIDAS TAMBIEN*/
     justify-content: center;
     flex-wrap: wrap;  
     z-index: 0; 
@@ -291,13 +271,8 @@ main {
     width: 100%;
 }
 
-div.img img {
+.img-div img {
     width: 100%;
-}
-
-article h2{
-    width: 100%;
-
 }
 
 .precio{
@@ -417,7 +392,7 @@ footer div img {
 /* TABLET */
 @media (min-width: 600px) {
     main {
-        padding-top: 25vh;
+        padding-top: 25vh;/*CAMBIE PADDING PARA QUE EL HEADER NO ME LO TAPE*/
     }
 
     .header-login{
@@ -509,7 +484,7 @@ footer div img {
 
 @media (min-width: 750px) {
     main {
-        padding-top: 35vh;
+        padding-top: 35vh; /*CAMBIE PADDING PARA QUE EL HEADER NO ME LO TAPE*/
     }
 
     .header-menu{
@@ -609,7 +584,7 @@ footer div img {
         flex-wrap: wrap;
     }
     main {
-        padding-top: 40vh;
+        padding-top: 40vh;/*CAMBIE PADDING PARA QUE EL HEADER NO ME LO TAPE*/
     }
 
     .header-menu{
