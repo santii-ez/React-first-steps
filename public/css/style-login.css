@@ -1,186 +1,221 @@
+/*se importa la tipografía Roboto de google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap');
 
-*{
-    margin:0px;
-    padding: 0px;
+* {
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
-
 }
-/*tipografía del body, interlineado y altura*/
+/*BODY*/
+
 body{
-    font-family: 'Raleway', sans-serif ;
     font-size: 12px;
-    background-color: #363062;
-    width: 100%;
-    height: 100%;
+    margin: 0;
 }
-/*tipografia de la estructura interna del body*/
-header{
-    background-color: white;
-    padding-bottom: 15px;
+
+/*NAV*/
+
+.header-menu nav {
+   display: none;
+}
+
+/*HEADER*/
+
+header {
+    padding-top: 8px;
+    background-color: #1c063b;
+    width: 100vw;
     position: fixed;
-    z-index: 2;
-    width: 100%;
-}
-
-nav{
-    display: none;
-}
-main {
-    
-    padding-top: 20px;
-    background-color: #363062;
-    display: flex;
-    justify-content: center;
+    z-index:999;
     
 }
+.container-header{
 
-
-footer{
-    background-color: beige;
-}
-
-p{
-    font-size: 12px;
-}
-
-h2{
-    font-size: 24px;
-}
-
-h6{
-    font-size: 18px;
-}
-
-h5{
-    font-size: 16px;
-}
-.header-login{
     max-width: 1200px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100vw;
-    padding-top: 10px;
-    
+    height: max(80px,9vw);
+    padding: 10px 0px;
 }
 
 .header-menu{
     display: none;
 }
 
+.logo {
+    
+    padding-top: 10px;
+    padding-bottom: 15px;
+    flex-grow: 0.2;
+    text-align: center;
+}
 
+.logo img {
+    width: 20vw;
+    max-width: 150px;
+   
+   
+}
+.carrito-compra i{
+    border:#f1fdf7e8 solid 2px ;
+    border-radius: 25px;
+    margin-right: 10px;
+    color:rgb(241 253 247 / 91%);
+    cursor: pointer;
+    font-size: min(3vw, 25px);
+    padding: 7px;
+    transition: all 300ms ease;
+   
+    
+}
+/* hover carrito de compra*/
+
+.carrito-compra i:hover{
+   border: whitesmoke solid 2px ;
+    transform: scale(1.1);
+    color: whitesmoke;
+   
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+}
+
+.user-login i{
+   
+   
+    font-size: 5vw;
+    margin-right: 10px;
+    color:rgb(241 253 247 / 91%);
+    cursor: pointer;
+    font-size: min(8vw, 40px);
+    padding: 7px;
+    transition: all 300ms ease;
+
+}
+
+.user-login i:hover {
+    transform: scale(1.1);
+}
+
+/*burger-menu*/
 
 .burger-menu{
     flex-grow: 0;
     text-align: left;
     padding: 15px;
     cursor: pointer;
-    font-size: 17px;
-    }
-.logo-login{
-        flex-grow: 0.1;
-        padding-top: 10px;
+    font-size: 15px;
     
     }
-.search-bar{
-    flex-grow: 0.5;
-    }
 
-
-.carrito-compra-login{
-    flex-grow: 0.3;
-    text-align: right;
-   font-size: 30px;
-    }
-
-
-.logo-login img {
-    width: 20vw ;
-}
-
-
-.carrito-compra-login i{
-    border:#827397 solid ;
-    border-radius: 25px;
+.background-burger{
+    background-color: rgb(241 253 247 / 91%);
+    color: #1c063b;
     padding: 5px;
-    color: #827397;
-    cursor: pointer;
-    font-size: 23px
-   
-    
+    border-radius: 5px;
+    transition: all 300ms ease;
 }
-/* hover */
 
-.carrito-compra-login i:hover{
-    background-color: rgb(251, 121, 74);
+/* hover burger-menu*/
+
+.background-burger:hover{
+    background-color: rgb(18, 89, 230);
     color: white;
-    transition: 0.5s;
-    border: solid rgb(251, 121, 74);
+    transform: scale(1.1);
+    border:  2px solid rgb(18, 89, 230);
     border-radius:25px ;
-
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    
 }
 
-/*burger-menu*/
 
+/*Search bar*/
 
-
-.background-violet{
-    background-color: #827397;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;}
-
-.search input[type=text]{
-    width:300px;
-    height:25px;
-    border-radius:25px;
-    border: none;
-   
-}
-      
-.search{
-    float:right;
-    margin:7px;
-   
-}
-      
-.search-bar button {
-    background-color: whitesmoke;
-    color: black;
-    float: right;
-    padding: 0px 10px;
-    margin-right: 16px;
-    margin-left: 5px;
-    font-size: 8px;
-    border: solid #bebebe ;
-    cursor: pointer;
-    border-radius: 10px;
-    block-size: 40px;
-    margin-top: 5px;
-    
-    
-} 
-/*hover */
-.search-bar button:hover{
-    background-color: rgb(251, 121, 74);
-    color: white;
-    transition: 0.5s;
-    border: solid rgb(251, 121, 74);
-    
+.search-bar{
+    flex-grow: 0.6;
+    margin-left: 5vw;
 }
 
 .search-bar form{
     display: flex;
-    white-space: nowrap;
-    justify-content: center;
+    align-items: center;
+}
+
+.input-header {
+        width: 90%;
+        height: 6vw;
+        max-height: 30px;
+        margin-right: 8px;
+        box-sizing: border-box;
+        border: 3px solid rgb(231, 231, 203);
+        border-radius: 4px;
+        box-shadow: 2px 2px 4px #504f4f;
+        text-align: center;
+        
+}
+
+.search-bar button {
+display: flex;
+background-color: rgb(240, 240, 240);
+color: #1c063b;
+padding: min(0.6vw, 6px);
+margin-right: 16px;
+margin-left: 5px;
+font-size: 2vw;
+border: solid #bebebe ;
+cursor: pointer;
+border-radius: 30%;
+} 
+
+/*hover search bar*/
+.search-bar button:hover{
+
+transition: 0.5s;
+transform: scale(1.1);
+
+}
+
+main{
+ 
+    background-color: rgb(255 255 255);
+    width: 100%;
+    
+   
+}
+
+p{
+    font-size: 12px;
+}
+a {
+    color: black;
+}
+
+h6{
+    font-size: 14px;
+    margin: 0;
+}
+
+h5{
+    font-size: 16px;
+}
+    
+h4 {
+    font-size: 18px;
+}
+h2{
+    font-size: 24px;
+}
+
+article {
+    margin-bottom: 10px;
+    padding: 15px;
 }
 
 .formulario {
-    width: 90%;
+    width: 100%;
     padding: 10vw;
-    background-color: whitesmoke;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,7 +272,69 @@ input[type=submit] {
       font-weight: bold;
   }
 
- 
+  /* FOOTER */
+  footer {
+    background-color: #1c063b;
+    
+   } 
+  
+
+  .contenedor-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+    padding: 20px;
+
+    
+  }
+  .contenedor-footer ul li{
+    list-style: none;
+    text-align: left;
+    padding-top: 5px;
+    font-size: min(3vw, 15px);
+  }
+  .contenedor-footer ul li a{
+      color: white;
+      text-decoration: none;
+  }
+  
+    .logo-footer {
+    width: 25vw;
+    max-width: 160px;
+  }
+
+  .contacto{
+      
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .contacto h6, .contacto ul{
+    padding-left: 0px
+}
+
+.social-media{
+      width: 100%;
+      display: flex;
+    justify-content: center;
+      padding: 8px;
+
+  }
+  
+  .social-media-list {
+      display: flex;
+      gap: 2em
+  }
+
+  .social-media-list img {
+      width: 50%;
+      max-width: 100px;
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  }
+  
 
   /*boton whatsapp*/
   .btn-whatsapp img {
@@ -254,72 +351,77 @@ input[type=submit] {
 
 }
 
-/* media  Tablet*/
+@media (min-width: 361px) {
 
-@media (min-width: 600px) {
-    .header-login{
-        width:100vw;
-    }
+    /*HEADER*/
+
     .header-menu{
-        display: flex;
-        width: 100%;
-        height: 5vh;
-        background-color: #827397;
-        padding: 0px 20px;
-        justify-content: center;
-    
-    }
-    .menu{
-        display: flex;
-        margin: auto;
-        height: 100%;
-           
-    }
-    
-    nav {
-        display: flex;
-        height: 100%;
-    }
-    
-    nav > ul {
-        height: 100%;
-        display: flex;
+            display: flex;
+            justify-content: center;
+            height: 8vw;
+            max-height: 40px;
+            background-color: rgb(241 253 247 / 91%);
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
         
-    }
-    nav > ul > li{
-        display: flex;
-        height: 100%;
-        list-style: none;
-        text-align: center;
-    }
-    
-    nav > ul > li >a {
-        text-decoration: none;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        color: white;
-        align-items: center;
-        padding: 14px;
-        text-transform: uppercase;
-        font-size: 14px;
-        transition: all 300ms ease;
-    
-    }
-    nav > ul > li >a:hover{
-        transform: scale(1.1);
-        background-color: rgb(251, 121, 74);
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    }
-
- 
-    .burger-menu {
+        
+        }
+    .menu{
+            display: flex;
+                      
+        }
+         
+    .burger-menu{ 
         display: none;
     }
 
-    .carrito-compra-login{
-        padding-right: 15px;
+    .logo {
+        padding-left: 10px;
     }
+    .header-menu nav {
+            display: flex;
+           
+        }
+        
+    .header-menu nav > ul {
+            
+            display: flex;
+            margin:0px;
+            padding: 0px;
+            
+        }
+    .header-menu nav > ul > li{
+            display: flex;
+            list-style: none;
+            text-align: center;
+        }
+        
+    .header-menu nav > ul > li >a {
+            margin: 0px 5vw;
+            text-decoration: none;
+            display: flex;
+            color: #1c063b;
+            align-items: center;
+            padding: 14px 0px;
+            text-transform: uppercase;
+            font-size: min(2vw, 12px);
+            transition: all 300ms ease;
+            font-weight: bold;
+           
+        }
+    .header-menu nav > ul > li >a:hover{
+            color:white;
+            transform: scale(1.2);
+            border-radius: 10px;
+            padding: 5px;
+        }
+    
+        /*hasta aca es el header*/
+}
+
+/* media  Tablet*/
+
+@media (min-width: 600px) {
+    
 
     .formulario{
         display: flex;
@@ -344,68 +446,7 @@ input[type=submit] {
 
 }
 
-@media (min-width: 750px) {
-
-    .header-menu{
-        display: flex;
-        width: 100%;
-        height: 60px;
-        background-color: #827397;
-        padding: 0px 20px
-    
-    }
-    .menu{
-        display: flex;
-        margin: auto;
-        height: 100%;
-        
-    
-    }
-    
-    nav {
-        display: flex;
-        height: 100%;
-    }
-    
-    nav > ul {
-        height: 100%;
-        display: flex;
-        
-    }
-    nav > ul > li{
-        display: flex;
-        height: 100%;
-        list-style: none;
-        
-    }
-    
-    nav > ul > li >a {
-        text-decoration: none;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        color: white;
-        align-items: center;
-        padding: 25px;
-        text-transform: uppercase;
-        font-size: 14px;
-        transition: all 300ms ease;
-    
-    }
-    nav > ul > li >a:hover{
-        transform: scale(1.1);
-        background-color: rgb(251, 121, 74);
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    }
-
-    .burger-menu {
-        display: none;
-    }
-
-    .carrito-compra-login{
-        padding-right: 15px;
-    }
+@media (min-width: 761px) {
 
     section{
 
@@ -414,74 +455,42 @@ input[type=submit] {
 
      
     }
+    /* FOOTER */
+
+    .logo-footer {
+        width: 25vw;
+        display: flex;
+        justify-content: center;
+        }
+
+        
+        .contacto h6, .contacto ul{
+           
+            padding-left: 0px
+        }
+
+        .social-media {
+            width: 30%;
+            
+        }
+
+        .social-media-list {
+            gap: 1em;
+        }
+
+        .social-media-list li {
+            text-align: center;
+            width: 30%;
+        }
+
+
+   
 
 }
 
 @media (min-width: 1200px) {
 
-    .header-menu{
-        display: flex;
-        
-        width: 100vw;
-        height: 60px;
-        background-color: #827397;
-        padding: 0px 20px
     
-    }
-    .menu{
-        display: flex;
-        justify-content: center;
-        margin: auto;
-        height: 100%;
-        width: 100%;
-    
-    }
-    
-    nav {
-        display: flex;
-        height: 100%;
-    }
-    
-    nav > ul {
-        height: 100%;
-        display: flex;
-        
-    }
-    nav > ul > li{
-        display: flex;
-        height: 100%;
-        list-style: none;
-        
-    }
-    
-    nav > ul > li >a {
-        text-decoration: none;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        color: white;
-        align-items: center;
-        padding: 25px;
-        text-transform: uppercase;
-        font-size: 14px;
-        transition: all 300ms ease;
-    
-    }
-    nav > ul > li >a:hover{
-        transform: scale(1.1);
-        background-color: rgb(251, 121, 74);
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    }
-
-    .burger-menu {
-        display: none;
-    }
-
-    .carrito-compra-login{
-        padding-right: 15px;
-    }
-
     section{
 
         display: flex;
