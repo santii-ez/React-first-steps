@@ -13,9 +13,8 @@ body{
 /*tipografia de la estructura interna del body*/
 
 header {
-    /* background-color: white; */
     width: 100%;
-    position: block fixed;
+    position: block;
 }
 
 nav {
@@ -86,11 +85,6 @@ i h4 {
     padding: 10px 15px;
 }
 
-main {
-    width: 90%;
-    margin: auto;
-}
-
 article {
     margin-bottom: 10px;
     padding: 15px;
@@ -138,7 +132,7 @@ p{
     text-align: center;
 }
 
-    /* sections */
+/* sections */
     main {
         margin: auto;
         width: 90%;
@@ -146,7 +140,7 @@ p{
     
     section {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .carrusel, .info {
