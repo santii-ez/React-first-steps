@@ -371,10 +371,10 @@ h2{
 
 
     .main-productDetail {
-    width: 100%; /*LE PUSE UN WIDTH AL 100% DEL BODY XQ SINO ME QUEDABA MAL*/
+    margin-top:  20vh;
+    width: 100%;
     background-color: #363062;
     display: flex;
-    padding-top: 20vh;/*LO TENGO EN VW XQ EL HEDER ME PISA EL MAIN, HAY 2 MEDIAQUIERE A LOS 600 px Y A LOS 1200 px PARA ADAPTARSE A ESAS MEDIDAS TAMBIEN*/
     justify-content: center;
     flex-wrap: wrap;  
     z-index: 0; 
@@ -1070,6 +1070,9 @@ margin-bottom: 20px;
             /*hasta aca es el header*/
 
             /* MAIN */
+            .main-productDetail {
+                margin-top:  28vh;
+            }
             .carrusel {
                 margin-top: 160px;
             }
@@ -1102,9 +1105,9 @@ margin-bottom: 20px;
    
    
     /* PRODUCT DETAIL */
-    .main-productDetail {
-        padding-top: 25vh;/*CAMBIE PADDING PARA QUE EL HEADER NO ME LO TAPE*/
-    }
+    /*.main-productDetail {
+        margin-top:  28vh;
+    }*/
 
     /* FIN PRODUCT DETAIL */
 
@@ -1173,13 +1176,6 @@ margin-bottom: 20px;
 
     /* FIN HOME */
 
-    /* PRODUCT DETAIL */
-
-    .main-productDetail {
-        padding-top: 35vh; /*CAMBIE PADDING PARA QUE EL HEADER NO ME LO TAPE*/
-    }
-
-    /* FIN PRODUCT DETAIL */
 
     /* CARRITO */
 
@@ -1299,6 +1295,11 @@ margin-bottom: 20px;
         }
         /* FIN CARRITO */
     }
+    /*productDetail*/
+    .main-productDetail {
+        margin-top:  30vh;
+    }
+    /*fin productDetail*/
 
     /*desktop*/
 @media (min-width: 1000px) {
@@ -1328,7 +1329,7 @@ margin-bottom: 20px;
         flex-wrap: wrap;
     }
     .main-productDetail {
-        padding-top: 40vh;/*CAMBIE PADDING PARA QUE EL HEADER NO ME LO TAPE*/
+        margin-top: 35vh;
     }
 
     /* FIN PRODUCT DETAIL */
