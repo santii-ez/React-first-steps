@@ -7,7 +7,9 @@
         <title>Ingresa</title> 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style-login.css" rel="stylesheet"> 
+        <!-- <link href="css/style-login.css" rel="stylesheet">  -->
+        <link href="css/styleunificado.css" rel="stylesheet">
+
        
     </head>
 <body>
@@ -55,7 +57,7 @@
         
     </header>    
     <main>
-        <section class="formulario">
+        <section class="section-set-display formulario">
 
             <article class="formulario-login">
             
@@ -63,12 +65,12 @@
                     <h2>Ingresá</h2>
                     
                     <br>
-                    <label for="username">Usuario
+                    <label class="label-bold" for="username">Usuario
                         <br>
                         <input class= "input-formulario" type="text" name="username" id="username" placeholder="mjabdo@hotmail.com" minlength="5" maxlength="30" required >
                         <br>
                     </label>
-                    <label for="contraseña">Contraseña
+                    <label class="label-bold" for="contraseña">Contraseña
                         <input class= "input-formulario"  type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
                         <br>
                     </label>
@@ -92,23 +94,23 @@
                         <h4>Datos Personales</h4>
                     </div>
 
-                    <label for="name">Nombre
+                    <label class="label-bold"  for="name">Nombre
                         <input class= "input-formulario" type="text" name="name" id="name" required>
                     </label>
 
-                    <label for="name">Apellido
+                    <label class="label-bold" for="name">Apellido
                         <input class= "input-formulario" type="text" name="name" id="name" required>
                     </label>
 
-                    <label for="email">Email
+                    <label class="label-bold" for="email">Email
                         <input class= "input-formulario" type="email" name="email" id="email" required>
                     </label>
 
-                    <label for="contraseña">Contraseña
+                    <label class="label-bold" for="contraseña">Contraseña
                         <input class= "input-formulario" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
                     </label>
 
-                    <label for="passconfcon"> Confirmar ontraseña
+                    <label class="label-bold"  for="passconfcon"> Confirmar ontraseña
                         <input class= "input-formulario" type="password" name="passconfcon" id="passconfcon" placeholder=" Confirmar contraseña" required>
                     </label>
                     <br>
@@ -121,7 +123,7 @@
             </article>
         
         </section>
-        <section>
+        <section class="section-set-display">
             <div class="btn-whatsapp">
                 <a href="https://api.whatsapp.com/send/?phone=+54 11 36346889&text=Tecnomundo!" target="_blank" title="¡Dejanos tu mensaje!"><img src="images/whatsapp-logo.png" alt="whatsapp logo"></a> 
             </div>

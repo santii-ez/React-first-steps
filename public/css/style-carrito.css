@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap');
 
 /*tipografía del body, interlineado y altura*/
-body{
+.body-carrito{
     font-family: 'Raleway', sans-serif ;
     height: 100%;
     border: solid 5px rgb(209, 206, 206);
@@ -303,18 +303,13 @@ margin-bottom: 20px;
     margin: 10px 0px;
 }
 
-.suggestion-title {
-    
-}
+
 
 .item-suggested {
     width: 50%;
     padding: 10px 0px;
 }
 
-.img-price-container {
-    
-}
 
 .img-price-container img {
     border: 1px solid rgba(0,0,0,0.5);
@@ -433,7 +428,7 @@ margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
-    main {
+    .main-carrito {
         display: flex;
         flex-wrap: wrap;
     }
@@ -505,9 +500,7 @@ margin-bottom: 20px;
 
     .description {
         width: 25vw;
-    }
-
-    
+    }    
     
     .item-suggested {
         width: 30%;

@@ -7,19 +7,62 @@
         <title>Tus compras</title> 
         <script src="https://kit.fontawesome.com/e27ee0d4d1.js" crossorigin="anonymous"></script> 
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style-carrito.css" rel="stylesheet"> 
+        <!-- <link href="css/style-carrito.css" rel="stylesheet">  -->
+        <link href="css/styleunificado.css" rel="stylesheet">
+
     </head>
-    <body>
-        <header> 
-          <a href="/home" target="_blank" title="Principal"><div class="header-logo"><img src="/images/logo-tecnomundo3.png" alt="Logo-TecnoMundo"></div></a>
-        </header>
-        <main>
+    <body class="body-carrito">
+      <header>
+
+        <div class="container-header">
+            <div class="burger-menu">
+                    <i class="background-burger fa-solid fa-bars"></i>
+            </div>
+
+            <div class="logo">                
+                <a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" class="logo" alt="Logo"></a> 
+            </div>
+            <div class="search-bar">
+                <form action="#" method="GET">
+                
+                    <input class="input-header" type="text" placeholder="Busca tu producto" name="search">
+                    
+                    <button>
+                        <i class="fa fa-search" style="font-size: 16px;"></i>
+                    </button>     
+                </form>
+                </div>  
+                <div class="carrito-compra">
+                <a href="/carrito" target="blank" title=" Tus Compras"><i class="fa-solid fa-cart-shopping"></i></a>           
+            </div>
+            <div class="user-login">
+                <a href="/login" target="_blank" title="Ingresa"><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+        </div>
+            
+        
+        <div class="header-menu">                
+            <div class="menu">                
+                <nav>
+                    <ul>
+                        <li><a href='#'>Computadoras</a></li> 
+                        <li><a href='#'>Laptops</a></li> 
+                        <li><a href='#'>Tablets</a></li> 
+                        <li><a href='#'>Servicio Técnico</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+    </header>
+    
+    <main class="main-carrito">
           <div class="shopping-cart">
             <a href="/carrito" target="blank" title=" Tus Compras"><i class="fa-solid fa-cart-shopping" ></i></a>
             <h1>Mi Carrito</h1>
           </div>
           <Section class="cart-container">
-            <article class="cart-items">
+            <article class="article-margin-padding cart-items">
               <div class="img-items">
                 <img src="images/1.jpg" alt="imagen-item-1">
               </div>
@@ -36,7 +79,7 @@
                   </div>
               </div>
             </article>
-            <article class="cart-items">
+            <article class="article-margin-padding cart-items">
               <div class="img-items">
                 <img src="images/1.jpg" alt="imagen-item-1">
               </div>
@@ -53,7 +96,7 @@
                   </div>
               </div>
             </article>
-            <article class="cart-items">
+            <article class=" article-margin-padding cart-items">
               <div class="img-items">
                 <img src="images/1.jpg" alt="imagen-item-1">
               </div>
@@ -72,7 +115,7 @@
             </article>
           </Section>
           <section class="discount-checkout">
-            <article class="discount">
+            <article class="article-margin-padding discount">
               <div class="titulo">
                 <h3 class="discount-code">Codigo de Descuento</h3>
               </div>
@@ -85,7 +128,7 @@
                 </form>
               </div>
             </article>
-            <article class="checkout">
+            <article class="article-margin-padding checkout">
               <div class="subtotal-box">
                 <div class="flex-grow-70"><h4 class="subtotal">Subtotal</h4></div>
                 <div><h4 class="price-total">100.00</h4></div>
@@ -101,17 +144,17 @@
           </section>
           <section class="suggestion">
             <div class="suggestion-title-box"><h2 class="suggestion-title">A personas como tu le interesaron los siguientes productos</h2></div>
-            <article class="item-suggested s-item-2">
+            <article class="article-margin-padding item-suggested s-item-2">
               <div class="img-price-container"><img  src="#" alt="item-suggested"/>
               <h4 class="flex-grow-40">25.000</h4></div>
               <div class="description-container"><h4>Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4></div>
             </article>
-            <article class="item-suggested s-item-2">
+            <article class="article-margin-padding item-suggested s-item-2">
               <div class="img-price-container"><img  src="#" alt="item-suggested"/>
               <h4 class="flex-grow-40">25.000</h4></div>
               <div class="description-container"><h4>Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4></div>
             </article>
-            <article class="item-suggested s-item-3">
+            <article class="article-margin-padding item-suggested s-item-3">
               <div class="img-price-container"><img  src="# " alt="item-suggested"/>
               <h4 class="flex-grow-40">25.000</h4></div>
               <div class="description-container"><h4>Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4></div>
@@ -120,8 +163,8 @@
         </main>
         <footer>
           <div class="footer-container">
-            <div class="footer-logo"><a href="/home" target="_blank" title="Principal"><img src="" alt="Logo-TecnoMundo"></a></div>
-            <div><h4>Al comprar se aceptan los <a href="#"> Términos y Condiciones</a></h4></div>
+            <div class="footer-logo"><a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" alt="Logo-TecnoMundo"></a></div>
+            <div><h4>Al comprar se aceptan los <a class="tyc" href="#"> Términos y Condiciones</a></h4></div>
             <div><h5>Copyright 2022 | Todos los derechos reservados Tecnomundo.com. Tecnomundo S.A.C.I. e I. | Mendoza | Argentina</h5></div>
             <div><p>Las fotos son a modo ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la verificación de stock. Los precios online y los planes de financiación para los productos presentados/publicados en www.fravega.com.ar y/o www.fravega.com son válidos exclusivamente para la compra vía internet en las páginas antes mencionadas. Las especificaciones técnicas y descripciones están sujetas a cambios sin previo aviso.</p></div>
           </div>
