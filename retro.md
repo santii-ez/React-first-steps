@@ -1,6 +1,23 @@
-Retro primer sprint:
-1. Comenzar a hacer:  Para mejorar la organizacion dentro del grupo vamos a implementar un tablero de trabajo.
-2. Hacer más: 
-3. Continuar haciendo: continuar la linea de trabajo en el grupo, la cual es mantener nuestro estilo de trabajo sencillo.
-4. Hacer menos: 
-5. Dejar de hacer:
+<h1 align="center">Retrospectiva</h1>
+
+La retrospectiva se centra en mejorar como equipo, su objetivo es mejorar la dinámica del grupo, no están evaluando el sitio o el producto en sí.
+
+## Retro Sprint 1:
+<ul>
+    <li><em>Comenzar a hacer:</em> Para mejorar la organizacion dentro del grupo vamos a implementar un tablero de trabajo.
+    <li><em>Hacer mas:</em>
+    <li><em>Continuar haciendo:</em> continuar la linea de trabajo en el grupo, la cual es mantener nuestro estilo de trabajo sencillo.
+    <li><em>Hacer menos:</em> 
+    <li><em>Dejar de hacer:</em>
+</ul>
+
+
+
+## Retro Sprint 2:
+<ul>
+    <li><em>Comenzar a hacer:</em> comunicar al grupo cuando se empieza a realizar una tarea nueva. Esto permite evitar posible problemas futuros, por ejemplo al usar git hub.
+    <li><em>Hacer mas:</em> el grupo debe usar mas la herramienta de organización de tareas, como lo es Trello. Al tener presente, de forma organizada, las diferentes actividades a llevar a cabo se puede favorecer el uso eficiente del tiempo de trabajo.
+    Además, el grupo acordó que es necesario actualizar el repositorio a medida que vaya habiendo avances para que todos sus miembros puedan participar de la instancia de feedback. El objetivo de este punto es mejorar el entorno de trabajo al estar actualizados de las tareas realizadas por cada uno de sus miembros. 
+    <li><em>Continuar haciendo:</em> el proceso de toma de decisiones ha sido efectivo durante el sprint, al mantener como premisa fundamental la de proceder de forma simple y segura en la consecución de las tareas.
+    <li><em>Hacer menos:</em> es importante que los miembros del grupo se comprometan a realizar las actividades pero, tambien, la responsabilidad ultima es del grupo. Es por ello que se debe recaer mas en el grupo y no lo individual en la medida que vayan surgiendo problemas. Esto podría ayudar en la resolución de problemas e impulsar el proceso de aprendizaje de cada uno al ser participe de la resolución de una situación determinada.  
+    <li><em>Dejar de hacer:</em> el grupo puso en consideración la dificultad de organizar de forma eficiente el tiempo. En este contexto, es sumamente importante evitar un gran cadual de tareas al final del sprint e ir avanzando de forma paulatina a lo largo de todo el tiempo disponible.
