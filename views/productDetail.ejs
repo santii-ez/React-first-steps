@@ -1,60 +1,13 @@
 <!DOCTYPE html> 
 <html>
-    <head lang="en"> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>Moto e7 plus</title> 
-        <base href = "/"> 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/styleunificado.css" rel="stylesheet">
-            
-    </head>
+     <!-- HEAD -->
+     <%- include('./partials/head') %>
+     
     <body class="body-productDetail">
-        <header>
-
-            <div class="container-header">
-                <div class="burger-menu">
-                        <i class="background-burger fa-solid fa-bars"></i>
-                </div>
-    
-                <div class="logo">                
-                    <a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" class="logo" alt="Logo"></a> 
-                </div>
-                <div class="search-bar">
-                    <form action="#" method="GET">
-                    
-                        <input class="input-header" type="text" placeholder="Busca tu producto" name="search">
-                        
-                        <button>
-                            <i class="fa fa-search" style="font-size: 16px;"></i>
-                        </button>     
-                    </form>
-                    </div>  
-                    <div class="carrito-compra">
-                    <a href="/product/productCart" target="blank" title=" Tus Compras"><i class="fa-solid fa-cart-shopping"></i></a>           
-                </div>
-                <div class="user-login">
-                    <a href="/user/login" target="_blank" title="Ingresa"><i class="fa-solid fa-circle-user"></i></a>
-                </div>
-            </div>
-                
-            
-            <div class="header-menu">                
-                <div class="menu">                
-                    <nav>
-                        <ul>
-                            <li><a href='#'>Computadoras</a></li> 
-                            <li><a href='#'>Laptops</a></li> 
-                            <li><a href='#'>Tablets</a></li> 
-                            <li><a href='#'>Servicio Técnico</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            
-        </header>
-
+        <!-- HEADER -->
+        <%- include('./partials/header') %>
+        
+        <!-- MAIN -->
 
         <main class="main-productDetail">
 
@@ -170,28 +123,8 @@
 
         </main>
 
-        <footer>
-            <div class="contenedor-footer">
-            <div class="logo-footer">
-                <a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" class="logo-footer" alt="logo-footer"></a>
-            </div>
-            
-                <div class="contacto">
-                    <h6>CONTACTO</h6>
-                    <ul>
-                        <li>Tel: +54 9 116772286</li>
-                        <li>Email: tecnomundo@outlook.com</li>
-                        <li>Domicilio: Av. Bandera de Los Andes 333</li>
-                    </ul>
-                </div>
-                <div class="social-media">
-                    <ul class="social-media-list" >
-                        <li><a href="https://www.instagram.com" target="_blank" title="¡Seguinos en Instagram!"><img src="/images/social-media/instagram.png" class="social-media-icon" alt="icon-instagram"></a></li>
-                        <li><a href="https://www.facebook.com" target="_blank" title="¡Seguinos en Facebook!"><img src="/images/social-media/facebook.png" class="social-media-icon" alt="icon-facebook"></a></li>
-                        <li><a href="https://www.twitter.com" target="_blank" title="¡Seguinos en Twitter!"><img src="/images/social-media/twitter.png" class="social-media-icon"  alt="icon-facebook"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+        <!-- FOOTER -->
+        <%- include('./partials/footer') %>
+
     </body>
 </html>
