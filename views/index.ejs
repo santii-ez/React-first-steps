@@ -1,62 +1,15 @@
 
 <!DOCTYPE html> 
 <html>
-    <head lang="en"> 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <title>TecnoMundo</title> 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
-        <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-         
-    </head>
+    <!-- HEAD -->
+    <%- include('./partials/head') %>
     <body>
-        <header>
-
-            <div class="container-header">
-                <div class="burger-menu">
-                        <i class="background-burger fa-solid fa-bars"></i>
-                </div>
-    
-                <div class="logo">                
-                    <a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" class="logo" alt="Logo"></a> 
-                </div>
-                <div class="search-bar">
-                    <form action="#" method="GET">
-                    
-                        <input class="input-header" type="text" placeholder="Busca tu producto" name="search">
-                        
-                        <button>
-                            <i class="fa fa-search" style="font-size: 16px;"></i>
-                        </button>     
-                    </form>
-                    </div>  
-                    <div class="carrito-compra">
-                    <a href="/carrito" target="blank" title=" Tus Compras"><i class="fa-solid fa-cart-shopping"></i></a>           
-                </div>
-                <div class="user-login">
-                    <a href="/login" target="_blank" title="Ingresa"><i class="fa-solid fa-circle-user"></i></a>
-                </div>
-            </div>
-                
-            
-            <div class="header-menu">                
-                <div class="menu">                
-                    <nav>
-                        <ul>
-                            <li><a href='#'>Computadoras</a></li> 
-                            <li><a href='#'>Laptops</a></li> 
-                            <li><a href='#'>Tablets</a></li> 
-                            <li><a href='#'>Servicio Técnico</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            
-        </header>
-
-        <main>
-            <section class="carrusel">
+        <!-- HEADER -->
+        <%- include('./partials/header') %>
+        
+        <!-- MAIN -->
+        <main class="main-home">
+            <section class="section-set-display carrusel">
                 <div class="slider-frame">
                     <ul>
                         <li><img src="https://www.solidbackgrounds.com/images/1280x720/1280x720-violet-solid-color-background.jpg" alt="Ofertas"></li>
@@ -67,7 +20,7 @@
                 </div>
             </section>
         
-            <section class="info">
+            <section class="section-set-display  info">
                 <div>
                     <ul>
                         <li>
@@ -93,8 +46,8 @@
 
         
             <h2>Lo más buscado</h2>
-            <section class="sección01">
-                <article class="article01">
+            <section class="section-set-display  sección01">
+                <article class="article-style article01">
                     <div class="imgProduct"><img src="https://bittstores.com/wp-content/uploads/2021/09/1-24.jpg" alt="Iphone 13 Pro Max"></div>
 
                     <div class="descriptionProduct">
@@ -110,7 +63,7 @@
                         </div> 
                     </div>
                 </article>
-                <article class="article02">
+                <article class="article-style article02">
                     <div class="imgProduct"><img src="https://images.fravega.com/f500/9bf66637ef368e7564c9555a2967f7c7.jpg" alt="Computadora Lenovo"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -125,7 +78,7 @@
                         </div> 
                     </div>
                 </article>
-                <article class="article03">
+                <article class="article-style article03">
                     <div class="imgProduct"><img src="https://m.media-amazon.com/images/I/41a7f9H2TVL._SL500_.jpg" alt="Samsung Galaxy S22 Ultra"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -140,7 +93,7 @@
                         </div> 
                     </div>
                 </article>
-                <article class="article04">
+                <article class="article-style article04">
                     <div class="imgProduct"><img src="https://images.fravega.com/f500/b51b4ac266c155b2b88ba5db0324fa8a.jpg" alt="Galaxy Tab A8"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -158,8 +111,8 @@
             </section>
         
             <h2>Celulares</h2>
-            <section class="seccion02">
-                <article class="article01">
+            <section class="section-set-display  seccion02">
+                <article class="article-style article01">
                     <div class="imgProduct"><img src="https://www.manual.sv/thumbs/products/l/1528806-oneplus-10-pro-5g.jpg" alt="OnePlus 10 Pro"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -174,7 +127,7 @@
                         </div> 
                     </div>
                 </article>
-                <article class="article02">
+                <article class="article-style article02">
                     <div class="imgProduct"><img src="https://img.myipadbox.com/upload/store/product_l/MPH8860W.jpg" alt="Xiaomi Note 10 Pro"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -189,7 +142,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="article03">
+                <article class="article-style article03">
                     <div class="imgProduct"><img src="https://www.manual.ar/thumbs/products/l/1308509-motorola-moto-g9-plus.jpg" alt="Motorola G9 Plus"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -204,7 +157,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="article04">
+                <article class="article-style article04">
                     <div class="imgProduct"><img src="https://internacionalmobile.store/wp-content/uploads/2021/08/Internacional-Mobile-Store-Huawey-P40-PRO-Negro.jpg" alt="Huawei P40 Pro"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -222,8 +175,8 @@
             </section>
         
             <h2>Tablets</h2>
-            <section class="seccion03">
-                <article class="article01">
+            <section class="section-set-display  seccion03">
+                <article class="article-style article01">
                     <div class="imgProduct"><img src="https://images.fravega.com/f500/b51b4ac266c155b2b88ba5db0324fa8a.jpg" alt="Galaxy Tab A8"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -238,7 +191,7 @@
                         </div> 
                     </div>
                 </article>
-                <article class="article02">
+                <article class="article-style article02">
                     <div class="imgProduct"><img src="https://images.fravega.com/f500/b2850b9dd3e84a07885becc4da5fa840.jpg" alt="iPad Pro"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -253,7 +206,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="article03">
+                <article class="article-style article03">
                     <div class="imgProduct"><img src="https://gizmobo.com/wp-content/uploads/2022/01/Samsung-Galaxy-Tab-S8-Ultra.webp" alt="Galaxy Tab S8 Ultra"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -268,7 +221,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="article04">
+                <article class="article-style article04">
                     <div class="imgProduct"><img src="https://img.gkbcdn.com/p/2021-08-11/xiaomi-mi-pad-5-cn-version-android-tablet-pc-miui---black-1628652747661._w500_.jpg" alt="Xiaomi Mi Pad"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -286,8 +239,8 @@
             </section>
         
             <h2>Notebooks</h2>
-            <section class="seccion04">
-                <article class="article01">
+            <section class="section-set-display  seccion04">
+                <article class="article-style article01">
                     <div class="imgProduct"><img src="https://neomacimport.com/wp-content/uploads/2021/06/MBP164-2.png" alt="MacBook Pro"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -302,7 +255,7 @@
                         </div> 
                     </div>
                 </article>
-                <article class="article02">
+                <article class="article-style article02">
                     <div class="imgProduct"><img src="https://images.fravega.com/f500/9bf66637ef368e7564c9555a2967f7c7.jpg" alt="Notebook Lenovo"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -317,7 +270,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="article03">
+                <article class="article-style article03">
                     <div class="imgProduct"><img src="https://cf.shopee.com.ar/file/5181ada738024612bd87f2f5cc3a962b" alt="Notebook Asus VivoBook"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -332,7 +285,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="article04">
+                <article class="article-style article04">
                     <div class="imgProduct"><img src="https://www.officomputers.com.ar/oc/wp-content/uploads/2021/09/gigabyte-AERO-KD-1.png" alt="Notebook Gigabyte Aero 15"></div>
                     <div class="descriptionProduct">
                         <div class="title">
@@ -348,35 +301,16 @@
                     </div>
                 </article>
             </section>
-            <section class="section-btn-whatsapp">
+            <section class="section-set-display  section-btn-whatsapp">
                 <div class="btn-whatsapp">
                     <a href="https://api.whatsapp.com/send/?phone=+54 11 36346889&text=Tecnomundo!" target="_blank" title="¡Dejanos tu mensaje!"><img src="images/whatsapp-logo.png" alt="whatsapp logo"></a>
                 </div>
             </section>
         </main>
-        <footer>
-            <div class="contenedor-footer">
-            <div class="logo-footer">
-                <a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" class="logo-footer" alt="logo-footer"></a>
-            </div>
-            
-                <div class="contacto">
-                    <h6>CONTACTO</h6>
-                    <ul>
-                        <li>Tel: +54 9 116772286</li>
-                        <li>Email: tecnomundo@outlook.com</li>
-                        <li>Domicilio: Av. Bandera de Los Andes 333</li>
-                    </ul>
-                </div>
-                <div class="social-media">
-                    <ul class="social-media-list" >
-                        <li><a href="https://www.instagram.com" target="_blank" title="¡Seguinos en Instagram!"><img src="/images/social-media/instagram.png" class="social-media-icon" alt="icon-instagram"></a></li>
-                        <li><a href="https://www.facebook.com" target="_blank" title="¡Seguinos en Facebook!"><img src="/images/social-media/facebook.png" class="social-media-icon" alt="icon-facebook"></a></li>
-                        <li><a href="https://www.twitter.com" target="_blank" title="¡Seguinos en Twitter!"><img src="/images/social-media/twitter.png" class="social-media-icon"  alt="icon-facebook"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
+        <!-- FOOTER -->
+        <%- include('./partials/footer') %>
+        
+        
     </body>
        
 </html>

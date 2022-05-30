@@ -1,0 +1,426 @@
+/*se importa la tipografía Roboto de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Roboto:wght@100&display=swap');
+
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+/*BODY*/
+
+body{
+    font-size: 12px;
+    margin: 0;
+}
+
+/*NAV*/
+
+.header-menu nav {
+   display: none;
+}
+
+/*HEADER*/
+
+header {
+    padding-top: 8px;
+    background-color: #1c063b;
+    width: 100vw;
+    /*
+    position: fixed;
+    z-index:999;
+    */
+    top:0;
+    
+}
+.container-header{
+
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: max(80px,9vw);
+    padding: 10px 0px;
+}
+
+.header-menu{
+    display: none;
+}
+
+.logo {
+    
+    padding-top: 10px;
+    padding-bottom: 15px;
+    flex-grow: 0.2;
+    text-align: center;
+}
+
+.logo img {
+    width: 20vw;
+    max-width: 150px;
+   
+   
+}
+.carrito-compra i{
+    border:#f1fdf7e8 solid 2px ;
+    border-radius: 25px;
+    margin-right: 10px;
+    color:rgb(241 253 247 / 91%);
+    cursor: pointer;
+    font-size: min(3vw, 25px);
+    padding: 7px;
+    transition: all 300ms ease;
+   
+    
+}
+/* hover carrito de compra*/
+
+.carrito-compra i:hover{
+   border: whitesmoke solid 2px ;
+    transform: scale(1.1);
+    color: whitesmoke;
+   
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+}
+
+.user-login i{
+   
+   
+    font-size: 5vw;
+    margin-right: 10px;
+    color:rgb(241 253 247 / 91%);
+    cursor: pointer;
+    font-size: min(8vw, 40px);
+    padding: 7px;
+    transition: all 300ms ease;
+
+}
+
+.user-login i:hover {
+    transform: scale(1.1);
+}
+
+/*burger-menu*/
+
+.burger-menu{
+    flex-grow: 0;
+    text-align: left;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    
+    }
+
+.background-burger{
+    background-color: rgb(241 253 247 / 91%);
+    color: #1c063b;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 300ms ease;
+}
+
+/* hover burger-menu*/
+
+.background-burger:hover{
+    background-color: rgb(18, 89, 230);
+    color: white;
+    transform: scale(1.1);
+    border:  2px solid rgb(18, 89, 230);
+    border-radius:25px ;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    
+}
+
+
+/*Search bar*/
+
+.search-bar{
+    flex-grow: 0.6;
+    margin-left: 5vw;
+}
+
+.search-bar form{
+    display: flex;
+    align-items: center;
+}
+
+.input-header {
+        width: 90%;
+        height: 6vw;
+        max-height: 30px;
+        margin-right: 8px;
+        box-sizing: border-box;
+        border: 3px solid rgb(231, 231, 203);
+        border-radius: 4px;
+        box-shadow: 2px 2px 4px #504f4f;
+        text-align: center;
+        
+}
+
+.search-bar button {
+display: flex;
+background-color: rgb(240, 240, 240);
+color: #1c063b;
+padding: min(0.6vw, 6px);
+margin-right: 16px;
+margin-left: 5px;
+font-size: 2vw;
+border: solid #bebebe ;
+cursor: pointer;
+border-radius: 30%;
+} 
+
+/*hover search bar*/
+.search-bar button:hover{
+
+transition: 0.5s;
+transform: scale(1.1);
+
+}
+
+/* MAIN - GENERAL */
+
+main{
+    background-color: rgb(255 255 255);
+    width: 100%;
+    margin: auto;
+    
+}
+
+p{
+    font-size: 12px;
+}
+
+a {
+    color: black;
+}
+
+h6{
+    font-size: 14px;
+    /* en carrito aparece 18px */
+    margin: 0;
+}
+
+h5{
+    font-size: 16px;
+}
+    
+h4 {
+    font-size: 18px;
+}
+h2{
+    font-size: 24px;
+}
+
+/*Main Filtros*/
+
+/* sections */
+
+
+.main-home {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+
+/*modificado*/
+.article-style-celulares {
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.celulares{
+    margin: 20px;
+}
+
+.container-celulares{
+    gap: 10px;
+}
+
+.article02, .article03, .article04 {
+        display: none;
+}
+.descriptionProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: solid 1px #ebebeb;
+    padding: 15px;
+    display: flex;
+}
+
+.descriptionProduct .title {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.title h5 {
+    width: 100%;
+    margin: 0;
+}
+
+.descriptionProduct .price {
+    color: rgba(210, 71, 115, 0.792);
+}
+    
+.descriptionProduct .discount {
+    display: flex;
+    color: #39b54a;
+}
+
+.discount i {
+    margin-right: 3px;
+}
+
+.imgProduct img {
+        width: 100%;
+        height: auto;
+    }
+
+/* FIN HOME */
+
+
+/* FIN HOME */
+
+
+.filtrados{
+    display: none;
+}
+
+
+@media (min-width: 361px) {
+
+    /*HEADER*/
+
+    .header-menu{
+            display: flex;
+            justify-content: center;
+            height: 8vw;
+            max-height: 40px;
+            background-color: rgb(241 253 247 / 91%);
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        
+        
+        }
+    .menu{
+            display: flex;
+                      
+        }
+         
+    .burger-menu{ 
+        display: none;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
+    .header-menu nav {
+            display: flex;
+           
+        }
+        
+    .header-menu nav > ul {
+            
+            display: flex;
+            margin:0px;
+            padding: 0px;
+            
+        }
+    .header-menu nav > ul > li{
+            display: flex;
+            list-style: none;
+            text-align: center;
+        }
+        
+    .header-menu nav > ul > li >a {
+            margin: 0px 5vw;
+            text-decoration: none;
+            display: flex;
+            color: #1c063b;
+            align-items: center;
+            padding: 14px 0px;
+            text-transform: uppercase;
+            font-size: min(2vw, 12px);
+            transition: all 300ms ease;
+            font-weight: bold;
+           
+        }
+    .header-menu nav > ul > li >a:hover{
+            color:white;
+            transform: scale(1.2);
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        /*main listado productos*/
+
+    .main-listaProductos{
+            display: flex;
+            
+        }
+
+    .filtrados{
+            display: none;
+        }
+
+    .celulares{
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    .container-celulares{
+        display: flex;
+    }
+    .article02 {
+            display: block;
+        }
+
+  
+
+}
+
+@media (min-width: 761px) {
+   
+    /* HOME */
+    .article03, .article04 {
+        display: block;
+    
+    }
+
+    .filtrados{
+        display: flex;
+        margin-right: 25px;
+        margin-top: 20px;
+       
+    }
+
+    .filtros-aplicados ul{
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    .marcas, .precios{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px lightgrey;
+    }
+
+    .tipo-marcas{
+        padding-left: 8px;
+    }
+    .checkbox{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    
+    
+}

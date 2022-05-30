@@ -3,8 +3,27 @@ const express = require('express');
 const app = express();
 const path = require('path')
 
+//>montar rutas 
+const productRoutes = require ('./routes/productRoutes')
+const mainRoutes = require ('./routes/mainRoutes')
+const usersRoutes = require ('./routes/usersRoutes')
+
 //Declaracion de puertos
 const port = 3000
+
+
+// views
+app.use(express.static(path.join(__dirname,'views')))
+// public
+app.use(express.static(path.join(__dirname,'public')))
+
+//EJS
+app.set('view engine', 'ejs')
+
+//match
+app.use('/',mainRoutes)
+app.use('/user',usersRoutes)
+app.use('/product', productRoutes)
 
 //montar el servidor                                                                                                                                                                                                                                                                                                                             
 app.listen(port, () => {
@@ -13,51 +32,3 @@ app.listen(port, () => {
 })
 
 
-//>montar rutas 
-
-// views
-const views = path.join(__dirname, 'views/')
-// public
-const public = path.join(__dirname, 'public/')
-
-// hhtp routes
-const hhtpRaiz = '/'
-const htppHome = '/home'
-const httpCarrito = '/carrito'
-const httpLogIn = '/login'
-const httpProducto = '/productDetail'
-const httpListadoCelulares = '/listadoDeCelulares'
-
-// html
-const homeHtml = 'home.html'
-const carritoHtml = 'carrito.html'
-const loginHtml ='login.html'
-const productoHtml = 'productDetail.html'
-const listadoCelularesHtml = 'listadoDeCelulares.html'
-
-
-// Define the static file path
-app.use(express.static(__dirname +'/public/'));
-
-app.get(hhtpRaiz, (req, res) => {
-    res.sendFile(path.join(views, homeHtml))
-})
-
-app.get(htppHome, (req, res) => {
-    res.sendFile(path.join(views, homeHtml))
-})
-
-app.get(httpCarrito, (req, res) => {
-    res.sendFile(path.join(views, carritoHtml))
-})
-
-app.get(httpLogIn, (req, res) => {
-    res.sendFile(path.join(views, loginHtml))
-})
-
-app.get(httpProducto, (req, res) => {
-    res.sendFile(path.join(views, productoHtml))
-})
- app.get(httpListadoCelulares,(req,res)=>{
-     res.sendFile(path.join(views, listadoCelularesHtml))
- })
