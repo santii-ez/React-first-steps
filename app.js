@@ -26,12 +26,14 @@ const htppHome = '/home'
 const httpCarrito = '/carrito'
 const httpLogIn = '/login'
 const httpProducto = '/productDetail'
+const httpListadoCelulares = '/listadoDeCelulares'
 
 // html
 const homeHtml = 'home.html'
 const carritoHtml = 'carrito.html'
 const loginHtml ='login.html'
 const productoHtml = 'productDetail.html'
+const listadoCelularesHtml = 'listadoDeCelulares.html'
 
 
 // Define the static file path
@@ -56,3 +58,6 @@ app.get(httpLogIn, (req, res) => {
 app.get(httpProducto, (req, res) => {
     res.sendFile(path.join(views, productoHtml))
 })
+ app.get(httpListadoCelulares,(req,res)=>{
+     res.sendFile(path.join(views, listadoCelularesHtml))
+ })
