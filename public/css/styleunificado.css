@@ -393,7 +393,7 @@ h2{
     border: 0px 3px 0px 3px solid whitesmoke;
 }
 
-.titulo{
+.titulo {
     width: 90%;
     background-color: whitesmoke;
     color:#827397;
@@ -584,6 +584,10 @@ div.fotos article{
     padding: 15px;
   }
 
+  .main-carrito {
+      padding-top:25vw;
+  }
+
   /* Flex-Box  */
 
 .flex-grow-40 {
@@ -607,7 +611,6 @@ div.fotos article{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #827397;
 }
 
 /* Main <---> Seccion de articulos a comprar <---> Headline*/
@@ -620,13 +623,13 @@ div.fotos article{
     box-shadow: 0 0 2px #888;
     padding: 0.5em 0.6em;
     font-size: 1em;
-    color: white;
+    color: #1c063b;
     margin: 10px 0px 10px 20px;
     border: 1px solid;
 }
 
 .shopping-cart h1 {
-    color: white;
+    color: #1c063b;
     font-size: 1em;
     text-transform: uppercase;
     margin: 2.5px 10px;
@@ -685,16 +688,28 @@ div.fotos article{
 
 }
 
-.remove-button {
-    cursor: pointer;
-    border-radius: 4px;
-    box-shadow: 2px 2px 4px #000000;
-    background-color: #827397;
-
+.number {
+    font-size: 20px;
 }
 
+.remove-button button {
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 2px 2px #000000;
+    color: white;
+    padding:5px;
+    margin: auto;
+    background-color: #1c063b;
+    transition: all 0.2s;
+}
+
+.remove-button button:hover {
+    transform: scale(1.1);
+}
 .amount {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 17px;
 }
 
 /* Main <---> Seccion de descuento y checkout */
@@ -709,6 +724,7 @@ div.fotos article{
     border-bottom: 2.5px solid #827397;
 }
 .discount-code {
+    color: #1c063b;
 text-align: center;
 margin-bottom: 20px;
 }
@@ -724,6 +740,8 @@ margin-bottom: 20px;
 }
 
 .discount-box {
+    border:2px solid beige;
+    box-shadow: 2px 2px 4px #000000;
     height: 70%;
     width: 60%;
     margin: 0px 10px 10px 0px;
@@ -734,17 +752,18 @@ margin-bottom: 20px;
     font-weight: 700;
     padding: 5px 15px;
     background-color: white;
-    color: #827397;
+    color: #1c063b;
     cursor: pointer;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     border-radius: 4px;
     box-shadow: 2px 2px 4px #000000;
     transition: all 0.2s;
 }
 
 .discount-button:hover {
-    background-color:#827397;
+    background-color:#1c063b;
     color: white;
+    transform: scale(1.1)
 }
 
 /* Checkout */
@@ -773,8 +792,8 @@ margin-bottom: 20px;
     font-weight: 700;
     padding: 5px 15px;
     width: 80%;
-    background-color: #827397;
-    opacity: 0.8;
+    background-color: #1c063b;
+    /* opacity: 0.8; */
     color: white;
     cursor: pointer;
     border-radius: 4px;
@@ -783,7 +802,8 @@ margin-bottom: 20px;
 }
 
 .checkout-buttom button:hover {
-    opacity: 1;
+    transform: scale(1.1)
+    /* opacity: 1; */
 }
 .checkout-continue {
     text-align: center;
@@ -797,17 +817,18 @@ margin-bottom: 20px;
     padding: 5px 15px;
     width: 80%;
     background-color: white;
-    color: #827397;
+    color: #1c063b;
     cursor: pointer;
-    opacity: 0.8;
+    /* opacity: 0.8; */
     border-radius: 4px;
     box-shadow: 2px 2px 4px #000000;
     transition: all 0.2s;
 }
 
 .checkout-continue button:hover {
-    background-color:#827397;
+    background-color:#1c063b;
     color: white;
+    transform: scale(1.1)
 }
 
 /* Main <---> Seccion de sugerencias */
@@ -889,22 +910,22 @@ margin-bottom: 20px;
 }
 
 .footer-logo a img {
-    width: 15vw;
-    min-width: 120px;
+    width: 120px;
 }
 
 .tyc {
     color: white;
 }
-.footer-container h4{
+.footer-container h6{
     font-weight: 100;
-    padding: 10px 5px;
+    padding: 0px 5px;
     margin: 10px 0px 15px;   
 }
 
 .footer-container h5{
     font-weight: 100;
-    padding-bottom: 10px
+    margin: 5px
+    
 }
 
 .footer-container p {
@@ -1069,7 +1090,7 @@ margin-bottom: 20px;
         
             /*hasta aca es el header*/
 
-            /* MAIN */
+            /* HOME */
             .main-productDetail {
                 margin-top:  28vh;
             }
@@ -1084,7 +1105,7 @@ margin-bottom: 20px;
                 margin: 15px;
             }
 
-            /* FIN MAIN */
+            /* FIN HOME */
 
             /* LOGIN - REGISTRO */
 
@@ -1096,7 +1117,10 @@ margin-bottom: 20px;
 
             /* CARRITO */
 
+.main-carrito {
+    padding-top: 140px
 
+}
 
 
 }
@@ -1333,5 +1357,10 @@ margin-bottom: 20px;
     }
 
     /* FIN PRODUCT DETAIL */
+
+    /* CARRITO */
+    .main-carrito{
+        padding-top: 14vw;
+    }
 }
 }
