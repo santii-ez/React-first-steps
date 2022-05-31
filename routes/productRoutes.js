@@ -12,6 +12,8 @@ router.get("/listPhones", productControllers.listaCelulares );
 
 /*router.get("listado/:idProducto?", productControllers.detalleProducto );*/
 
+router.get('/newProduct', productControllers.newProduct)
+
 
 module.exports =router
 

@@ -16,6 +16,10 @@ const controllers = {
 
     listaCelulares :(req, res)=> {
         res.render('listPhones')
+    },
+
+    newProduct: (req, res) => {
+        res.render('newProduct')
     }
 }
 
