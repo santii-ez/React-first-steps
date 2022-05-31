@@ -1,133 +1,130 @@
 <!DOCTYPE html> 
 <html>
+     <!-- HEAD -->
+     <%- include('./partials/head') %>
+     
+    <body class="body-productDetail">
+        <!-- HEADER -->
+        <%- include('./partials/header') %>
+        
+        <!-- MAIN -->
 
-    <!-- HEAD -->
-    <title>Productos</title> 
-    <%- include('./partials/head') %>
-    
-<body class="body-productDetail"> 
+        <main class="main-productDetail">
 
-    <!-- HEADER -->
-    <%- include('./partials/header') %>
-    
-    <!-- MAIN -->
+            <section class="titulo">                
+                <h2>Moto E7 Plus</h2>                
+            </section>
 
-    <main class="main-productDetail">
+            <section class="product">
 
-        <section class="titulo">                
-            <h2>Moto E7 Plus</h2>                
-        </section>
+                <div class="fotos">
+                    <article>
+                        <div class="img-div fotoPincipal "><img src="images/1.jpg" alt="foto Moto e7"></div>                    
+                        <div class="fotosSecundarias">
+                            <div class="img-div"><img src="images/1.jpg" alt="foto Moto e7"></div>
+                            <div class="img-div"><img src="images/2.jpg" alt="foto Moto e7"></div>
+                            <div class="img-div"><img src="images/3.jpg" alt="foto Moto e7"></div>
+                            <div class="img-div"><img src="images/4.jpg" alt="foto Moto e7"></div>
+                            <div class="img-div"><img src="images/5.png" alt="foto Moto e7"></div>
+                            <div class="img-div"><img src="images/6.jpg" alt="foto Moto e7"></div>
+                            <div class="img-div"><img src="images/7.jpg" alt="foto Moto e7"></div>
+                        </div>                    
+                    </article>                  
+                </div>
 
-        <section class="product">
-
-            <div class="fotos">
-                <article>
-                    <div class="img-div fotoPincipal "><img src="images/1.jpg" alt="foto Moto e7"></div>                    
-                    <div class="fotosSecundarias">
-                        <div class="img-div"><img src="images/1.jpg" alt="foto Moto e7"></div>
-                        <div class="img-div"><img src="images/2.jpg" alt="foto Moto e7"></div>
-                        <div class="img-div"><img src="images/3.jpg" alt="foto Moto e7"></div>
-                        <div class="img-div"><img src="images/4.jpg" alt="foto Moto e7"></div>
-                        <div class="img-div"><img src="images/5.png" alt="foto Moto e7"></div>
-                        <div class="img-div"><img src="images/6.jpg" alt="foto Moto e7"></div>
-                        <div class="img-div"><img src="images/7.jpg" alt="foto Moto e7"></div>
-                    </div>                    
-                </article>                  
-            </div>
-
-            <div class="precio"> 
-                <article class="color-green precio">
-                    <h2 class="fotos">$65.500</h2>
-                    <h2 class="fotos">en 12x $ 9.288,45</h2>
-                    <a class="color-blanco" href="#">Ver todos los medios de pago</a>
-                </article>
-                <article class="comprar">
-                    <div>
-                        <input class="buy-btn" type="submit" value="comprar" name="comprar" id="compar">
-                    </div>
-                </article>                    
-            </div>
-
-            <article class="caracteristicas">
-                <div>
-                    <h3>General</h3>
-                    <div class="primero">
-                        <h4>Marca</h4>
-                        <h4>Motorola</h4>
-                    </div>
-                    <div class="segundo">
-                        <h4>Línea</h4>
-                        <h4>Moto E</h4>
-                    </div>
-                        <div class="tercero">
-                            <h4>Modelo</h4>
-                            <h4>E7 Plus</h4>
+                <div class="precio"> 
+                    <article class="color-green precio">
+                        <h2 class="fotos">$65.500</h2>
+                        <h2 class="fotos">en 12x $ 9.288,45</h2>
+                        <a class="color-blanco" href="#">Ver todos los medios de pago</a>
+                    </article>
+                    <article class="comprar">
+                        <div>
+                            <input class="buy-btn" type="submit" value="comprar" name="comprar" id="compar">
                         </div>
+                    </article>                    
                 </div>
 
-                <div>
-                    <h3>Pantalla</h3>
-                    <div class="primero">
-                        <h4>Tamaño</h4>
-                        <h4>6.5 "</h4>
+                <article class="caracteristicas">
+                    <div>
+                        <h3>General</h3>
+                        <div class="primero">
+                            <h4>Marca</h4>
+                            <h4>Motorola</h4>
+                        </div>
+                        <div class="segundo">
+                            <h4>Línea</h4>
+                            <h4>Moto E</h4>
+                        </div>
+                            <div class="tercero">
+                                <h4>Modelo</h4>
+                                <h4>E7 Plus</h4>
+                            </div>
                     </div>
-                    <div class="segundo">
-                        <h4>Resolución</h4>
-                        <h4>720 px x 1600 px</h4>
+
+                    <div>
+                        <h3>Pantalla</h3>
+                        <div class="primero">
+                            <h4>Tamaño</h4>
+                            <h4>6.5 "</h4>
+                        </div>
+                        <div class="segundo">
+                            <h4>Resolución</h4>
+                            <h4>720 px x 1600 px</h4>
+                        </div>
+                        <div class="tercero">
+                            <h4>Tecnología </h4>
+                            <h4>IPS</h4>
+                        </div>
                     </div>
-                    <div class="tercero">
-                        <h4>Tecnología </h4>
-                        <h4>IPS</h4>
+
+                    <div>
+                        <h3>Memoria</h3>
+                        <div class="primero">
+                            <h4>Memoria interna</h4>
+                            <h4>64 GB</h4>
+                        </div>
+                        <div class="segundo">
+                            <h4>Memoria RAM</h4>
+                            <h4>4 GB</h4>
+                        </div>
+                        <div class="tercero">
+                            <h4>Tipos de tarjeta</h4>
+                            <h4>MicroSD</h4>
+                        </div>
                     </div>
+
+                    <div>
+                        <h3>Procesador</h3>
+                        <div class="primero">
+                        <h4>Modelo</h4>
+                            <h4>Snapdragon 460</h4>
+                        </div>
+                        <div class="segundo">                       
+                            <h4>Cantidad de núcleos</h4>
+                            <h4>8</h4>
+                        </div>
+                        <div class="tercero">                            
+                            <h4>Velocidad</h4>
+                            <h4>1.8 GHz</h4>
+                        </div>
+                    </div>
+
                 </div>
+            </section>
 
-                <div>
-                    <h3>Memoria</h3>
-                    <div class="primero">
-                        <h4>Memoria interna</h4>
-                        <h4>64 GB</h4>
-                    </div>
-                    <div class="segundo">
-                        <h4>Memoria RAM</h4>
-                        <h4>4 GB</h4>
-                    </div>
-                    <div class="tercero">
-                        <h4>Tipos de tarjeta</h4>
-                        <h4>MicroSD</h4>
-                    </div>
+            <section class="whatsapp">                    
+                <div class="btn-whatsapp">                        
+                    <a href="https://api.whatsapp.com/send/?phone=calleFalsa123&text=Si están leyendo estoy pongan en le chat que nuestra pagina está buenisima!!!" target="_blank">                    
+                        <img src="images/whatsapp-logo.png" alt="whatsapp logo">
+                    </a>
                 </div>
+            </section>
 
-                <div>
-                    <h3>Procesador</h3>
-                    <div class="primero">
-                    <h4>Modelo</h4>
-                        <h4>Snapdragon 460</h4>
-                    </div>
-                    <div class="segundo">                       
-                        <h4>Cantidad de núcleos</h4>
-                        <h4>8</h4>
-                    </div>
-                    <div class="tercero">                            
-                        <h4>Velocidad</h4>
-                        <h4>1.8 GHz</h4>
-                    </div>
-                </div>
+        </main>
 
-            </div>
-        </section>
+        <!-- FOOTER -->
+        <%- include('./partials/footer') %>
 
-        <section class="whatsapp">                    
-            <div class="btn-whatsapp">                        
-                <a href="https://api.whatsapp.com/send/?phone=calleFalsa123&text=Si están leyendo estoy pongan en le chat que nuestra pagina está buenisima!!!" target="_blank">                    
-                    <img src="images/whatsapp-logo.png" alt="whatsapp logo">
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <%- include('./partials/footer') %>
-
-</body>
+    </body>
 </html>

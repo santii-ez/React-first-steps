@@ -1,101 +1,13 @@
 
 <!DOCTYPE html> 
-<html>  
+<html>
+     <!-- HEAD -->
+     <%- include('./partials/head') %>
 
-  <!-- HEAD -->
-  <title>Carrito</title> 
-  <%- include('./partials/head') %>
-  
-<body class="body-carrito">
-
-  <!-- HEADER -->
-  <%- include('./partials/header') %>
-    
-  <!-- MAIN -->
-  <main class="main-carrito">
-      <div class="shopping-cart">
-        <a href="/carrito" target="blank" title=" Tus Compras"><i class="fa-solid fa-cart-shopping" ></i></a>
-        <h1>Mi Carrito</h1>
-      </div>
-      <Section class="cart-container">
-        <article class="article-margin-padding cart-items">
-          <div class="img-items">
-            <img src="images/1.jpg" alt="imagen-item-1">
-          </div>
-          <div class="description-item">
-            <h4 class="description">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
-              <div class="counter"> 
-                <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
-                <div class=number>2</div>
-                <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
-              </div>
-              <div class="price">
-                <div class="amount">$ 50.00</div>
-                <div class="remove-button"><button type="button">Remove</button></div>
-              </div>
-          </div>
-        </article>
-        <article class="article-margin-padding cart-items">
-          <div class="img-items">
-            <img src="images/1.jpg" alt="imagen-item-1">
-          </div>
-          <div class="description-item">
-            <h4 class="description">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
-              <div class="counter"> 
-                <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
-                <div class=number>2</div>
-                <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
-              </div>
-              <div class="price">
-                <div class="amount">$ 50.00</div>
-                <div class="remove-button"><button type="button">Remove</button></div>
-              </div>
-          </div>
-        </article>
-        <article class=" article-margin-padding cart-items">
-          <div class="img-items">
-            <img src="images/1.jpg" alt="imagen-item-1">
-          </div>
-          <div class="description-item">
-            <h4 class="description">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
-              <div class="counter"> 
-                <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
-                <div class=number>2</div>
-                <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
-              </div>
-              <div class="price">
-                <div class="amount">$ 50.00</div>
-                <div class="remove-button"><button type="button">Remove</button></div>
-              </div>
-          </div>
-        </article>
-      </Section>
-      <section class="discount-checkout">
-        <article class="article-margin-padding discount">
-          <div class="titulo">
-            <h3 class="discount-code">Codigo de Descuento</h3>
-          </div>
-          <div class="discount-container">
-            <form>
-              <label for="discount">
-                <input class="discount-box" type="text" name="discount" id="discount" />
-              </label>
-                <input class="discount-button" type="submit" value="Aplicar"/>
-            </form>
-          </div>
-        </article>
-        <article class="article-margin-padding checkout">
-          <div class="subtotal-box">
-            <div class="flex-grow-70"><h4 class="subtotal">Subtotal</h4></div>
-            <div><h4 class="price-total">100.00</h4></div>
-          </div>
-          <div class="total-box">
-            <div class="flex-grow-70"><h4 class="total">Total</h4></div>
-            <div><h4 class="price-total">100.00</h4></div>
-          </div>
-          <div class="checkout-buttom"><button>Finalizar Compra</button></div>
-          <div class="checkout-continue"><button>Continuar Comprando</button></div>              
-        </article>
+    </head>
+    <body class="body-carrito">
+      <!-- HEADER -->
+      <%- include('./partials/header') %>
         
       <!-- MAIN -->
     <main class="main-carrito">
