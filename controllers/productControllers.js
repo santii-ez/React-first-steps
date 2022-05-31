@@ -12,6 +12,10 @@ const controllers = {
     },
     productDetail : (req, res) => {
         res.render('productDetail')
+    },
+
+    listaCelulares :(req, res)=> {
+        res.render('listPhones')
     }
 }
 

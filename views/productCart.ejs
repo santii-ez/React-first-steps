@@ -97,36 +97,166 @@
           <div class="checkout-continue"><button>Continuar Comprando</button></div>              
         </article>
         
-      </section>
-      <section class="suggestion">
-        <div class="suggestion-title-box"><h2 class="suggestion-title">A personas como tu le interesaron los siguientes productos</h2></div>
-        <article class="article-margin-padding item-suggested s-item-2">
-          <div class="img-price-container"><img  src="#" alt="item-suggested"/>
-          <h4 class="flex-grow-40">25.000</h4></div>
-          <div class="description-container"><h4>Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4></div>
-        </article>
-        <article class="article-margin-padding item-suggested s-item-2">
-          <div class="img-price-container"><img  src="#" alt="item-suggested"/>
-          <h4 class="flex-grow-40">25.000</h4></div>
-          <div class="description-container"><h4>Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4></div>
-        </article>
-        <article class="article-margin-padding item-suggested s-item-3">
-          <div class="img-price-container"><img  src="# " alt="item-suggested"/>
-          <h4 class="flex-grow-40">25.000</h4></div>
-          <div class="description-container"><h4>Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4></div>
-        </article>  
-      </section>
-  </main>
-
-  <footer>
-    <div class="footer-container">
-      <div class="footer-logo"><a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" alt="Logo-TecnoMundo"></a></div>
-      <div><h4>Al comprar se aceptan los <a class="tyc" href="#"> Términos y Condiciones</a></h4></div>
-      <div><h5>Copyright 2022 | Todos los derechos reservados Tecnomundo.com. Tecnomundo S.A.C.I. e I. | Mendoza | Argentina</h5></div>
-      <div><p>Las fotos son a modo ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la verificación de stock. Los precios online y los planes de financiación para los productos presentados/publicados en www.fravega.com.ar y/o www.fravega.com son válidos exclusivamente para la compra vía internet en las páginas antes mencionadas. Las especificaciones técnicas y descripciones están sujetas a cambios sin previo aviso.</p></div>
-    </div>
-    <div class="data-fiscal-container"><a href="https://www.afip.gob.ar" target="_blank" title="AFIP"><img src="images/data-fiscal.jpg" alt="data-fiscal"/></a></div>
-  </footer>
-
-</body>
+      <!-- MAIN -->
+    <main class="main-carrito">
+          <div class="shopping-cart">
+            <a href="/product/productCart" target="blank" title=" Tus Compras"><i class="fa-solid fa-cart-shopping" ></i></a>
+            <h1>Mi Carrito</h1>
+          </div>
+          <Section class="cart-container">
+            <article class="article-margin-padding cart-items">
+              <div class="img-items">
+                <img src="images/1.jpg" alt="imagen-item-1">
+              </div>
+              <div class="description-item">
+                <h4 class="description">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
+                  <div class="counter"> 
+                    <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
+                    <div class=number>2</div>
+                   <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
+                  </div>
+                  <div class="price">
+                    <div class="amount">$ 50.00</div>
+                    <div class="remove-button"><button type="button">Remove</button></div>
+                  </div>
+              </div>
+            </article>
+            <article class="article-margin-padding cart-items">
+              <div class="img-items">
+                <img src="images/1.jpg" alt="imagen-item-1">
+              </div>
+              <div class="description-item">
+                <h4 class="description">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
+                  <div class="counter"> 
+                    <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
+                    <div class=number>2</div>
+                   <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
+                  </div>
+                  <div class="price">
+                    <div class="amount">$ 50.00</div>
+                    <div class="remove-button"><button type="button">Remove</button></div>
+                  </div>
+              </div>
+            </article>
+            <article class=" article-margin-padding cart-items">
+              <div class="img-items">
+                <img src="images/1.jpg" alt="imagen-item-1">
+              </div>
+              <div class="description-item">
+                <h4 class="description">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
+                  <div class="counter"> 
+                    <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
+                    <div class=number>2</div>
+                   <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
+                  </div>
+                  <div class="price">
+                    <div class="amount">$ 50.00</div>
+                    <div class="remove-button"><button type="button">Remove</button></div>
+                  </div>
+              </div>
+            </article>
+          </Section>
+          <section class="discount-checkout">
+            <article class="article-margin-padding discount">
+              <div>
+                <h3 class="discount-code">Codigo de Descuento</h3>
+              </div>
+              <div class="discount-container">
+                <form>
+                  <label for="discount">
+                    <input class="discount-box" type="text" name="discount" id="discount" />
+                  </label>
+                    <input class="discount-button" type="submit" value="Aplicar"/>
+                </form>
+              </div>
+            </article>
+            <article class="article-margin-padding checkout">
+              <div class="subtotal-box">
+                <div class="flex-grow-70"><h4 class="subtotal">Subtotal</h4></div>
+                <div><h4 class="price-total">100.00</h4></div>
+              </div>
+              <div class="total-box">
+                <div class="flex-grow-70"><h4 class="total">Total</h4></div>
+                <div><h4 class="price-total">100.00</h4></div>
+              </div>
+              <div class="checkout-buttom"><button>Finalizar Compra</button></div>
+              <div class="checkout-continue"><button>Continuar Comprando</button></div>              
+            </article>
+            
+          </section>
+          <section class="suggestion">
+            <div class="suggestion-title-box"><h2 class="suggestion-title">A personas como tu le interesaron los siguientes productos</h2></div>
+            <div class="section-set-display">
+              <article class="article-style article01">
+                <div class="imgProduct"><img src="https://www.manual.sv/thumbs/products/l/1528806-oneplus-10-pro-5g.jpg" alt="OnePlus 10 Pro"></div>
+                <div class="descriptionProduct">
+                    <div class="title">
+                        <h5>OnePlus 10 Pro</h5>
+                    </div>
+                    <div class="price">
+                        <h5>$2.400</h5>
+                    </div> 
+                    <div class="discount">
+                        <i class="fa-solid fa-truck"></i>
+                        <h6>Envío gratis</h6>
+                    </div> 
+                </div>
+            </article>
+            <article class="article-style article02">
+                <div class="imgProduct"><img src="https://img.myipadbox.com/upload/store/product_l/MPH8860W.jpg" alt="Xiaomi Note 10 Pro"></div>
+                <div class="descriptionProduct">
+                    <div class="title">
+                        <h5>Xiaomi Note 10 Pro</h5>
+                    </div>
+                    <div class="price">
+                        <h5>$1.800</h5>
+                    </div>
+                    <div class="discount">
+                        <i class="fa-solid fa-truck"></i>
+                        <h6>Envío gratis</h6>
+                    </div>
+                </div>
+            </article>
+            <article class="article-style article03">
+                <div class="imgProduct"><img src="https://www.manual.ar/thumbs/products/l/1308509-motorola-moto-g9-plus.jpg" alt="Motorola G9 Plus"></div>
+                <div class="descriptionProduct">
+                    <div class="title">
+                        <h5>Motorola G9 Plus</h5>
+                    </div>
+                    <div class="price">
+                        <h5>$200</h5>
+                    </div>
+                    <div class="discount">
+                        <i class="fa-solid fa-truck"></i>
+                        <h6>Envío gratis</h6>
+                    </div>
+                </div>
+            </article>
+            <article class="article-style article04">
+                <div class="imgProduct"><img src="https://internacionalmobile.store/wp-content/uploads/2021/08/Internacional-Mobile-Store-Huawey-P40-PRO-Negro.jpg" alt="Huawei P40 Pro"></div>
+                <div class="descriptionProduct">
+                    <div class="title">
+                        <h5>Huawei P40 Pro</h5>
+                    </div>
+                    <div class="price">
+                        <h5>$1.500</h5>
+                    </div>
+                    <div class="discount">
+                        <i class="fa-solid fa-truck"></i>
+                        <h6>Envío gratis</h6>
+                    </div>
+                </div>
+            </article>
+          </section>
+        </main>
+        <footer>
+          <div class="footer-container">
+            <div class="footer-logo"><a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" alt="Logo-TecnoMundo"></a></div>
+            <div><h6>Al comprar se aceptan los <a class="tyc" href="#"> Términos y Condiciones</a></h6></div>
+            <div><h5>Copyright 2022 | Todos los derechos reservados Tecnomundo.com. Tecnomundo S.A.C.I. e I. | Mendoza | Argentina</h5></div>
+            <div><p>Las fotos son a modo ilustrativo. La venta de cualquiera de los productos publicados está sujeta a la verificación de stock. Los precios online y los planes de financiación para los productos presentados/publicados en www.fravega.com.ar y/o www.fravega.com son válidos exclusivamente para la compra vía internet en las páginas antes mencionadas. Las especificaciones técnicas y descripciones están sujetas a cambios sin previo aviso.</p></div>
+          </div>
+          <div class="data-fiscal-container"><a href="https://www.afip.gob.ar" target="_blank" title="AFIP"><img src="images/data-fiscal.jpg" alt="data-fiscal"/></a></div>
+        </footer>
+    </body>
 </html>

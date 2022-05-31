@@ -8,6 +8,8 @@ router.get("/productDetail", productControllers.productDetail );
 
 router.get("/productCart", productControllers.carrito );
 
+router.get("/listPhones", productControllers.listaCelulares );
+
 /*router.get("listado/:idProducto?", productControllers.detalleProducto );*/
 
 
