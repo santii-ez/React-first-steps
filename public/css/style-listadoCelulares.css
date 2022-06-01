@@ -215,32 +215,56 @@ h2{
 
 /*Main Filtros*/
 
-/* sections */
-
-
-.main-home {
-    width: 90%;
-    margin: auto;
-}
-
-
-
 
 /*modificado*/
+
+.filtrados{
+    display: none;
+}
 .article-style-celulares {
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     margin-bottom: 10px;
-    padding: 15px;
+    transition: all 300ms ease;
+    width: 90%;
+    
+   
 }
 
+.article-style-celulares:hover{
+    transform: scale(1.05);
+
+}
 .celulares{
     margin: 20px;
 }
 
-.container-celulares{
-    gap: 10px;
+.submit-verProducto{
+    background-color: #1c063b;
+    color: white;
+    padding: 5px;
+    margin-top: 9px;
+    border-radius: 8px;
+    transition: all 300ms ease;
 }
+
+/*hover submit-ver producto*/
+.submit-verProducto:hover{
+    transform: scale(1.1);
+    cursor:pointer;
+}
+
+.container-celulares{
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    padding-top: 15px;
+    
+}
+
+/*hasta aca modifique*/
 
 .article02, .article03, .article04 {
         display: none;
@@ -250,38 +274,59 @@ h2{
     flex-direction: column;
     align-items: center;
     border-top: solid 1px #ebebeb;
-    padding: 15px;
+    margin:0px 15px;
     display: flex;
 }
 
-.descriptionProduct .title {
+/*modificado*/
+.listProduct{
+    padding: 0px 0px 15px;
+}
+
+.listProduct h5{
+
+    margin: auto;
+    padding: 1.5vh;
+}
+
+ .title-product {
     text-align: center;
     color: rgba(0, 0, 0, 0.7);
-    height: 20px;
-    margin-bottom: 10px;
+   
 }
 
-.title h5 {
-    width: 100%;
-    margin: 0;
-}
 
-.descriptionProduct .price {
+
+.price-product {
     color: rgba(210, 71, 115, 0.792);
 }
-    
-.descriptionProduct .discount {
+   
+.descriptionProduct .discount-listaProducto {
     display: flex;
     color: #39b54a;
+    gap: 9px;
+    
+}
+.precio-tachado{
+    text-decoration: line-through;
 }
 
-.discount i {
-    margin-right: 3px;
+/*hasta aca se modifico*/
+.imgOferta{
+    display: flex;
+    justify-content: end;
+}
+.imgOferta img{
+    width: 30vw;
+    position: absolute;
 }
 
 .imgProduct img {
-        width: 100%;
-        height: auto;
+    width: 81%;
+    margin: auto;
+    height: auto;
+    
+    display: flex;
     }
 
 /* FIN HOME */
@@ -290,9 +335,7 @@ h2{
 /* FIN HOME */
 
 
-.filtrados{
-    display: none;
-}
+
 
 
 @media (min-width: 361px) {
@@ -377,6 +420,13 @@ h2{
     }
     .container-celulares{
         display: flex;
+        
+       
+
+    }
+
+    .imgOferta img {
+        width: 16vw;
     }
     .article02 {
             display: block;
@@ -421,6 +471,21 @@ h2{
         gap: 5px;
     }
     
+
+    .gama-precios{
+        cursor: pointer;
+        opacity: 0.8;
+       
+    }
+
+    .gama-precios h3{
+        font-size: 12px;
+    }
+    ul.gama-precios{
+        padding-left: 0px;
+    }
+    .imgOferta img {
+        width: 12vw;
     
-    
+    }
 }
