@@ -9,13 +9,13 @@ const mainRoutes = require ('./routes/mainRoutes')
 const usersRoutes = require ('./routes/usersRoutes')
 
 //Declaracion de puertos
-const port = 3005
+const port = 3000   
 
 
 // views
 app.use(express.static(path.join(__dirname,'views')))
 // public
-app.use(express.static(path.join(__dirname,'public')))
+app.use(express.static(path.join(__dirname,'../public')))
 
 //EJS
 app.set('view engine', 'ejs')
