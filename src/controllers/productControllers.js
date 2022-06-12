@@ -7,14 +7,14 @@ const controllers = {
             res.send('Bienbenido al producto: ' + req.params.idProducto)
         };   
     },*/
-    carrito : (req, res) => {
+    cart : (req, res) => {
         res.render("productCart");
     },
     productDetail : (req, res) => {
         res.render('productDetail');
     },
 
-    listaCelulares :(req, res)=> {
+    listPhones :(req, res)=> {
         res.render('listPhones');
     },
 

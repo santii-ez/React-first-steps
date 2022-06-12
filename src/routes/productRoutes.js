@@ -3,13 +3,11 @@ const router = express.Router();
 const productControllers = require ('../controllers/productControllers');
 
 // routes
-router.get("/productDetail", productControllers.productDetail );
+router.get("/productCart", productControllers.cart );
 
-router.get("/productCart", productControllers.carrito );
+router.get("/listPhones", productControllers.listPhones);
 
-router.get("/listPhones", productControllers.listaCelulares );
-
-/*router.get("listado/:idProducto?", productControllers.detalleProducto );*/
+router.get("/productDetail/:idProduct", productControllers.productDetail);
 
 router.get('/newProduct', productControllers.newProduct);
 
