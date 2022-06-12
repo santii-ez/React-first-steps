@@ -8,20 +8,20 @@ const controllers = {
         };   
     },*/
     carrito : (req, res) => {
-        res.render("productCart")
+        res.render("productCart");
     },
     productDetail : (req, res) => {
-        res.render('productDetail')
+        res.render('productDetail');
     },
 
     listaCelulares :(req, res)=> {
-        res.render('listPhones')
+        res.render('listPhones');
     },
 
     newProduct: (req, res) => {
-        res.render('newProduct')
+        res.render('newProduct');
     }
-}
+};
 
 
-module.exports = controllers
+module.exports = controllers;
