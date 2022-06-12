@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "first_name": "Nataniel",
+        "last_name": "Isaksen",
+        "email": "nisaksen0@a8.net",
+        "password": "d3MZ36RlRf",
+        "image": "user_1.jpg"
+    },
+    {
+        "id": 2,
+        "first_name": "Lissa",
+        "last_name": "Andrea",
+        "email": "landrea1@geocities.jp",
+        "password": "GEZ8AqWXj",
+        "image": "user_2.jpg"
+    },
+    {
+        "id": 3,
+        "first_name": "Margaux",
+        "last_name": "Pippard",
+        "email": "mpippard2@seattletimes.com",
+        "password": "2SXDw8P",
+        "image": "user_3.jpg"
+    },
+    {
+        "id": 4,
+        "first_name": "Reggy",
+        "last_name": "Mulryan",
+        "email": "rmulryan3@bigcartel.com",
+        "password": "jz5whrX",
+        "image": "user_4.jpg"
+    },
+    {
+        "id": 5,
+        "first_name": "Ally",
+        "last_name": "Tremblay",
+        "email": "atremblay4@wunderground.com",
+        "password": "eQOkoyWvn",
+        "image": "user_5.jpg"
+    },
+    {
+        "id": 6,
+        "first_name": "Evangelin",
+        "last_name": "Acreman",
+        "email": "eacreman5@google.nl",
+        "password": "DLmjhS8rmUb",
+        "image": "user_6.jpg"
+    },
+    {
+        "id": 7,
+        "first_name": "Marmaduke",
+        "last_name": "Farren",
+        "email": "mfarren6@e-recht24.de",
+        "password": "Y210UwnQ",
+        "image": "user_7.jpg"
+    },
+    {
+        "id": 8,
+        "first_name": "Zacherie",
+        "last_name": "Karlsson",
+        "email": "zkarlsson7@ucoz.com",
+        "password": "Jl1MJPvmvHN",
+        "image": "user_8.jpg"
+    }
+]
