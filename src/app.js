@@ -15,6 +15,8 @@ const port = 3000;
 app.use(express.static(path.join(__dirname,'views')));
 // public
 app.use(express.static(path.join(__dirname,'../public')));
+// Decode Form URL Encoded Data
+app.use(express.urlencoded());
 
 //EJS
 app.set('view engine', 'ejs');

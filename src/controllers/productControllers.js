@@ -29,8 +29,35 @@ const controllers = {
 
     newProduct: (req, res) => {
         res.render('newProduct');
-    }
-};
+    },
+        
+    store: (req, res) => {
+        let products = JSON.parse(fs.readFileSync(filePath, "utf-8"))
+    
+        let newProduct = {
+            
+            id: products [products.length -1].id + 1,
+            name: req.body.name,
+            description:req.body.description,
+            price: parseInt (req.body.price),
+            discount:parseInt (req.body.discount),
+            category: req.body.category,
+            image: req.file.filename,
+            section: req.body.section,
+            marca: req.body.brand,
+        }
+    
+       
+        products.push (newProduct)
+    
+        let newProductStore = JSON.stringify(products, null, 2);
+    
+        fs.writeFileSync(filePath, newProductStore, 'utf-8')	
+    
+        return res.redirect('/product')
+    
+        }
+}
 
 
-module.exports = controllers;
+module.exports = controllers
