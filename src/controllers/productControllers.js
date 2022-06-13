@@ -1,3 +1,10 @@
+const fs = require ('fs');
+const path = require ('path')
+
+
+// leer el archivo
+const filePath = path.join(__dirname, "../data/productsDataBase.json")
+
 const controllers = {
     /*detalleProducto : (req, res) => {
         if (req.params.idProducto == undefined) {
@@ -14,8 +21,10 @@ const controllers = {
         res.render('productDetail');
     },
 
-    listPhones :(req, res)=> {
-        res.render('listPhones');
+    listProducts :(req, res)=> {
+        let products = JSON.parse(fs.readFileSync (filePath, "utf-8"))
+
+        res.render('listProducts', {products: products})
     },
 
     newProduct: (req, res) => {
