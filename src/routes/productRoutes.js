@@ -19,7 +19,7 @@ const uploadFile = multer({ storage: storage });
 // routes
 router.get("/productCart", productControllers.cart );
 
-router.get("/productDetail", productControllers.productDetail);
+router.get("/productDetail/:id", productControllers.productDetail);
 // Create a new product
 router.get('/create', productControllers.newProduct)
 router.post('/store', uploadFile.single("images"),productControllers.store)

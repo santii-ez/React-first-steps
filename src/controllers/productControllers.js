@@ -18,7 +18,13 @@ const controllers = {
         res.render("productCart");
     },
     productDetail : (req, res) => {
-        res.render('productDetail');
+        let products = JSON.parse(fs.readFileSync (filePath, "utf-8"))
+
+        let detalleProducto = products.filter(item => {
+            return item.id == parseInt(req.params.id)
+        })
+
+        res.render('productDetail', {detalleProducto: detalleProducto})
     },
 
     listProducts :(req, res)=> {

@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname,'views')));
 // public
 app.use(express.static(path.join(__dirname,'../public')));
 // Decode Form URL Encoded Data
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: false}));
 
 //EJS
 app.set('view engine', 'ejs');
