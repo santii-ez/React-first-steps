@@ -369,138 +369,148 @@ h2{
 /* MAIN - PRODUCT DETAIL */
     
 
+.margin-productDetail{
 
-    .main-productDetail {
-    margin-top:  20vh;
-    width: 100%;
-    background-color: #363062;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;  
-    z-index: 0; 
-    }     
+    margin-bottom: 7vh;
+    margin-top: 25vh;
+}
+.card-body{
+    white-space: pre-wrap;
+}
+
+.card-text{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.name-product{
+    font-size: 25px;
+    padding-bottom: 2vh;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.product-description{
+    white-space: normal
+}
+.detail-product{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
     
-    /*>>atributos main<<*/
-.product {
-    width: 90%;
-    padding: 10vw;
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+}
+p.card-text{
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+div.d-grid.gap-2.button-productDetail{
+    font-size: smaller
+}
+.button-productDetail{
     text-align: center;
-    border: 0px 3px 0px 3px solid whitesmoke;
 }
 
-.titulo {
-    width: 90%;
-    background-color: whitesmoke;
-    color:#827397;
-    align-items: center;
-    text-align: center;
-    border: 0px 3px 0px 3px solid whitesmoke;
-    justify-content: center;
-}
 
-.fotos{
-    width: 100%;
-}
 
-.img-div img {
-    width: 100%;
-}
-
-.precio{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    color: #4D4C7D;
-    align-items: center;
-    text-align: center;
-    border-top: 0px 3px 0px 3px solid whitesmoke;
-    justify-content: center;
-}
-
-/*>>flexbox main<<*/
-div.fotos article{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-}
-
-.fotoPincipal{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-.fotosSecundarias{
-    display: none;
-}
-
-/*>>>boton comprar<<*/
-.buy-btn {
-    background-color: #827397;
-    border: solid 1px;
+.button-productDetail  button{
+    
+    background-color: #1c063b;
+    border: #1c063b;
     color: white;
-    text-align: center;
-    text-decoration: none;
-    margin: center;
-    cursor: pointer;
-    opacity: 0.5;
+    
+    
+}
+.button-productDetail  button:hover{
+    background-color: #1c063b;
+   transform: scale(1.03);
+   transition: 00.5s;
+}
+
+
+/* counter detailProduct */
+
+.contador-productDetail{
+    white-space: normal;
     display: flex;
     justify-content: center;
-    float: right;
-    padding: 0px 10px;
-    margin: 8px;
-    margin-right: 16px;
-    margin-left: 5px;
-    font-size: larger;
+    align-items: center;
+    font-size: 20px;
+}
+
+div.btn.btn-plus , .btn.btn-minus{
+    font-size: x-large
+}
+
+
+
+
+/*precio*/
+
+.productDetail-price-discount{
+    -webkit-text-stroke-width: thin;
+    width: 100;
+    display: inline-flex;
+    align-items: center;
+    flex-flow: column;
+    width: -webkit-fill-available;
+    white-space: nowrap;
+}
+
+
+
+.price-product {
+    color: rgba(210, 71, 115, 0.792);
+}
+   
+ .discount-listaProducto {
+    display: flex;
+    color: #39b54a;
+    gap: 9px;
+    
+}
+
+h5.price-product{
+    font-size:30px
+}
+
+
+
+.precio-tachado{
+    text-decoration: line-through;
+}
+
+/* edit-delete */
+.edit-delete{
+    display: flex;
+    white-space: normal;
+    gap: 10px;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+i.fa-solid.fa-pen-to-square{
     border-radius: 10px;
-    block-size: 40px;
-    margin-top: 5px;  
-    width:200px;
-    height:100px;  
-    box-shadow: 2px 2px 4px #000000;
+    background-color: #1c063b;
+    font-size: 25px;
+    color: rgb(241 253 247 / 91%);
+    padding: 4px;
+
+}
+i.fa-regular.fa-trash-can{
+    border-radius: 10px;
+    background-color: #1c063b;
+    font-size: 25px;
+    color: rgb(241 253 247 / 91%);
+    padding: 4px;
+}
+button.button-delete {
+    background-color: white;
+    border: none;
 }
 
-.buy-btn:hover{
-    background-color: rgb(251, 121, 74);
-    color: white;
-    transition: 0.5s;
-    border: solid rgb(251, 121, 74);
-}
 
-/*tabla caracteristicas*/
-.caracteristicas{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-}
 
-.primero{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
-    border: 2px  solid #4D4C7D;
-}
-.segundo{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
-    border-left: 2px solid #4D4C7D;
-    border-right: 2px solid #4D4C7D;
-}
-.tercero{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
-    border: 2px solid #4D4C7D;
-}
 /* FIN PRODUCT DETAIL */
 
 /* MAIN - LOGIN - REGISTRO*/

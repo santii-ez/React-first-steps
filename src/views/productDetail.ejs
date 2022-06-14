@@ -10,7 +10,7 @@
         <base href = "/"> 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/productDetail.css" rel="stylesheet">
+        <link href="css/styleunificado.css" rel="stylesheet">
 
     </head>
      
@@ -36,10 +36,10 @@
                 <h4 class="card-title detail-product" >Detalle del Producto</h4>
                 <p class="card-text"><%= item.description %></p>
                 </div>
-                
-                <div class="card-title price-product">
+
+                <div class="card-title productDetail-price-discount">
                     <div>
-                        <h5>$ <%= (((100 - item.discount)/100)*item.price).toFixed(2) %></h5>
+                        <h5 class="price-product">$ <%= (((100 - item.discount)/100)*item.price).toFixed(2) %></h5>
                     </div>
                     <% if (item.discount != 0) { %>
                     <div class="discount-listaProducto">
@@ -50,10 +50,10 @@
                 </div> 
                
                 <div class="counter contador-productDetail"> 
-                  <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
+                  <div class="btn btn-minus"><i class="fa-solid fa-circle-minus"></i></i></div>
                   <div class=number>2</div>
                 
-                 <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
+                 <div class="btn btn-plus"><i class="fa-solid fa-circle-plus"></i></div>
                 </div>
 
                 <div class="d-grid gap-2 button-productDetail">
@@ -68,7 +68,7 @@
                                                                           
                 <form action="product/delete/<%= item.id %>?_method=delete" method="post">
                 
-                  <button type="submit">
+                  <button class="button-delete" type="submit">
                     <i width="30px" class="fa-regular fa-trash-can"></i>
                   </button>
                  
