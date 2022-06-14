@@ -29,6 +29,10 @@ router.get("/", productControllers.listProducts);
 
 //Delete products
 router.delete("/delete/:id", productControllers.delete)
+
+// Edit products
+router.get("/edit/:id", productControllers.editView)
+router.put("/edit/:id",uploadFile.single("images"), productControllers.editProduct)
 // exports
 module.exports = router;
 

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <%- include('./partials/head') %>
+    <!-- HEADER -->
+    <%- include('./partials/header') %>
+<body>
+    <main>
+        <section class="newProductSection">
+        <div class="container products-wrapper">
+		        <div class="row">
+			        <div class="col-12">
+				        <h2 class="products-title">Formulario de edicion de productos</h2>
+			        </div>
+		        </div>
+            <div class="col-12">
+                <% productToEdit.forEach (item => { %> 
+            <form action="/product/edit/<%= item.id %>?_method=put" method="post" enctype="multipart/form-data" class="newProductForm">
+                <div class="row">
+                <div class="col-12 col-md-6">
+                <label  for="name" class="newProductLabel"><h4 class="titleNewProduct">Nombre del producto </h4></label>
+                    <input type="text" name="name" id="name" class="newProductInput" placeholder="Ej. Galaxy S22" value="<%= item.name %>" required>
+                </div>
+                <div class="col-12 col-md-6">
+                <label  for="description" class="newProductLabel"><h4 class="titleNewProduct">Descripción</h4></label>
+                    <textarea type="text" name="description" class="newProductInput"><%= item.description %></textarea>
+                </div>
+                <div class="col-12 col-md-6">
+                    <label  for="images" class="newProductLabel "> <h4 class="titleNewProduct">Ingrese las imágenes</h4> </label>
+                    <input type="file" name="images" id="images" >
+                </div>
+                <div class="col-12 col-md-6">
+                <label  for="category" class="newProductLabel"><h4 class="titleNewProduct"> Categoría </h4> </label>
+                    <div class="categoryContainer"><input type="radio" name="category" value="phones"> <h6>Celular</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="category" value="tablets"> <h6>Tablet</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="category" value="laptops"> <h6>Laptop</h6></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label  for="brand" class="newProductLabel"><h4 class="titleNewProduct"> Marca </h4></label>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Iphone"> <h6>Iphone</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Samsung"> <h6>Samsung</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Motorola"> <h6>Motorola</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Huawei"> <h6>Huawei</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="OnePlus"> <h6>OnePlus</h6></div>
+                    <div class="categoryContainer"><input type="radio" name="brand" value="Xiaomi"> <h6>Xiaomi</h6></div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="section" class="form-label">Categoría:</label>
+                    <select name="section" id="section" class="newProductLabel" required>
+                        <option value="">Elegí</option>
+                        <option value="lo mas buscado">Lo mas buscado</option>
+                        <option value="celulares">Celulares</option>
+                        <option value="tablets">Tablets</option>
+                        <option value="laptops">Laptops</option>
+                       
+                    </select>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label  for="price" class="newProductLabel"> <h4 class="titleNewProduct"> Precio en USD$ </h4>   </label>
+                    <input type="number" name="price" class="newProductInput" required min="1" value="<%= item.price %>">
+                </div>
+             
+                <div class="col-12 col-md-6">
+                    <label  for="price" class="newProductLabel"> <h4 class="titleNewProduct">Descuento </h4></label>
+                    <input type="number" name="discount" class="newProductInput" required value="<%= item.discount %>">
+                </div>             
+                
+                <div class="col-12">
+                    <button type="submit" class="submit-login"><h4 class="titleNewProduct">Editar producto</h4></button>
+                </div>
+                
+                <br>
+            </div>
+            </form>
+            <% }) %>
+            </div>
+        </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+</body>
+</html>
