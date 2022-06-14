@@ -34,8 +34,21 @@
                 <div><h5 class="card-title name-product"><%= item.name %></h5></div>
                 <div class="product-description">
                 <h4 class="card-title detail-product" >Detalle del Producto</h4>
-                <p class="card-text"><%= item.description %></p></div>
+                <p class="card-text"><%= item.description %></p>
+                </div>
                 
+                <div class="card-title price-product">
+                    <div>
+                        <h5>$ <%= (((100 - item.discount)/100)*item.price).toFixed(2) %></h5>
+                    </div>
+                    <% if (item.discount != 0) { %>
+                    <div class="discount-listaProducto">
+                            <div><h6 class="precio-tachado">$ <%= item.price %></h6></div>
+                            <div><h6><%= item.discount %> % OFF</h6></div>
+                    </div>
+                    <% } %>
+                </div> 
+               
                 <div class="counter contador-productDetail"> 
                   <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
                   <div class=number>2</div>
