@@ -6,14 +6,7 @@ const path = require ('path')
 const filePath = path.join(__dirname, "../data/productsDataBase.json")
 
 const controllers = {
-    /*detalleProducto : (req, res) => {
-        if (req.params.idProducto == undefined) {
-            res.send('Bienbenido a la seccion de productos')
-        } 
-        else {
-            res.send('Bienbenido al producto: ' + req.params.idProducto)
-        };   
-    },*/
+    
     cart : (req, res) => {
         res.render("productCart");
     },
@@ -62,7 +55,26 @@ const controllers = {
     
         return res.redirect('/product')
     
-        }
+        },
+
+        delete: (req, res) => {
+            let products = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+     
+
+            products = products.filter (item => {
+                return item.id != req.params.id
+            })
+
+            let newArrayProducts = JSON.stringify(products, null, 2);
+    
+            fs.writeFileSync(filePath, newArrayProducts, 'utf-8')	
+    
+            return res.redirect('/product')
+
+            
+
+
+        },
 }
 
 

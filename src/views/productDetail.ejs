@@ -51,11 +51,12 @@
                 <div class="edit-delete">
                 
                   <a href="#" target="_blank" title="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                  
                                                                           
-                <form action="#" method="GET">
+                <form action="product/delete/<%= item.id %>?_method=delete" method="post">
                 
-                  <button>
-                    <i width="30px" class="fa-regular fa-trash-can"></i></a>
+                  <button type="submit">
+                    <i width="30px" class="fa-regular fa-trash-can"></i>
                   </button>
                  
                 </form>
