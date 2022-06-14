@@ -24,10 +24,11 @@ router.get("/productDetail/:id", productControllers.productDetail);
 router.get('/create', productControllers.newProduct)
 router.post('/store', uploadFile.single("images"),productControllers.store)
 
-//list of products
-
+//List products
 router.get("/", productControllers.listProducts);
 
+//Delete products
+router.delete("/delete/:id", productControllers.delete)
 // exports
 module.exports = router;
 
