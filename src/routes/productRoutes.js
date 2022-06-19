@@ -11,6 +11,11 @@ router.get('/newProduct', productControllers.newProduct);
 
 router.get("/listPhones", productControllers.listPhones);
 
+router.get("/listNotebook", productControllers.listNotebook);
+
+router.get("/listTablet", productControllers.listTablet);
+
+
 // exports
 module.exports = router;
 
