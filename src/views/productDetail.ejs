@@ -1,130 +1,91 @@
 <!DOCTYPE html> 
 <html>
      <!-- HEAD -->
-     <%- include('./partials/head') %>
+     <!-- HEAD -->
+     <head lang="en"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>TecnoMundo</title> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <base href = "/"> 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/styleunificado.css" rel="stylesheet">
+
+    </head>
      
-    <body class="body-productDetail">
+    <body>
         <!-- HEADER -->
         <%- include('./partials/header') %>
         
         <!-- MAIN -->
 
-        <main class="main-productDetail">
-
-            <section class="titulo">                
-                <h2>Moto E7 Plus</h2>                
-            </section>
-
-            <section class="product">
-
-                <div class="fotos">
-                    <article>
-                        <div class="img-div fotoPincipal "><img src="images/Celulares/1.jpg" alt="foto Moto e7"></div>                    
-                        <div class="fotosSecundarias">
-                            <div class="img-div"><img src="images/Celulares/1.jpg" alt="foto Moto e7"></div>
-                            <div class="img-div"><img src="images/Celulares/2.jpg" alt="foto Moto e7"></div>
-                            <div class="img-div"><img src="images/Celulares/3.jpg" alt="foto Moto e7"></div>
-                            <div class="img-div"><img src="images/Celulares/4.jpg" alt="foto Moto e7"></div>
-                            <div class="img-div"><img src="images/Celulares/5.png" alt="foto Moto e7"></div>
-                            <div class="img-div"><img src="images/Celulares/6.jpg" alt="foto Moto e7"></div>
-                            <div class="img-div"><img src="images/Celulares/7.jpg" alt="foto Moto e7"></div>
-                        </div>                    
-                    </article>                  
+      <main>
+        <% detalleProducto.forEach (item => { %>
+       <div class="container products-wrapper margin-productDetail">
+        <div class="card mb-3 " >
+          <div class="row g-0">
+            <div class="col-md-6" style="white-space: pre-wrap">
+              <img src="images/products/<%= item.image %>" class="img-fluid" >
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                
+                <div><h5 class="card-title name-product"><%= item.name %></h5></div>
+                <div class="product-description">
+                <h4 class="card-title detail-product" >Detalle del Producto</h4>
+                <p class="card-text"><%= item.description %></p>
                 </div>
 
-                <div class="precio"> 
-                    <article class="color-green precio">
-                        <h2 class="fotos">$65.500</h2>
-                        <h2 class="fotos">en 12x $ 9.288,45</h2>
-                        <a class="color-blanco" href="#">Ver todos los medios de pago</a>
-                    </article>
-                    <article class="comprar">
-                        <div>
-                            <input class="buy-btn" type="submit" value="comprar" name="comprar" id="compar">
-                        </div>
-                    </article>                    
+                <div class="card-title productDetail-price-discount">
+                    <div>
+                        <h5 class="price-product">$ <%= (((100 - item.discount)/100)*item.price).toFixed(2) %></h5>
+                    </div>
+                    <% if (item.discount != 0) { %>
+                    <div class="discount-listaProducto">
+                            <div><h6 class="precio-tachado">$ <%= item.price %></h6></div>
+                            <div><h6><%= item.discount %> % OFF</h6></div>
+                    </div>
+                    <% } %>
+                </div> 
+               
+                <div class="counter contador-productDetail"> 
+                  <div class="btn btn-minus"><i class="fa-solid fa-circle-minus"></i></i></div>
+                  <div class=number>2</div>
+                
+                 <div class="btn btn-plus"><i class="fa-solid fa-circle-plus"></i></div>
                 </div>
 
-                <article class="caracteristicas">
-                    <div>
-                        <h3>General</h3>
-                        <div class="primero">
-                            <h4>Marca</h4>
-                            <h4>Motorola</h4>
-                        </div>
-                        <div class="segundo">
-                            <h4>Línea</h4>
-                            <h4>Moto E</h4>
-                        </div>
-                            <div class="tercero">
-                                <h4>Modelo</h4>
-                                <h4>E7 Plus</h4>
-                            </div>
-                    </div>
-
-                    <div>
-                        <h3>Pantalla</h3>
-                        <div class="primero">
-                            <h4>Tamaño</h4>
-                            <h4>6.5 "</h4>
-                        </div>
-                        <div class="segundo">
-                            <h4>Resolución</h4>
-                            <h4>720 px x 1600 px</h4>
-                        </div>
-                        <div class="tercero">
-                            <h4>Tecnología </h4>
-                            <h4>IPS</h4>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>Memoria</h3>
-                        <div class="primero">
-                            <h4>Memoria interna</h4>
-                            <h4>64 GB</h4>
-                        </div>
-                        <div class="segundo">
-                            <h4>Memoria RAM</h4>
-                            <h4>4 GB</h4>
-                        </div>
-                        <div class="tercero">
-                            <h4>Tipos de tarjeta</h4>
-                            <h4>MicroSD</h4>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>Procesador</h3>
-                        <div class="primero">
-                        <h4>Modelo</h4>
-                            <h4>Snapdragon 460</h4>
-                        </div>
-                        <div class="segundo">                       
-                            <h4>Cantidad de núcleos</h4>
-                            <h4>8</h4>
-                        </div>
-                        <div class="tercero">                            
-                            <h4>Velocidad</h4>
-                            <h4>1.8 GHz</h4>
-                        </div>
-                    </div>
-
+                <div class="d-grid gap-2 button-productDetail">
+                  <button class="btn btn-primary" type="button">Comprar</button>
+                  
                 </div>
-            </section>
+                
+                <div class="edit-delete">
+                
+                  <a href="product/edit/<%= item.id %>"  title="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                  
+                                                                          
+                <form action="product/delete/<%= item.id %>?_method=delete" method="post">
+                
+                  <button class="button-delete" type="submit">
+                    <i width="30px" class="fa-regular fa-trash-can"></i>
+                  </button>
+                 
+                </form>
+              </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        </div>
+        <% }) %>
 
-            <section class="whatsapp">                    
-                <div class="btn-whatsapp">                        
-                    <a href="https://api.whatsapp.com/send/?phone=calleFalsa123&text=Si están leyendo estoy pongan en le chat que nuestra pagina está buenisima!!!" target="_blank">                    
-                        <img src="images/whatsapp-logo.png" alt="whatsapp logo">
-                    </a>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- FOOTER -->
+      </main>
+      <footer>
         <%- include('./partials/footer') %>
-
-    </body>
-</html>
+      </footer>
+       </body>
+        </html>

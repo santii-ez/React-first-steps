@@ -54,6 +54,10 @@ node_modules
 
 --node.js
 --express
+--nodemon
+--template engine (ejs)
+--multe
+--method-override
 
 ### Instalación 🔧
 
@@ -66,7 +70,27 @@ npm install express -save
 
 Instalar 'nodemon'
 
-_source: https://www.npmjs.com/package/nodemon_
+_source: https://www.npmjs.com/package/gui-licenses-export
 
+npm install -g nodemon
 npm install --save-dev nodemon
+
+Instalar 'template engine'
+
+_source: https://www.npmjs.com/package/ejs
+
+npm install ejs
+
+Instalar 'multer'
+
+_source: https://www.npmjs.com/package/multer
+
+npm install --save multer
+
+
+Instalar 'method-override'
+
+__source: https://www.npmjs.com/package/method-override
+
+npm install method-override
 

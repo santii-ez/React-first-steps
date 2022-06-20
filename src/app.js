@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const methodOverride = require ('method-override') 
 
 //>montar rutas 
 const productRoutes = require ('./routes/productRoutes');
@@ -15,6 +16,10 @@ const port = 3000;
 app.use(express.static(path.join(__dirname,'views')));
 // public
 app.use(express.static(path.join(__dirname,'../public')));
+// Decode Form URL Encoded Data
+app.use(express.urlencoded({extended: false}));
+// Put and Delete method
+app.use(methodOverride ('_method'));
 
 //EJS
 app.set('view engine', 'ejs');
