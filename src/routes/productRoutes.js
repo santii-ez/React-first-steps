@@ -30,11 +30,11 @@ router.get("/", productControllers.listProducts);
 //Delete products
 router.delete("/delete/:id", productControllers.delete)
 
-router.get("/listPhones", productControllers.listProducts);
+// router.get("/listPhones", productControllers.listProducts);
 
-router.get("/listNotebook", productControllers.listNotebook);
+// router.get("/listNotebook", productControllers.listNotebook);
 
-router.get("/listTablet", productControllers.listTablet);
+// router.get("/listTablet", productControllers.listTablet);
 
 
 // Edit products
