@@ -19,6 +19,7 @@ El proyecto integrador requiere la creacion de un e-commerce, por lo cual, hemos
 <li>Fravega: https://www.fravega.com/ </li>
 <li> Garbarino: https://www.garbarino.com/ </li>
 <li> Musimundo: https://www.musimundo.com/ </li>
+<li> Mercado libre: https://www.mercadolibre.com.ar/ </li>
 </ol>
    
 Los sitios web de referencia han sido elegidos por ser los mejores posicionados a nivel nacional en el rubro de e-commerce de tecnologia. Ademas, cabe destacar, la simplicidad de estilo y de navegacion de estos proponen.  
