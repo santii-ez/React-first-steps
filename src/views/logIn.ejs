@@ -39,33 +39,66 @@
 
             </article>
 
-            <article class="formulario-registro">                
-                <form action="home" method="post" id="registro">
+         
+            <article class="formulario-registro">    
+               
+                
+                <form action="/user/login" method="POST" id="registro" enctype="multipart/form-data">
                     <div class="registro">
                         <h2>Creá tu cuenta</h2>
                         <h4>Datos Personales</h4>
                     </div>
 
                     <label class="label-bold"  for="name">Nombre
-                        <input class= "input-formulario" type="text" name="name" id="name" required>
+                        <input 
+                        type="text" 
+                        name="fullName" 
+                        id="name" 
+                        class= "input-formulario <%= locals.errors && errors.fullName ? 'is-invalid' : null %>"
+                        value="<%= locals.oldData ? oldData.fullName : null %>" >
                     </label>
+                    <% if(locals.errors && errors.fullName) { %>
+                    <div class="text-danger">
+                    <%= errors.fullName.msg %>
+                    </div>
+                    <% } %>
 
                     <label class="label-bold" for="name">Apellido
-                        <input class= "input-formulario" type="text" name="name" id="name" required>
+                        <input class= "input-formulario" type="text" name="lastName" id="name"  value="<%= locals.oldData ? oldData.lastName : null %>">
                     </label>
+                    <% if(locals.errors && errors.lastName) { %>
+                    <div class="text-danger">
+                        <%= errors.lastName.msg %>
+                    </div>
+                        <% } %>
 
                     <label class="label-bold" for="email">Email
-                        <input class= "input-formulario" type="email" name="email" id="email" required>
+                        <input class= "input-formulario" type="email" name="email" id="email"  value="<%= locals.oldData ? oldData.email: null %>">
                     </label>
+                    <% if(locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                        <% } %>
 
-                    <label class="label-bold" for="contraseña">Contraseña
-                        <input class= "input-formulario" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
+                    <label class="label-bold" for="contrasena">Contraseña
+                        <input class= "input-formulario" type="password" name="contrasena" id="contrasena" placeholder="Contraseña" >
                     </label>
+                    <% if(locals.errors && errors.contrasena) { %>
+                    <div class="text-danger">
+                        <%= errors.contrasena.msg %>
+                    </div>
+                        <% } %>
 
-                    <label class="label-bold"  for="passconfcon"> Confirmar ontraseña
-                        <input class= "input-formulario" type="password" name="passconfcon" id="passconfcon" placeholder=" Confirmar contraseña" required>
+                    <label class="label-bold"  for="passconfcon"> Confirmar Contraseña
+                        <input class= "input-formulario" type="password" name="passconfcon" id="passconfcon" placeholder=" Confirmar contraseña" >
                     </label>
                     <br>
+                    <label class="label-bold"  for="avatar"> Imagen de Perfil
+                        <input class= "input-formulario" type="file" name="avatar" id="avatar" >
+                    </label>
+
+                 
 
                     <input  class='submit-login' type="submit" value="Ingresar">
             
