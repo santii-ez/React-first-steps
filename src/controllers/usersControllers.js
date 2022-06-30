@@ -1,7 +1,8 @@
 const fs = require ('fs');
 const path = require ('path');
 const { validationResult }= require('express-validator');
-
+const bcrypt = require('bcryptjs');
+const multer = require('multer');
 
 const controller = {
     login: (req, res) => {
@@ -27,6 +28,9 @@ const controller = {
         res.redirect('/')
 
     },
+    ingress: 'mañana lo sigo',
+    
+
 };
 
 module.exports = controller;

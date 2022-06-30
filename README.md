@@ -59,6 +59,8 @@ node_modules
 --template engine (ejs)
 --multe
 --method-override
+--express-validator
+--bcryptjs
 
 ### Instalación 🔧
 
@@ -91,7 +93,23 @@ npm install --save multer
 
 Instalar 'method-override'
 
-__source: https://www.npmjs.com/package/method-override
+_source: https://www.npmjs.com/package/method-override
 
 npm install method-override
+
+
+
+Instalar 'express-validator'
+
+_source: https://express-validator.github.io/docs/
+
+npm install --save express-validator
+
+
+
+Instalar 'bcryptjs'
+
+_source: https://www.npmjs.com/package/bcryptjs
+
+npm install bcryptjs
 
