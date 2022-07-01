@@ -28,8 +28,32 @@ const controller = {
         res.redirect('/')
 
     },
-    ingress: 'mañana lo sigo',
-    
+    ingress: (req,res) =>{
+        //Creo el objeto errors para validar desde el back la entrada del usuario
+        const errors = validationResult(req);
+        //Verifico que el objeto errors este vacío
+        if(errors.isEmpty()){
+        //return res.send(errors.mapped());(con esto me fijo que trae el objeto errores)
+            //Me traigo el archivo plano de users y lo parseo.
+            let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
+            //Busco el objeto literal que coincide con el mail que viaja en el body del formulario
+            let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
+            //return res.send(usuarioLogueado);(con esto me fijo que tiene el objeto que acabo de crear con el fitro que hice)
+            //Como podemos modificar nuestros req.body
+            delete usuarioLogueado.password;//?????????? preguntar la logica del negocio detras de esto
+            req.session.usuario = usuarioLogueado;  //Guardar del lado del servidor
+            //Aquí voy a guardar las cookies del usuario que se loguea
+            if(req.body.recordarme){
+                res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})//tiempo que guardo la cookie
+            }
+            //Si todo sale bien hice que el usuario entre a su cuenta y lo envio a la pagina prinsipal
+            return res.redirect('/');
+        }else{
+          //Si el usuario se equivocó lo mando de nuevo a la vista del formulario y le levanto los errores
+          res.render(path.resolve(__dirname, '../views/logIn'),{errors:errors.mapped(),old:req.body});        
+        }
+      },
+
 
 };
 

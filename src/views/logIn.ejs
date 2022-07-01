@@ -12,11 +12,11 @@
         <section class="section-set-display formulario">
             <!--Ingreso de usuario registrado-->
             <article class="formulario-login">
-            
-                <form action="home" method="post" id="login">
+                
+                <form action="/" method="post" id="login">
                     <h2>Ingresá</h2>
-                    
                     <br>
+
                     <label class="label-bold" for="email">Usuario
                         <br>
                         <input class= "input-formulario" type="email" name="email" id="email" placeholder="mjabdo@hotmail.com" minlength="5" maxlength="30" required value="<%= typeof old != 'undefined' ? old.email : '' %>">
@@ -27,6 +27,7 @@
                             </span>
                          <%}%>
                     </label>
+
                     <label class="label-bold" for="contraseña">Contraseña
                         <input class= "input-formulario"  type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
                         <br>
@@ -35,6 +36,11 @@
                               <%= errors.password.msg %>
                             </span>
                          <%}%>
+                    </label>
+
+                    <label class="label-bold" for="recordarme">Recordarme
+                        <input class="input-formulario" type="checkbox" name="recordarme" id="recordarme">
+                        <br>
                     </label>
 
                    

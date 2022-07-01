@@ -38,12 +38,12 @@ const validationsRegister = [
 ]
 
 //Ejecucion de las validaciones para el formulario de ingreso
-const validationsIngress = [
-    //Validacion sobre el back del mail
+const validationsLogin = [
+    //Validacion en el back del mail
     body('email').isEmail().withMessage('Escribiste mal tu e-mail'),
-    //Validacion sobre el back de la contraseña
+    //Validacion en el back de la contraseña
     body('password').isLength({min: 5 }).withMessage('Te quedaste corto che, la clave era de 5 caracteres... O más'),
-    //Si pasa las dos validaciones anteriores, se verifica en el array de archivosUsers exista el usuario
+    //Si pasa las dos validaciones anteriores, se verifica en el array de archivosUsers que exista el usuario
     body('email').custom( (value  ) =>{
       for (let i = 0; i < archivosUsers.length; i++) {
           if (archivosUsers[i].email == value) {
@@ -54,6 +54,7 @@ const validationsIngress = [
     }).withMessage('No existis! O te diste de baja, o nunca te registraste... O peor aún, nuestros programadores te bloquearon y estan llamando al Interpol'),
 
     //Si pasa las 3 validaciones solo queda confirmar que la contraseña que ingreso es la correcta
+    /*hasta que no se haga la encriptacion en el formulario de register esta etapa queda comentada
     body('password').custom( (value, {req}) =>{
         for (let i = 0; i < archivosUsers.length; i++) {
             if (archivosUsers[i].email == req.body.email) {
@@ -66,7 +67,7 @@ const validationsIngress = [
         }
         
     }).withMessage('Usurio o contraseña no coinciden. Eso pasa cuando hay un problema entre el monitor y la silla... De forma condecorosa le decimos error capa 8'),
-
+    */
 ]
 
 
@@ -75,10 +76,10 @@ const validationsIngress = [
 // Formulario de registro y login
 router.get("/login", usersControllers.login);
 
-// Procesar el registro
+//ingresar a tu cuenta
 router.post("/login", upLoadFile.single('avatar'), validationsRegister, usersControllers.processRegister)
 
 //ingresar a tu cuenta
-router.post('/login', validationsIngress, usersControllers.ingress)
+router.post('/', validationsLogin, usersControllers.ingress)
 
 module.exports = router;
