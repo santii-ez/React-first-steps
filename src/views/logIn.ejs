@@ -93,10 +93,20 @@
                     <label class="label-bold"  for="passconfcon"> Confirmar Contraseña
                         <input class= "input-formulario" type="password" name="passconfcon" id="passconfcon" placeholder=" Confirmar contraseña" >
                     </label>
+                    <% if(locals.errors && errors.passconfcon) { %>
+                        <div class="text-danger">
+                            <%= errors.passconfcon.msg %>
+                        </div>
+                            <% } %>
                     <br>
                     <label class="label-bold"  for="avatar"> Imagen de Perfil
                         <input class= "input-formulario" type="file" name="avatar" id="avatar" >
                     </label>
+                    <% if(locals.errors && errors.avatar) { %>
+                        <div class="text-danger">
+                            <%= errors.avatar.msg %>
+                        </div>
+                            <% } %>
 
                  
 
