@@ -22,7 +22,7 @@ const upLoadFile = multer({storage})
 //requerir express validator
 
 const { body } = require('express-validator')
-const validations = [
+const validationsRegister = [
     body('fullName').notEmpty().withMessage('Tienes que ingresar su nombre'),
     body('lastName').notEmpty().withMessage('Tienes que ingresar su apellido'),
     body('email').notEmpty().withMessage('Tienes que ingresar su email').bail()
@@ -58,7 +58,7 @@ const validations = [
 router.get("/login", usersControllers.login);
 
 // Procesar el registro
-router.post("/login", upLoadFile.single('avatar'), validations, usersControllers.processRegister)
+router.post("/login", upLoadFile.single('avatar'), validationsRegister, usersControllers.processRegister)
 
 
 module.exports = router;
