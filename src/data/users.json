@@ -62,5 +62,12 @@
   "email": "zkarlsson7@ucoz.com",
   "password": "Jl1MJPvmvHN",
   "image": "user_8.jpg"
+ },
+ {
+  "fullName": "Pedro",
+  "lastName": "Sauma",
+  "email": "pedrosaumacammi@gmail.com",
+  "password": "$2a$10$5N5Tey2o5Osw9pGGIint0OEOfuhbbhr84SSunEjF93cFBL7UpV0dK",
+  "avatar": "1657210070878_img.jpg"
  }
 ]

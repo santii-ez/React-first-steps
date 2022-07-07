@@ -52,11 +52,11 @@ const controller = {
 
        // tercero agregar avatar y el hash de las contrasenas 
          let userToCreate = {
-             id : req.body.id,
+             id : req.body.id,//agregar un autoincremento
              fullName: req.body.fullName,
              lastName: req.body.lastName,
              email: req.body.email,
-             contrasena : bcrypt.hashSync(req.body.contrasena, 10),
+             password : bcrypt.hashSync(req.body.password, 10),
              avatar: req.file.filename
          }
 
@@ -64,7 +64,7 @@ const controller = {
       
 
         users.create (userToCreate);
-        return res.send('ok, se guardo al usuario');
+        return res.render('logIn');
 
         },
 
@@ -80,13 +80,13 @@ const controller = {
             let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.correo)
             //return res.send(usuarioLogueado);(con esto me fijo que tiene el objeto que acabo de crear con el fitro que hice)
             //Como podemos modificar nuestros req.body
-            delete usuarioLogueado.password;//?????????? preguntar la logica del negocio detras de esto
-            //<<<<<<<<<<<<<<<<<<<<ver punto 4>>>>>>>>>>>>>>>>>>>>>>>>>>>
+            //<<<<<<<<<<<<<<<<<<<<<<<Revisar lineas 84 y 85>>>>>>>>>>>>>>>>>
+            /*delete usuarioLogueado.password;//?????????? preguntar la logica del negocio detras de esto
             req.session.usuario = usuarioLogueado;  //Guardar del lado del servidor
             //Aquí voy a guardar las cookies del usuario que se loguea
             if(req.body.recordarme){
                 res.cookie('correo',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})//tiempo que guardo la cookie
-            }
+            }*/
             //Si todo sale bien hice que el usuario entre a su cuenta y lo envio a la pagina prinsipal
             return res.redirect('/');
         }else{

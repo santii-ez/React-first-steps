@@ -13,7 +13,7 @@
             <!--Ingreso de usuario registrado-->
             <article class="formulario-login">
                 
-                <form action="/" method="post" id="login">
+                <form action="/user" method="post" id="login">
                     <h2>Ingresá</h2>
                     <br>
 
@@ -28,12 +28,12 @@
                          <%}%>
                     </label>
 
-                    <label class="label-bold" for="password">Contraseña
-                        <input class= "input-formulario"  type="password" name="password" id="password" placeholder="Contraseña" required>
+                    <label class="label-bold" for="contrasena">Contraseña
+                        <input class= "input-formulario"  type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
                         <br>
-                        <% if(typeof(errors) != 'undefined' && errors.password){%>
+                        <% if(typeof(errors) != 'undefined' && errors.contrasena){%>
                             <span class="text-danger">
-                              <%= errors.password.msg %>
+                              <%= errors.contrasena.msg %>
                             </span>
                          <%}%>
                     </label>
@@ -99,12 +99,12 @@
                     </div>
                         <% } %>
 
-                    <label class="label-bold" for="contrasena">Contraseña
-                        <input class= "input-formulario" type="password" name="contrasena" id="contrasena" placeholder="Contraseña" >
+                    <label class="label-bold" for="password">Contraseña
+                        <input class= "input-formulario" type="password" name="password" id="password" placeholder="Contraseña" >
                     </label>
-                    <% if(locals.errors && errors.contrasena) { %>
+                    <% if(locals.errors && errors.password) { %>
                     <div class="text-danger">
-                        <%= errors.contrasena.msg %>
+                        <%= errors.password.msg %>
                     </div>
                         <% } %>
 

@@ -36,9 +36,9 @@ const validationsRegister = [
     body('lastName').notEmpty().withMessage('Tienes que ingresar su apellido'),
     body('email').notEmpty().withMessage('Tienes que ingresar su email').bail()
     .isEmail(). withMessage('Ingrese un email valido'),
-    body('contrasena').notEmpty().withMessage('Tienes que ingresar su contraseña'),
+    body('password').notEmpty().withMessage('Tienes que ingresar su contraseña'),
     body('passconfcon').custom((value, {req}) =>{
-        if(req.body.contrasena == value ){
+        if(req.body.password == value ){
             return true    // Si yo retorno un true  no se muestra el error     
         }else{
             return false   // Si retorno un false si se muestra el error
@@ -46,7 +46,7 @@ const validationsRegister = [
     }).withMessage('Las contraseñas deben ser iguales'),
     body('avatar').custom((value, {req})=>{
         let file = req.file
-        let acceptedExtensions = ['.jpg', '.png', '.gif']
+        let acceptedExtensions = ['.jpg','.jpeg', '.png', '.gif']
         if(!file){
             throw new Error ('Tienes que subir una imagen')
         }
@@ -68,7 +68,7 @@ const validationsLogin = [
     //Validacion en el back del mail
     body('correo').isEmail().withMessage('Escribiste mal tu e-mail'),
     //Validacion en el back de la contraseña
-    body('password').notEmpty().withMessage('Si no escribis una contraseña no vas a poder entrar'),
+    body('contrasena').notEmpty().withMessage('Si no escribis una contraseña no vas a poder entrar'),
     //Si pasa las dos validaciones anteriores, se verifica en el array de archivosUsers que exista el usuario
     body('correo').custom( (value  ) =>{
       for (let i = 0; i < archivosUsers.length; i++) {
@@ -80,7 +80,7 @@ const validationsLogin = [
     }).withMessage('No existis! O te diste de baja, o nunca te registraste... O peor aún, nuestros programadores te bloquearon y estan llamando al Interpol'),
 
     //Si pasa las 3 validaciones solo queda confirmar que la contraseña que ingreso es la correcta
-    body('password').custom( (value, {req}) =>{
+    body('contrasena').custom( (value, {req}) =>{
         for (let i = 0; i < archivosUsers.length; i++) {
             if (archivosUsers[i].email == req.body.correo) {
                 if(bcrypt.compareSync(value, archivosUsers[i].password)){//como la contraseña esta encriptada se debe hacer un paso adicional
@@ -100,10 +100,10 @@ const validationsLogin = [
 // Formulario de registro y login
 router.get("/login", usersControllers.login);
 
-//ingresar a tu cuenta
+//crea a tu cuenta
 router.post("/login", upLoadFile.single('avatar'), validationsRegister, usersControllers.processRegister)
 
 //ingresar a tu cuenta
-router.post('/', validationsLogin, usersControllers.ingress)
+router.post('/', validationsLogin, usersControllers.ingress) 
 
 module.exports = router;
