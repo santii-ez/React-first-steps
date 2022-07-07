@@ -5,7 +5,8 @@
   "last_name": "Isaksen",
   "email": "nisaksen0@a8.net",
   "password": "d3MZ36RlRf",
-  "image": "user_1.jpg"
+  "image": "user_1.jpg",
+  "role": "1"
  },
  {
   "id": 2,
@@ -13,7 +14,8 @@
   "last_name": "Andrea",
   "email": "landrea1@geocities.jp",
   "password": "GEZ8AqWXj",
-  "image": "user_2.jpg"
+  "image": "user_2.jpg",
+  "role": "1"
  },
  {
   "id": 3,
@@ -21,7 +23,8 @@
   "last_name": "Pippard",
   "email": "mpippard2@seattletimes.com",
   "password": "2SXDw8P",
-  "image": "user_3.jpg"
+  "image": "user_3.jpg",
+  "role": "1"
  },
  {
   "id": 4,
@@ -29,7 +32,8 @@
   "last_name": "Mulryan",
   "email": "rmulryan3@bigcartel.com",
   "password": "jz5whrX",
-  "image": "user_4.jpg"
+  "image": "user_4.jpg",
+  "role": "1"
  },
  {
   "id": 5,
@@ -37,7 +41,8 @@
   "last_name": "Tremblay",
   "email": "atremblay4@wunderground.com",
   "password": "eQOkoyWvn",
-  "image": "user_5.jpg"
+  "image": "user_5.jpg",
+  "role": "1"
  },
  {
   "id": 6,
@@ -45,7 +50,8 @@
   "last_name": "Acreman",
   "email": "eacreman5@google.nl",
   "password": "DLmjhS8rmUb",
-  "image": "user_6.jpg"
+  "image": "user_6.jpg",
+  "role": "1"
  },
  {
   "id": 7,
@@ -53,7 +59,8 @@
   "last_name": "Farren",
   "email": "mfarren6@e-recht24.de",
   "password": "Y210UwnQ",
-  "image": "user_7.jpg"
+  "image": "user_7.jpg",
+  "role": "1"
  },
  {
   "id": 8,
@@ -61,13 +68,16 @@
   "last_name": "Karlsson",
   "email": "zkarlsson7@ucoz.com",
   "password": "Jl1MJPvmvHN",
-  "image": "user_8.jpg"
+  "image": "user_8.jpg",
+  "role": "1"
  },
  {
+  "id": 9,
   "fullName": "Pedro",
   "lastName": "Sauma",
   "email": "pedrosaumacammi@gmail.com",
-  "password": "$2a$10$5N5Tey2o5Osw9pGGIint0OEOfuhbbhr84SSunEjF93cFBL7UpV0dK",
-  "avatar": "1657210070878_img.jpg"
+  "password": "$2a$10$rhnR5thTqXKixLwePE.d.epxv2KhtkgtRQbDqJTW4xvVCOWUHWimm",
+  "avatar": "1657228197179_img.jpg",
+  "role": 1
  }
 ]

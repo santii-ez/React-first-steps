@@ -103,7 +103,10 @@ router.get("/login", usersControllers.login);
 //crea a tu cuenta
 router.post("/login", upLoadFile.single('avatar'), validationsRegister, usersControllers.processRegister)
 
-//ingresar a tu cuenta
+//iniciar secion
 router.post('/', validationsLogin, usersControllers.ingress) 
+
+//cerrar secion
+router.get("/logout", usersControllers.logout)
 
 module.exports = router;

@@ -101,7 +101,7 @@ body{
  }
  
  .user-login i{
-    
+
     
      font-size: 5vw;
      margin-right: 10px;
@@ -116,7 +116,17 @@ body{
  .user-login i:hover {
      transform: scale(1.1);
  }
- 
+
+ .user-img {
+    height: 50%;
+}
+
+.user-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
  /*burger-menu*/
  
  .burger-menu{
