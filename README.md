@@ -61,55 +61,65 @@ node_modules
 --method-override
 --express-validator
 --bcryptjs
+--express-session
+--cookie-parser
 
 ### Instalación 🔧
+<ol>
+<li>
+    Instalar 'node_modules' en el proyecto
+    _source: https://expressjs.com/es/starter/installing.html_
 
-Instalar 'node_modules' en el proyecto
+    $ npm install express -save
+</li>
+<li>
+    Instalar 'nodemon'
+    _source: https://www.npmjs.com/package/gui-licenses-export
 
-_source: https://expressjs.com/es/starter/installing.html_
+    $ npm install -g nodemon
+    $ npm install --save-dev nodemon
+</li>
+<li>
+    Instalar 'template engine'
 
-npm install express -save
+    _source: https://www.npmjs.com/package/ejs
 
+    $ npm install ejs
+</li>
+<li>
+    Instalar 'multer'
+    _source: https://www.npmjs.com/package/multer
 
-Instalar 'nodemon'
+    $ npm install --save multer
+</li>
+<li>
+    Instalar 'method-override'
+    _source: https://www.npmjs.com/package/method-override
 
-_source: https://www.npmjs.com/package/gui-licenses-export
+    $ npm install method-override
+</li>
+<li>
+    Instalar 'express-validator'
+    _source: https://express-validator.github.io/docs/
 
-npm install -g nodemon
-npm install --save-dev nodemon
+    $ npm install --save express-validator
+</li>
+<li>
+    Instalar 'bcryptjs'
+    _source: https://www.npmjs.com/package/bcryptjs
 
-Instalar 'template engine'
+    $ npm install bcryptjs
+</li>
+<li>
+    Instalar 'express-session'
+    _source: https://www.npmjs.com/package/express-session
 
-_source: https://www.npmjs.com/package/ejs
+    $ npm install express-session
+</li>
+<li>
+    Instalar 'cookie-parser'
+    _source: 
 
-npm install ejs
-
-Instalar 'multer'
-
-_source: https://www.npmjs.com/package/multer
-
-npm install --save multer
-
-
-Instalar 'method-override'
-
-_source: https://www.npmjs.com/package/method-override
-
-npm install method-override
-
-
-
-Instalar 'express-validator'
-
-_source: https://express-validator.github.io/docs/
-
-npm install --save express-validator
-
-
-
-Instalar 'bcryptjs'
-
-_source: https://www.npmjs.com/package/bcryptjs
-
-npm install bcryptjs
-
+    $ npm install cookie-parser
+</li>
+</ol>

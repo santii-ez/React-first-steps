@@ -17,9 +17,9 @@
                     <h2>Ingresá</h2>
                     <br>
 
-                    <label class="label-bold" for="email">Usuario
+                    <label class="label-bold" for="correo">Usuario
                         <br>
-                        <input class= "input-formulario" type="email" name="email" id="email" placeholder="mjabdo@hotmail.com" minlength="5" maxlength="30" required value="<%= typeof old != 'undefined' ? old.email : '' %>">
+                        <input class= "input-formulario" type="email" name="correo" id="correo" placeholder="mjabdo@hotmail.com" minlength="5" maxlength="30" required value="<%= typeof old != 'undefined' ? old.correo : '' %>">
                         <br>
                         <% if(typeof(errors) != 'undefined' && errors.email){%>
                             <span class="text-danger"> 
@@ -28,8 +28,8 @@
                          <%}%>
                     </label>
 
-                    <label class="label-bold" for="contraseña">Contraseña
-                        <input class= "input-formulario"  type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
+                    <label class="label-bold" for="password">Contraseña
+                        <input class= "input-formulario"  type="password" name="password" id="password" placeholder="Contraseña" required>
                         <br>
                         <% if(typeof(errors) != 'undefined' && errors.password){%>
                             <span class="text-danger">

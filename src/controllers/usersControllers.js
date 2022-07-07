@@ -56,7 +56,7 @@ const controller = {
              fullName: req.body.fullName,
              lastName: req.body.lastName,
              email: req.body.email,
-             contrasena : bcryptjs.hashSync(req.body.contrasena, 10),
+             contrasena : bcrypt.hashSync(req.body.contrasena, 10),
              avatar: req.file.filename
          }
 
@@ -77,14 +77,15 @@ const controller = {
             //Me traigo el archivo plano de users y lo parseo.
             let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
             //Busco el objeto literal que coincide con el mail que viaja en el body del formulario
-            let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.email)
+            let usuarioLogueado = archivoUsuarios.find(usuario => usuario.email == req.body.correo)
             //return res.send(usuarioLogueado);(con esto me fijo que tiene el objeto que acabo de crear con el fitro que hice)
             //Como podemos modificar nuestros req.body
             delete usuarioLogueado.password;//?????????? preguntar la logica del negocio detras de esto
+            //<<<<<<<<<<<<<<<<<<<<ver punto 4>>>>>>>>>>>>>>>>>>>>>>>>>>>
             req.session.usuario = usuarioLogueado;  //Guardar del lado del servidor
             //Aquí voy a guardar las cookies del usuario que se loguea
             if(req.body.recordarme){
-                res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})//tiempo que guardo la cookie
+                res.cookie('correo',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})//tiempo que guardo la cookie
             }
             //Si todo sale bien hice que el usuario entre a su cuenta y lo envio a la pagina prinsipal
             return res.redirect('/');

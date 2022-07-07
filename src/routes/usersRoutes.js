@@ -66,11 +66,11 @@ const validationsRegister = [
 //Ejecucion de las validaciones para el formulario de ingreso
 const validationsLogin = [
     //Validacion en el back del mail
-    body('email').isEmail().withMessage('Escribiste mal tu e-mail'),
+    body('correo').isEmail().withMessage('Escribiste mal tu e-mail'),
     //Validacion en el back de la contraseña
-    body('password').isLength({min: 5 }).withMessage('Te quedaste corto che, la clave era de 5 caracteres... O más'),
+    body('password').notEmpty().withMessage('Si no escribis una contraseña no vas a poder entrar'),
     //Si pasa las dos validaciones anteriores, se verifica en el array de archivosUsers que exista el usuario
-    body('email').custom( (value  ) =>{
+    body('correo').custom( (value  ) =>{
       for (let i = 0; i < archivosUsers.length; i++) {
           if (archivosUsers[i].email == value) {
               return true    
@@ -80,10 +80,9 @@ const validationsLogin = [
     }).withMessage('No existis! O te diste de baja, o nunca te registraste... O peor aún, nuestros programadores te bloquearon y estan llamando al Interpol'),
 
     //Si pasa las 3 validaciones solo queda confirmar que la contraseña que ingreso es la correcta
-    /*hasta que no se haga la encriptacion en el formulario de register esta etapa queda comentada
     body('password').custom( (value, {req}) =>{
         for (let i = 0; i < archivosUsers.length; i++) {
-            if (archivosUsers[i].email == req.body.email) {
+            if (archivosUsers[i].email == req.body.correo) {
                 if(bcrypt.compareSync(value, archivosUsers[i].password)){//como la contraseña esta encriptada se debe hacer un paso adicional
                   return true;
                 }else{
@@ -93,7 +92,6 @@ const validationsLogin = [
         }
         
     }).withMessage('Usurio o contraseña no coinciden. Eso pasa cuando hay un problema entre el monitor y la silla... De forma condecorosa le decimos error capa 8'),
-    */
 ]
 
 
