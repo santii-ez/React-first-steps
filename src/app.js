@@ -34,7 +34,7 @@ app.use(methodOverride ('_method'));
 //EJS
 app.set('view engine', 'ejs');
 
-//
+//Para mantener en sesion al usuario
 app.use(session({
     secret : 'topSecret',
     resave: true,
@@ -44,7 +44,7 @@ app.use(session({
 //Aqui coloco el Middleware para activar lo referido a las cookies
 app.use(cookieParser());
 
-//Middleware de aplicación que se encarga de controlar si el usuario está logueado o no.
+//Middleware de aplicación que se encarga de controlar si el usuario está logueado o no
 app.use(acceso);
 
 

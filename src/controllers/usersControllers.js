@@ -46,7 +46,6 @@ const controller = {
                 oldData : req.body
 
                 })
-                   
          }
 
 
@@ -66,9 +65,6 @@ const controller = {
             //Agregamos por default el rol de usuario común
             role: 1
         }
-
-
-      
 
         users.create (userToCreate);
         return res.render('logIn');
