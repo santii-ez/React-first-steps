@@ -91,7 +91,7 @@ const validationsLogin = [
             }
         }
         
-    }).withMessage('Usurio o contraseña no coinciden. Eso pasa cuando hay un problema entre el monitor y la silla... De forma condecorosa le decimos error capa 8'),
+    }).withMessage('Usurio o contraseña no coinciden. Error de capa 8'),
 ]
 
 

@@ -21,11 +21,11 @@
         <div class="carrito-compra">
             <a href="/product/productCart" target="blank" title=" Tus Compras"><i class="fa-solid fa-cart-shopping"></i></a>           
         </div>
-        <%if(locals.usuario.role == 9){%>
+        <% if(locals.usuario.role == 9){ %>
             <div class="user-login">
                 <a href="#" target="_blank" title="admin"><i class="fa-regular fa-pen-to-square"></i></a>
             </div>
-        <%}>
+        <% } %>
         <% if (locals.usuario){ %>
             <!--Cuando ha iniciado secion-->
             <div class="user-login">
@@ -34,12 +34,12 @@
             <div class="user-img">
                 <img  src="/images/users/<%=locals.usuario.avatar %>"  alt="usuario">
             </div>
-        <%} else{%>
+        <% } else{ %>
             <!--Cuando no ha iniciado secion-->
             <div class="user-login">
                 <a href="/user/login" target="_blank" title="Ingresa"><i class="fa-solid fa-circle-user"></i></a>
             </div>
-        <%}%>
+        <% } %>
 
     </div>
         
