@@ -3,6 +3,8 @@ const router = express.Router();
 const usersControllers = require('../controllers/usersControllers');
 const path = require("path");
 const multer = require("multer");
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 //requerir express validator
 const { body } = require('express-validator')
@@ -66,9 +68,9 @@ const validationsRegister = [
 //Ejecucion de las validaciones para el formulario de ingreso
 const validationsLogin = [
     //Validacion en el back del mail
-    body('correo').isEmail().withMessage('Escribiste mal tu e-mail'),
+    body('correo').isEmail().withMessage('Por favor, ingrese un formato de mail válido'),
     //Validacion en el back de la contraseña
-    body('contrasena').notEmpty().withMessage('Si no escribis una contraseña no vas a poder entrar'),
+    body('contrasena').notEmpty().withMessage('Por favor, escriba su contraseña'),
     //Si pasa las dos validaciones anteriores, se verifica en el array de archivosUsers que exista el usuario
     body('correo').custom( (value  ) =>{
       for (let i = 0; i < archivosUsers.length; i++) {
@@ -77,7 +79,7 @@ const validationsLogin = [
           }
       }
       return false
-    }).withMessage('No existis! O te diste de baja, o nunca te registraste... O peor aún, nuestros programadores te bloquearon y estan llamando al Interpol'),
+    }).withMessage('Su email no se encuentra registrado'),
 
     //Si pasa las 3 validaciones solo queda confirmar que la contraseña que ingreso es la correcta
     body('contrasena').custom( (value, {req}) =>{
@@ -91,14 +93,14 @@ const validationsLogin = [
             }
         }
         
-    }).withMessage('Usurio o contraseña no coinciden. Error de capa 8'),
+    }).withMessage('Credenciales Inválidas'),
 ]
 
 
 //Rutas
 
 // Formulario de registro y login
-router.get("/login", usersControllers.login);
+router.get("/login", guestMiddleware, usersControllers.login);
 
 //crea a tu cuenta
 router.post("/login", upLoadFile.single('avatar'), validationsRegister, usersControllers.processRegister)
@@ -107,6 +109,6 @@ router.post("/login", upLoadFile.single('avatar'), validationsRegister, usersCon
 router.post('/', validationsLogin, usersControllers.ingress) 
 
 //cerrar secion
-router.get("/logout", usersControllers.logout)
+router.get("/logout", authMiddleware, usersControllers.logout)
 
 module.exports = router;

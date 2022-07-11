@@ -75,20 +75,22 @@
                   <button class="btn btn-primary" type="button">Comprar</button>
                   
                 </div>
+                <% if (locals.usuario.role == 9) { %>
+                  <div class="edit-delete">
                 
-                <div class="edit-delete">
-                
-                  <a href="product/edit/<%= item.id %>"  title="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="product/edit/<%= item.id %>"  title="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                    
+                                                                            
+                  <form action="product/delete/<%= item.id %>?_method=delete" method="post">
                   
-                                                                          
-                <form action="product/delete/<%= item.id %>?_method=delete" method="post">
+                    <button class="button-delete" type="submit">
+                      <i width="30px" class="fa-regular fa-trash-can"></i>
+                    </button>
+                   
+                  </form>
+                  </div>
+                <% } %>
                 
-                  <button class="button-delete" type="submit">
-                    <i width="30px" class="fa-regular fa-trash-can"></i>
-                  </button>
-                 
-                </form>
-              </div>
                 
               </div>
               

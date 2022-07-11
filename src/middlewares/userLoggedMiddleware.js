@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')));
         
-let acceso = (req,res,next) =>{
+let userLoggedMiddleware = (req,res,next) =>{
     //Variable locals (super global - vive en las vistas )
     res.locals.usuario = false;
     if(req.session.usuario){
@@ -20,4 +20,4 @@ let acceso = (req,res,next) =>{
     }
 }
 
-module.exports = acceso 
+module.exports = userLoggedMiddleware 

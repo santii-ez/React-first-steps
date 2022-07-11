@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser');
 //Requiero el middleware que controla si el sitio está o no culminado
 const mantenimiento = require('./middlewares/mantenimiento');
 //Requerir el middleware que controla si el usuario está o no Logueado
-const acceso = require('./middlewares/acceso');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 //>montar rutas 
 const productRoutes = require ('./routes/productRoutes');
@@ -45,7 +45,7 @@ app.use(session({
 app.use(cookieParser());
 
 //Middleware de aplicación que se encarga de controlar si el usuario está logueado o no
-app.use(acceso);
+app.use(userLoggedMiddleware);
 
 
 //match
