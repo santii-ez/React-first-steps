@@ -123,10 +123,12 @@ const controllers = {
                   if (req.file) {
                     newProduct.image = req.file.filename;
                   }
+                  console.log(newProduct)
                   return newProduct;
                 }
                 return prod;
               });
+              
 
             let newArrayProducts = JSON.stringify(productUpdate, null, 2);
     

@@ -37,8 +37,8 @@ app.set('view engine', 'ejs');
 //Para mantener en sesion al usuario
 app.use(session({
     secret : 'topSecret',
-    resave: true,
-    saveUninitialized: true,
+    resave: false,
+    saveUninitialized: false,
 }))
 
 //Aqui coloco el Middleware para activar lo referido a las cookies

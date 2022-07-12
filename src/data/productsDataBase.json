@@ -3,23 +3,23 @@
     "id": 1,
     "name": "Samsung Galaxy M23 5G",
     "description": "Pantalla: 6.6 , 1080 x 2408 pixels, Procesador: Octa-core 2.2GHz, RAM: 4GB, Almacenamiento: 128GB, Expansión: microSD, Cámara: Triple, 50MP+8MP+2MP, Batería: 5000 mAh, OS: Android 1",
-    "price": 134.2,
+    "price": 134,
     "discount": 15,
     "category": "phones",
     "image": "samsung-Galaxy-m23.jpg",
-    "section": "lo mas buscado",
+    "section": "celulares",
     "marca": "Samsung"
   },
   {
     "id": 2,
     "name": "Samsung Galaxy A22 128 GB",
     "description": "Pantalla: 6.4, 720 x 1600 pixels, Procesador: Mediatek Helio G80 2GHz, RAM: 4GB/6GB, Almacenamiento: 64GB/128GB, xpansión: microSD, Cámara: Cuádruple, 48MP+8MP +2MP+2MP, Batería: 5000 mAh, OS: Android 11",
-    "price": 55,
+    "price": 56,
     "discount": 0,
     "category": "phones",
     "image": "samsung-galaxy-A22.jpg",
     "section": "celulares",
-    "marca": "samsung"
+    "marca": "Samsung"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "category": "phones",
     "image": "Samsung-Galaxy-A03.jpg",
     "section": "celulares",
-    "marca": "samsung"
+    "marca": "Samsung"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "category": "phones",
     "image": "xiaomi-note11.jpg",
     "section": "lo mas buscado",
-    "marca": "xiaomi"
+    "marca": "Xiaomi"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "category": "phones",
     "image": "xiaomi-poco.jpg",
     "section": "celulares",
-    "marca": "xiamoi"
+    "marca": "Xiamoi"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "category": "phones",
     "image": "xiaomi-poco-F3.jpg",
     "section": "celulares",
-    "marca": "xiaomi"
+    "marca": "Xiaomi"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "category": "café",
     "image": "huawei-mate30.jpg",
     "section": "lo mas buscado",
-    "marca": "huawei"
+    "marca": "Huawei"
   },
   {
     "id": 8,
@@ -85,7 +85,7 @@
     "category": "phones",
     "image": "huawei-p30.jpg",
     "section": "celulares",
-    "marca": "huawei"
+    "marca": "Huawei"
   },
   {
     "id": 9,
@@ -96,7 +96,7 @@
     "category": "phones",
     "image": "huawei-P50.jpg",
     "section": "celulares",
-    "marca": "huawei"
+    "marca": "Huawei"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "category": "tablets",
     "image": "galaxy-tab8.png",
     "section": "lo mas buscado",
-    "marca": "samsung"
+    "marca": "Samsung"
   },
   {
     "id": 11,
@@ -118,7 +118,7 @@
     "category": "tablets",
     "image": "galaxy-tabS8.jpg",
     "section": "tablets",
-    "marca": "samsung"
+    "marca": "Samsung"
   },
   {
     "id": 12,
@@ -129,7 +129,7 @@
     "category": "tablets",
     "image": "galaxy-tabS7.jpg",
     "section": "tablets",
-    "marca": "samsung"
+    "marca": "Samsung"
   },
   {
     "id": 13,
@@ -140,7 +140,7 @@
     "category": "tablets",
     "image": "lenovo-P11.jpg",
     "section": "tablets",
-    "marca": "lenovo"
+    "marca": "Lenovo"
   },
   {
     "id": 14,
@@ -151,7 +151,7 @@
     "category": "tablets",
     "image": "xiaomi-pad5.jpg",
     "section": "tablets",
-    "marca": "xiaomi"
+    "marca": "Xiaomi"
   },
   {
     "id": 15,
@@ -162,7 +162,7 @@
     "category": "laptops",
     "image": "lenovo-ideaPad.jpg",
     "section": "lo mas buscado",
-    "marca": "lenovo"
+    "marca": "Lenovo"
   },
   {
     "id": 16,
@@ -173,7 +173,7 @@
     "category": "laptops",
     "image": "dell-inspiron3505.jpg",
     "section": "laptops",
-    "marca": "dell"
+    "marca": "Dell"
   },
   {
     "id": 17,
@@ -184,7 +184,7 @@
     "category": "tablets",
     "image": "Lenovo-IdeaPad-15IIL05.jpg",
     "section": "tablets",
-    "marca": "lenovo"
+    "marca": "Lenovo"
   },
   {
     "id": 18,
@@ -195,7 +195,7 @@
     "category": "laptops",
     "image": "apple-macbookAir.jpg",
     "section": "laptops",
-    "marca": "apple"
+    "marca": "Apple"
   },
   {
     "id": 19,
@@ -206,7 +206,6 @@
     "category": "laptops",
     "image": "apple-macbookPro.jpg",
     "section": "laptops",
-    "marca": "apple"
+    "marca": "Apple"
   }
- 
 ]
