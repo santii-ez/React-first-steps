@@ -48,7 +48,7 @@
         <div class="menu">                
             <nav>
                 <ul>
-                    <% if (locals.usuario.role == 9) { %>
+                    <% if (locals.usuario && locals.usuario.role == 9) { %>
                         <li><a href='/product/create'>Crear Producto</a></li> 
                     <% } %>
                     <li><a href='/product'>Todos Los Productos</a></li>

@@ -106,7 +106,7 @@ router.get("/login", guestMiddleware, usersControllers.login);
 router.post("/login", upLoadFile.single('avatar'), validationsRegister, usersControllers.processRegister)
 
 //iniciar secion
-router.post('/', validationsLogin, usersControllers.ingress) 
+router.post('/', validationsLogin, usersControllers.getIn) 
 
 //cerrar secion
 router.get("/logout", authMiddleware, usersControllers.logout)

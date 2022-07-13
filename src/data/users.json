@@ -6,7 +6,7 @@
   "email": "nisaksen0@a8.net",
   "password": "d3MZ36RlRf",
   "image": "user_1.jpg",
-  "role": "1"
+  "role": 1
  },
  {
   "id": 2,
@@ -15,7 +15,7 @@
   "email": "landrea1@geocities.jp",
   "password": "GEZ8AqWXj",
   "image": "user_2.jpg",
-  "role": "1"
+  "role": 1
  },
  {
   "id": 3,
@@ -24,7 +24,7 @@
   "email": "mpippard2@seattletimes.com",
   "password": "2SXDw8P",
   "image": "user_3.jpg",
-  "role": "1"
+  "role": 1
  },
  {
   "id": 4,
@@ -33,7 +33,7 @@
   "email": "rmulryan3@bigcartel.com",
   "password": "jz5whrX",
   "image": "user_4.jpg",
-  "role": "1"
+  "role": 1
  },
  {
   "id": 5,
@@ -42,7 +42,7 @@
   "email": "atremblay4@wunderground.com",
   "password": "eQOkoyWvn",
   "image": "user_5.jpg",
-  "role": "1"
+  "role": 1
  },
  {
   "id": 6,
@@ -51,7 +51,7 @@
   "email": "eacreman5@google.nl",
   "password": "DLmjhS8rmUb",
   "image": "user_6.jpg",
-  "role": "1"
+  "role": 1
  },
  {
   "id": 7,
@@ -60,7 +60,7 @@
   "email": "mfarren6@e-recht24.de",
   "password": "Y210UwnQ",
   "image": "user_7.jpg",
-  "role": "1"
+  "role": 1
  },
  {
   "id": 8,
@@ -69,6 +69,7 @@
   "email": "zkarlsson7@ucoz.com",
   "password": "Jl1MJPvmvHN",
   "image": "user_8.jpg",
-  "role": "1"
+  "role": 1
  }
+ 
 ]
