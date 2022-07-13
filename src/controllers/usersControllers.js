@@ -90,6 +90,7 @@ const controller = {
                 res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})//tiempo que guardo la cookie
             }
             //Si todo sale bien hice que el usuario entre a su cuenta y lo envio a la pagina prinsipal
+           
             return res.redirect('/');
         }else{
           //Si el usuario se equivocó lo mando de nuevo a la vista del formulario y le levanto los errores
