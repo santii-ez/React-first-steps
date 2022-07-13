@@ -71,7 +71,7 @@ const controller = {
 
         },
 
-    ingress: (req,res) =>{
+    getIn: (req,res) =>{
         //Creo el objeto errors para validar desde el back la entrada del usuario
         const errors = validationResult(req);
         //Verifico que el objeto errors este vacío

@@ -75,7 +75,7 @@
                   <button class="btn btn-primary" type="button">Comprar</button>
                   
                 </div>
-                <% if (locals.usuario.role == 9) { %>
+                <% if (locals.usuario && locals.usuario.role == 9) { %>
                   <div class="edit-delete">
                 
                     <a href="product/edit/<%= item.id %>"  title="edit"><i class="fa-solid fa-pen-to-square"></i></a>
