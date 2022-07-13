@@ -44,3 +44,14 @@ La retrospectiva se centra en mejorar como equipo, su objetivo es mejorar la din
     <li><em>Hacer menos:</em> es importante que los miembros del grupo se comprometan a realizar las actividades pero, tambien, la responsabilidad ultima es del grupo. Es por ello que se debe recaer mas en el grupo y no lo individual en la medida que vayan surgiendo problemas. Esto podría ayudar en la resolución de problemas e impulsar el proceso de aprendizaje de cada uno al ser participe de la resolución de una situación determinada.  
     <li><em>Dejar de hacer:</em> por lo mencionado en el primer apartado, la desición de que cada uno avance con un tema que elija, claramente es algo que no se va a volver a repetir.
 </ul>
+
+
+
+## Retro Sprint 5:
+<ul>
+    <li><em>Comenzar a hacer:</em> aplicar las reuniones weekly para interiorizarnos con el código, inclusive con el que no realizamos particularmente. Proponer oportunidades de mejora para hacer eficaz el código.
+    <li><em>Hacer mas:</em> estar más atento a las consignas para hacer equitativa la división de tareas. Mejorar la comunicación para saber hasta dónde llegar respecto a las tareas asignadas.
+    <li><em>Continuar haciendo:</em> la predisposición que maneja el grupo es muy buena. Todos tratamos de llegar a tiempo con las consignas y no atrasarnos, para lograr una entrega en tiempo y forma.
+    <li><em>Hacer menos:</em> - 
+    <li><em>Dejar de hacer:</em> en este sprint tuvimos el error de no respetar las consignas y avanzar con la de nuestros pares. Esto claramente no se volverá a realizar ya que, conlleva a una desigualdad en la realización del trabajo. 
+</ul>
