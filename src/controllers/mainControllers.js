@@ -30,7 +30,7 @@ const controller = {
             return item.category == "laptops"
         });
 
-        return res.render('index', {products: products, searchedProducts: shuffle(searchedProducts), article: article, tablets :shuffle(tablets), phones: shuffle(phones), laptops: shuffle(laptops)});
+        return res.render(path.join(__dirname,'../views/index'), {products: products, searchedProducts: shuffle(searchedProducts), article: article, tablets :shuffle(tablets), phones: shuffle(phones), laptops: shuffle(laptops)});
     }
 
 };

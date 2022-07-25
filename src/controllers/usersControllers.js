@@ -12,7 +12,7 @@ const controller = {
     
 
     login: (req, res) => {
-        res.render('login')},
+        res.render(path.join(__dirname,'../views/logIn.ejs'))},
 
     processRegister: (req,res)=>{
 
@@ -23,7 +23,7 @@ const controller = {
 
         if(resultValidation.errors.length > 0){
 
-            return res.render('login', {
+            return res.render(path.join(__dirname,'../views/logIn'), {
 
                 errors : resultValidation.mapped(),
                 oldData : req.body
@@ -67,7 +67,7 @@ const controller = {
         }
 
         users.create (userToCreate);
-        return res.render('logIn');
+        return res.render(path.join(__dirname,'../views/logIn.ejs'));
 
         },
 

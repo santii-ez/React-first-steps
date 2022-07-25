@@ -21,7 +21,7 @@ const controllers = {
     },
     
     cart : (req, res) => {
-        res.render("productCart");
+        res.render(path.join(__dirname,'../views/productCart.ejs'));
     },
 
     productDetail : (req, res) => {
@@ -31,26 +31,15 @@ const controllers = {
             return item.id == parseInt(req.params.id)
         })
 
-        res.render('productDetail', {detalleProducto: detalleProducto})
+        res.render(path.join(__dirname,'../views/productDetail.ejs'), {detalleProducto: detalleProducto})
     },
 
     listProducts :(req, res)=> {
         let products = JSON.parse(fs.readFileSync (filePath, "utf-8"))
 
-        res.render('listProducts', {products: products})
+        res.render(path.join(__dirname,'../views/listProducts.ejs'), {products: products})
     },
-    listNotebook :(req, res)=> {
-        let article = ["article01", "article02", "article03", "article04"];
-        let products = JSON.parse(fs.readFileSync (filePath, "utf-8"));
-        //laptops
-        let laptops = products.filter (item => {
-            return item.category == "laptops"
-        });
-        return res.render('listNotebook', {products: products, article: article,  laptops: shuffle(laptops)});
-    },
-    listTablet :(req, res)=> {
-        res.render('listTablet');
-    },
+   
 
     newProduct: (req, res) => {
         res.render('newProduct');
@@ -105,7 +94,7 @@ const controllers = {
                 return item.id == req.params.id
             }) 
 
-            res.render ('productEdit', {productToEdit: productToEdit})
+            res.render (path.join(__dirname,'../views/productEdit.ejs'), {productToEdit: productToEdit})
         },
         editProduct: (req, res) => {
             let products = JSON.parse(fs.readFileSync(filePath, "utf-8"))
