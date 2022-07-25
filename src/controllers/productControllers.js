@@ -1,15 +1,29 @@
 const fs = require ('fs');
 const path = require ('path');
+const db = require ('./../database/models')
 
 
 // leer el archivo
 const filePath = path.join(__dirname, "../data/productsDataBase.json")
 
 const controllers = {
+
+    prueba: (req, res) => {
+        let sale = db.Sale.findAll({
+            include: [{association: 'user'}, {association: 'products'}]
+        })
+        let sale_detail = db.Sale_detail.findAll ()
+
+        Promise.all ([sale, sale_detail])
+        .then( ([sale, sale_detail]) =>{
+            res.send({sale, sale_detail})
+        });   
+    },
     
     cart : (req, res) => {
         res.render("productCart");
     },
+
     productDetail : (req, res) => {
         let products = JSON.parse(fs.readFileSync (filePath, "utf-8"))
 

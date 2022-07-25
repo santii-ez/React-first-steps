@@ -22,6 +22,9 @@ const uploadFile = multer({ storage: storage });
 //List products
 router.get("/", productControllers.listProducts);
 
+//Prueba Base de Datos 
+router.get("/prueba", productControllers.prueba);
+
 router.get("/productCart", productControllers.cart );
 
 router.get("/productDetail/:id", productControllers.productDetail);
