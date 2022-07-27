@@ -5,6 +5,7 @@ const path = require("path");
 const multer = require("multer");
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
+const db = require("../database/models")
 
 //requerir express validator
 const { body } = require('express-validator')
@@ -14,7 +15,7 @@ const bcrypt = require('bcryptjs');
 const fs = require('fs');
 
 //Me traigo el archivo JSON con los usuarios registrados y lo parseo para usarlo mas adelante
-const archivosUsers = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')))
+// const archivosUsers = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/users.json')))
 
 //multer
 //https://www.npmjs.com/package/multer
@@ -72,27 +73,24 @@ const validationsLogin = [
     //Validacion en el back de la contraseña
     body('contrasena').notEmpty().withMessage('Por favor, escriba su contraseña'),
     //Si pasa las dos validaciones anteriores, se verifica en el array de archivosUsers que exista el usuario
-    body('correo').custom( (value  ) =>{
-      for (let i = 0; i < archivosUsers.length; i++) {
-          if (archivosUsers[i].email == value) {
-              return true    
-          }
-      }
-      return false
-    }).withMessage('Su email no se encuentra registrado'),
+    body('correo').custom( async value => {
+      let emailCheck = await db.User.findAll ({where: {email: value}})
+      
+      if (emailCheck.length == 0) {
+            console.log("No user exist")
+            return Promise.reject()
+            }
+        }).withMessage('Su email no se encuentra registrado'),
 
     //Si pasa las 3 validaciones solo queda confirmar que la contraseña que ingreso es la correcta
-    body('contrasena').custom( (value, {req}) =>{
-        for (let i = 0; i < archivosUsers.length; i++) {
-            if (archivosUsers[i].email == req.body.correo) {
-                if(bcrypt.compareSync(value, archivosUsers[i].password)){//como la contraseña esta encriptada se debe hacer un paso adicional
-                  return true;
-                }else{
-                  return false;
-                }
-            }
-        }
-        
+    body('contrasena').custom(async (value, {req}) =>{
+        let emailCheck = await db.User.findOne ({where: {email: req.body.correo}})
+        if (emailCheck) {
+            
+            if(!bcrypt.compareSync(value, emailCheck.password)){
+                
+              return Promise.reject()
+            }}            
     }).withMessage('Credenciales Inválidas'),
 ]
 

@@ -5,7 +5,7 @@
   "last_name": "Isaksen",
   "email": "nisaksen0@a8.net",
   "password": "d3MZ36RlRf",
-  "image": "user_1.jpg",
+  "image_product": "user_1.jpg",
   "role": 1
  },
  {
@@ -14,7 +14,7 @@
   "last_name": "Andrea",
   "email": "landrea1@geocities.jp",
   "password": "GEZ8AqWXj",
-  "image": "user_2.jpg",
+  "image_product": "user_2.jpg",
   "role": 1
  },
  {
@@ -23,7 +23,7 @@
   "last_name": "Pippard",
   "email": "mpippard2@seattletimes.com",
   "password": "2SXDw8P",
-  "image": "user_3.jpg",
+  "image_product": "user_3.jpg",
   "role": 1
  },
  {
@@ -32,7 +32,7 @@
   "last_name": "Mulryan",
   "email": "rmulryan3@bigcartel.com",
   "password": "jz5whrX",
-  "image": "user_4.jpg",
+  "image_product": "user_4.jpg",
   "role": 1
  },
  {
@@ -41,7 +41,7 @@
   "last_name": "Tremblay",
   "email": "atremblay4@wunderground.com",
   "password": "eQOkoyWvn",
-  "image": "user_5.jpg",
+  "image_product": "user_5.jpg",
   "role": 1
  },
  {
@@ -50,7 +50,7 @@
   "last_name": "Acreman",
   "email": "eacreman5@google.nl",
   "password": "DLmjhS8rmUb",
-  "image": "user_6.jpg",
+  "image_product": "user_6.jpg",
   "role": 1
  },
  {
@@ -59,7 +59,7 @@
   "last_name": "Farren",
   "email": "mfarren6@e-recht24.de",
   "password": "Y210UwnQ",
-  "image": "user_7.jpg",
+  "image_product": "user_7.jpg",
   "role": 1
  },
  {
@@ -68,7 +68,7 @@
   "last_name": "Karlsson",
   "email": "zkarlsson7@ucoz.com",
   "password": "Jl1MJPvmvHN",
-  "image": "user_8.jpg",
+  "image_product": "user_8.jpg",
   "role": 1
  }
  
