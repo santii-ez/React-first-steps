@@ -8,41 +8,28 @@ const filePath = path.join(__dirname, "../data/productsDataBase.json")
 
 const controllers = {
 
-    prueba: (req, res) => {
-        let sale = db.Sale.findAll({
-            include: [{association: 'user'}, {association: 'products'}]
-        })
-        let sale_detail = db.Sale_detail.findAll ()
-
-        Promise.all ([sale, sale_detail])
-        .then( ([sale, sale_detail]) =>{
-            res.send({sale, sale_detail})
-        });   
-    },
-    
     cart : (req, res) => {
         res.render(path.join(__dirname,'../views/productCart.ejs'));
     },
 
     productDetail : (req, res) => {
-        let products = JSON.parse(fs.readFileSync (filePath, "utf-8"))
-
-        let detalleProducto = products.filter(item => {
-            return item.id == parseInt(req.params.id)
-        })
-
-        res.render(path.join(__dirname,'../views/productDetail.ejs'), {detalleProducto: detalleProducto})
+        db.Product.findByPk(req.params.id)
+            .then((product) => {
+                return res.render(path.join(__dirname, '../views/productDetail.ejs'), { product: product });
+            })
+            .catch(error => res.send(error));
     },
 
     listProducts :(req, res)=> {
-        let products = JSON.parse(fs.readFileSync (filePath, "utf-8"))
-
-        res.render(path.join(__dirname,'../views/listProducts.ejs'), {products: products})
+        db.Product.findAll()
+            .then((products) => {
+                return res.render(path.join(__dirname,'../views/listProducts.ejs'), { products: products });
+            })
+            .catch(error => res.send(error));
     },
    
-
     newProduct: (req, res) => {
-        res.render('newProduct');
+        res.render(path.join(__dirname,'../views/newProduct.ejs'));
     },
         
     store: (req, res) => {
@@ -73,29 +60,21 @@ const controllers = {
         },
 
         delete: (req, res) => {
-            let products = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-     
+            db.Product.destroy({
+                where: { id: req.params.id }
+            });
 
-            products = products.filter (item => {
-                return item.id != req.params.id
-            })
-
-            let newArrayProducts = JSON.stringify(products, null, 2);
-    
-            fs.writeFileSync(filePath, newArrayProducts, 'utf-8')	
-    
-            return res.redirect('/product')
+            res.redirect('/product')
         },
 
         editView: (req, res) => {
-            let products = JSON.parse(fs.readFileSync(filePath, "utf-8"))
-
-            productToEdit = products.filter (item =>{
-                return item.id == req.params.id
-            }) 
-
-            res.render (path.join(__dirname,'../views/productEdit.ejs'), {productToEdit: productToEdit})
+            db.Product.findByPk(req.params.id)
+                .then((productToEdit) => {
+                    return res.render (path.join(__dirname,'../views/productEdit.ejs'), { productToEdit: productToEdit });
+                })
+                .catch(error => res.send(error));
         },
+        
         editProduct: (req, res) => {
             let products = JSON.parse(fs.readFileSync(filePath, "utf-8"))
              

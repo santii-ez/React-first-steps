@@ -36,30 +36,29 @@
         <!-- MAIN -->
 
       <main>
-        <% detalleProducto.forEach (item => { %>
        <div class="container products-wrapper margin-productDetail">
         <div class="card mb-3 " >
           <div class="row g-0">
             <div class="col-md-6" style="white-space: pre-wrap">
-              <img src="images/products/<%= item.image %>" class="img-fluid" >
+              <img src="images/products/<%= product.image %>" class="img-fluid" >
             </div>
             <div class="col-md-6">
               <div class="card-body">
                 
-                <div><h5 class="card-title name-product"><%= item.name %></h5></div>
+                <div><h5 class="card-title name-product"><%= product.name %></h5></div>
                 <div class="product-description">
                 <h4 class="card-title detail-product" >Detalle del Producto</h4>
-                <p class="card-text"><%= item.description %></p>
+                <p class="card-text"><%= product.description %></p>
                 </div>
 
                 <div class="card-title productDetail-price-discount">
                     <div>
-                        <h5 class="price-product">$ <%= (((100 - item.discount)/100)*item.price).toFixed(2) %></h5>
+                        <h5 class="price-product">$ <%= (((100 - product.discount)/100)*product.price).toFixed(2) %></h5>
                     </div>
-                    <% if (item.discount != 0) { %>
+                    <% if (product.discount != 0) { %>
                     <div class="discount-listaProducto">
-                            <div><h6 class="precio-tachado">$ <%= item.price %></h6></div>
-                            <div><h6><%= item.discount %> % OFF</h6></div>
+                            <div><h6 class="precio-tachado">$ <%= product.price %></h6></div>
+                            <div><h6><%= product.discount %> % OFF</h6></div>
                     </div>
                     <% } %>
                 </div> 
@@ -78,10 +77,10 @@
                 <% if (locals.usuario && locals.usuario.role == 9) { %>
                   <div class="edit-delete">
                 
-                    <a href="product/edit/<%= item.id %>"  title="edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="product/edit/<%= product.id %>"  title="edit"><i class="fa-solid fa-pen-to-square"></i></a>
                     
                                                                             
-                  <form action="product/delete/<%= item.id %>?_method=delete" method="post">
+                  <form action="product/delete/<%= product.id %>?_method=delete" method="post">
                   
                     <button class="button-delete" type="submit">
                       <i width="30px" class="fa-regular fa-trash-can"></i>
@@ -98,7 +97,6 @@
           </div>
         </div>
         </div>
-        <% }) %>
 
       </main>
       <footer>
