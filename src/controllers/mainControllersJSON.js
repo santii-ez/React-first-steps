@@ -3,6 +3,7 @@ const shuffle = require ('../modules/shuffleArray')
 // requerir librerias fs y path
 const fs = require ('fs');
 const path = require ('path')
+const db = require ('../database/models')
 
 
 // leer el archivo

@@ -1,11 +1,14 @@
 const express = require ('express');
 const router = express.Router();
-const mainControllers = require ('../controllers/mainControllers');
+const mainControllersJSON = require ('../controllers/mainControllersJSON');
+const mainControllersDB = require ('../controllers/mainControllersDB');
 
-//routes
-router.get("/", mainControllers.index);
+//routes JSON
+router.get("/", mainControllersJSON.index);
+router.get("/home", mainControllersJSON.index);
 
-router.get("/home", mainControllers.index );
+//routes DB
+router.get("/db", mainControllersDB.prueba);//por ahora levanta un ejs de prueba
 
 // exports
 module.exports = router;
