@@ -1,9 +1,28 @@
 <header>
+<div class="container-header">
 
-    <div class="container-header">
-        <div class="burger-menu">
-                <i class="background-burger fa-solid fa-bars"></i>
-        </div>
+<div class="burger-menu">
+    <i class="background-burger fa-solid fa-bars" ></i>
+</div>
+<div class="cont-menu active" id="menu">
+
+    <div class="logo logo-burgerMenu">                
+        <div><a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" class="logo" alt="Logo"></a> </div>
+        <div><i class="background-burger fa-solid fa-xmark burger-close"></i></div>
+    </div>
+    
+    <ul>
+        <% if (locals.usuario && locals.usuario.role == 9) { %>
+        <li><a  href='/product/create'>Crear Producto</a></li> 
+        <% } %>
+        <li><a  href='/product'>Todos Los Productos</a></li>
+        <li><a  href='/product'>Celulares</a></li> 
+        <li><a  href='/product'>Tablets</a></li> 
+        <li><a  href='/product'>Laptops</a></li> 
+        <li><a  href='#'>Servicio Técnico</a></li>
+    </ul>
+</div>
+   
 
         <div class="logo">                
             <a href="/home" target="_blank" title="Principal"><img src="/images/logo-tecnomundo3.png" class="logo" alt="Logo"></a> 
@@ -42,6 +61,7 @@
         <% } %>
 
     </div>
+</div>
         
     
     <div class="header-menu">                
