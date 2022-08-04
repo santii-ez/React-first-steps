@@ -33,7 +33,18 @@ const controllers = {
     },
         
     store: (req, res) => {
-        let products = JSON.parse(fs.readFileSync(filePath, "utf-8"))
+        db.Product.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: parseInt(req.body.price),
+            discount: parseInt(req.body.discount),
+            category: req.body.category,
+            image_product: req.file.images,
+            section: req.body.section,
+            brand: req.body.brand
+        });
+
+        /* let products = JSON.parse(fs.readFileSync(filePath, "utf-8"))
     
         let newProduct = {
             
@@ -53,7 +64,7 @@ const controllers = {
     
         let newProductStore = JSON.stringify(products, null, 2);
     
-        fs.writeFileSync(filePath, newProductStore, 'utf-8')	
+        fs.writeFileSync(filePath, newProductStore, 'utf-8') */	
     
         return res.redirect('/product')
     
@@ -76,7 +87,22 @@ const controllers = {
         },
         
         editProduct: (req, res) => {
-            let products = JSON.parse(fs.readFileSync(filePath, "utf-8"))
+            db.Product.update({
+                name: req.body.name,
+                description: req.body.description,
+                price: parseInt(req.body.price),
+                discount: parseInt(req.body.discount),
+                category: req.body.category,
+                image_product: req.file.images,
+                section: req.body.section,
+                brand: req.body.brand
+            }, {
+                where: {
+                    id: req.params.id
+                }
+            });
+                
+            /* let products = JSON.parse(fs.readFileSync(filePath, "utf-8"))
              
             
 
@@ -114,7 +140,7 @@ const controllers = {
 
             let newArrayProducts = JSON.stringify(productUpdate, null, 2);
     
-            fs.writeFileSync(filePath, newArrayProducts, 'utf-8')	
+            fs.writeFileSync(filePath, newArrayProducts, 'utf-8')	 */
     
             return res.redirect('/product')
               
