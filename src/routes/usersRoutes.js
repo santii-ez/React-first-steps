@@ -77,7 +77,6 @@ const validationsLogin = [
       let emailCheck = await db.User.findAll ({where: {email: value}})
       
       if (emailCheck.length == 0) {
-            console.log("No user exist")
             return Promise.reject()
             }
         }).withMessage('Su email no se encuentra registrado'),

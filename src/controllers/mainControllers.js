@@ -1,38 +1,65 @@
-// requerir modulos
+// Requires
+const db = require ('../database/models');
+const Op = db.Sequelize.Op;
 const shuffle = require ('../modules/shuffleArray')
-// requerir librerias fs y path
 const fs = require ('fs');
-const path = require ('path')
+const path = require ('path');
 
+// controller DB
 
-// leer el archivo
-const filePath = path.join(__dirname, "../data/productsDataBase.json")
-
-// controller
 const controller = {
-    index: (req, res) => {
-        let article = ["article01", "article02", "article03", "article04"];
-        let products = JSON.parse(fs.readFileSync (filePath, "utf-8"));
-        // most searched
-        let searchedProducts = products.filter (item => {
-            return item.section == "lo mas buscado"
-        });
-        // phones
-        let phones = products.filter (item => {
-            return item.category == "phones"
-        });
-        // tabs
-        let tablets = products.filter (item => {
-            return item.category == "tablets"
-        });
-        //laptops
-        let laptops = products.filter (item => {
-            return item.category == "laptops"
-        });
-
-        return res.render(path.join(__dirname,'../views/index'), {products: products, searchedProducts: shuffle(searchedProducts), article: article, tablets :shuffle(tablets), phones: shuffle(phones), laptops: shuffle(laptops)});
+    //index.ejs
+    index : async(req, res)=>{
+            let article = ["article01", "article02", "article03", "article04"];
+            let searchedProducts = await db.Product.findAll({ where : {section:'lo mas buscado'}});
+            let phones = await db.Product.findAll({ where : {section:'celulares'}});
+            let tablets = await db.Product.findAll({ where : {section:'tablets'}}); 
+            let laptops = await db.Product.findAll({ where : {section:'laptops'}}); 
+            return   res.render(path.join(__dirname,'../views/index'), {article: article, searchedProducts: shuffle(searchedProducts), phones: shuffle(phones), tablets :shuffle(tablets), laptops: shuffle(laptops)})
+    },
+    //lista de lo más buscado
+    searchedProducts: (req,res) =>{
+        db.Product.findAll({where:{section:'lo mas buscado'}})
+            .then((products) => {
+                return res.render(path.join(__dirname,'../views/listProducts'), { products: products });
+            })
+        .catch(error => res.send(error));
+    },
+    //lista de phones
+    phones: (req,res) =>{
+        db.Product.findAll({where:{category:'phones'}})
+            .then((products) => {
+                return res.render(path.join(__dirname,'../views/listProducts'), { products: products });
+            })
+        .catch(error => res.send(error));
+    },
+    //lista de tablets
+    tablets: (req,res) =>{
+        db.Product.findAll({where:{category:'tablets'}})
+            .then((products) => {
+                return res.render(path.join(__dirname,'../views/listProducts'), { products: products });
+            })
+        .catch(error => res.send(error));
+    },
+    //lista de laptops
+    laptops: (req,res) =>{
+        db.Product.findAll({where:{category:'laptops'}})
+            .then((products) => {
+                return res.render(path.join(__dirname,'../views/listProducts'), { products: products });
+            })
+        .catch(error => res.send(error));
+    },
+    //formulario de busqueda
+    search: (req,res) =>{
+        //capturo el string que busca el usuaria que viaja por la url
+        const search = req.query.search
+        db.Product.findAll({where:{name: {[Op.like]:'%'+search+'%'}}})
+            .then((products) => {
+                return res.render(path.join(__dirname,'../views/listProducts'), { products: products });
+            })
+        .catch(error => res.send(error));
     }
+}
 
-};
 
 module.exports = controller;

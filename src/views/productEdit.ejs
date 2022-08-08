@@ -77,11 +77,11 @@
                       </div>
                       <div class="form-group row">
                         <label for="brand"><h4 class="titleNewProduct"> Marca </h4></label>
-                        <% let marcas = ["Iphone", "Samsung", "Motorola", "Huawei", "OnePlus", "Xiaomi"] %> 
+                        <% let marcas = ["Iphone", "Apple", "Samsung", "Motorola", "Huawei", "OnePlus", "Xiaomi"] %> 
                         <select name="brand" id="brand" class="form-control">
                             <option >Elige la marca </option>
                           <% marcas.forEach(brand => { %> 
-                            <option  value="<%= brand %>" <% if (item.marca == brand) { %><%= 'selected' %><% }%>><%= brand %> </option>
+                            <option  value="<%= brand %>" <% if (item.brand == brand) { %><%= 'selected' %><% }%>><%= brand %> </option>
                             <% }) %>
                         </select>                        
                       </div>
@@ -99,7 +99,7 @@
                       <div class="price-discount form-group">
                         <div class="col-6 col-md-6">
                           <label  for="price" class="newProductLabel"> <h4 class="titleNewProduct"> Precio $ </h4>   </label>
-                          <input type="number" name="price" class="newProductInput" min="1" step="any" value="<%= item.price %>">
+                          <input type="number" name="price" class="newProductInput" min="1" step="any" value="<%= item.price_product %>">
                       </div>
                    
                       <div class="col-6 col-md-6">

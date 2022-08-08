@@ -75,21 +75,21 @@
                       </div>
                       <div class="form-group row">
                         <label for="inputState"><h4 class="titleNewProduct"> Marca </h4></label>
-                        <% let marcas = ["Iphone", "Samsung", "Motorola", "Huawei", "OnePlus", "Xiaomi"] %> 
-                        <select id="inputState" class="form-control">
+                        <% let marcas = ["Iphone","Apple","Samsung", "Motorola", "Huawei", "OnePlus", "Xiaomi"] %> 
+                        <select name="brand" id="inputState" class="form-control">
                             <option >Elige la marca </option>
                           <% marcas.forEach(item => { %> 
-                            <option name="brand" value="<%= item %>"><%= item %> </option>
+                            <option  value="<%= item %>"><%= item %> </option>
                             <% }) %>
                         </select>
                       </div>
                       <div class="form-group row">
                         <label for="inputState"><h4 class="titleNewProduct"> Sección </h4></label>
                         <% let section = ["lo mas buscado", "celulares", "laptops", "tablets"] %> 
-                        <select id="inputState" class="form-control">
+                        <select name="section" id="inputState" class="form-control">
                             <option >Elige una sección </option>
                           <% section.forEach(item => { %> 
-                            <option name="brand" value="<%= item %>"><%= item %> </option>
+                            <option  value="<%= item %>"><%= item %> </option>
                             <% }) %>
                         </select>
                       </div>

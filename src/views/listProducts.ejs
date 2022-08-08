@@ -12,6 +12,7 @@
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style-listadoCelulares.css" rel="stylesheet">
         <script src="/js/burgerMenu.js" defer></script>
+        <script src="/js/header.js" defer></script> 
     </head>
 <body>
     <!-- HEADER -->
@@ -82,17 +83,17 @@
                         <% if (item.discount != 0) { %>
                         <div class="imgOferta"><img src="images/celulares/oferta.webp" alt="oferta"></div>
                         <% } %>
-                        <div class="imgProduct"><img src="images/products/<%= item.image %>"></div>
+                        <div class="imgProduct"><img src="images/products/<%= item.image_product %>"></div>
                         <article class="descriptionProduct listProduct">
                             <div class="title-product">
                                 <h5><%= item.name %></h5>
                             </div>
                             <div class="price-product">
-                                <h5>$ <%= (((100 - item.discount)/100)*item.price).toFixed(2) %></h5>
+                                <h5>$ <%= (((100 - item.discount)/100)*item.price_product).toFixed(2) %></h5>
                             </div> 
                             <% if (item.discount != 0) { %>
                                 <div class="discount-listaProducto">
-                                    <h6 class="precio-tachado">$ <%= item.price %></h6>
+                                    <h6 class="precio-tachado">$ <%= item.price_product %></h6>
                                     <h6><%= item.discount %> % OFF</h6>
                                 </div>
                             <% } %>
