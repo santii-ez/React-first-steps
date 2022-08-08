@@ -75,19 +75,10 @@ const controller = {
          
         if(errors.isEmpty()){
             let usuarioLogueado = await db.User.findOne({where: {email: req.body.correo}})
-            // Generar otra variable con los datos que necesito (NO PASSWORD) - 
+
+            delete usuarioLogueado.dataValues.password
             
-            let usuarioLogueadoNoPassword = {
-                id: usuarioLogueado.id ,
-                first_name: usuarioLogueado.first_name ,
-                last_name: usuarioLogueado.last_name, 
-                email: usuarioLogueado.email,
-                image_product: usuarioLogueado.image_product ,
-                role: usuarioLogueado.role
-            }    
-            
-            req.session.usuario = usuarioLogueadoNoPassword
-            // console.log(req.session.usuario)
+            req.session.usuario = usuarioLogueado.dataValues
 
             if (req.body.recordarme) {
                 res.cookie('email',usuarioLogueado.email,{maxAge: 1000 * 60 * 60 * 24})
