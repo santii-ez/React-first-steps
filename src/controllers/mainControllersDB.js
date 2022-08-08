@@ -1,10 +1,9 @@
 // Requires
 const db = require ('../database/models');
-const Sequelize = require ('sequelize')
 const Op = db.Sequelize.Op;
+const shuffle = require ('../modules/shuffleArray')
 const fs = require ('fs');
 const path = require ('path');
-const { where } = require('sequelize/types');
 
 // controller DB
 
@@ -16,7 +15,7 @@ const controller = {
             let phones = await db.Product.findAll({ where : {section:'celulares'}});
             let tablets = await db.Product.findAll({ where : {section:'tablets'}}); 
             let laptops = await db.Product.findAll({ where : {section:'laptops'}}); 
-            return   res.render(path.join(__dirname,'../views/prueba'), {article: article, searchedProducts: searchedProducts, phones: phones, tablets :tablets, laptops: laptops})
+            return   res.render(path.join(__dirname,'../views/prueba'), {article: article, searchedProducts: shuffle(searchedProducts), phones: shuffle(phones), tablets :tshuffle(ablets), laptops: shuffle(laptops)})
     },
     //lista de lo más buscado
     searchedProducts: (req,res) =>{
@@ -53,7 +52,7 @@ const controller = {
     //formulario de busqueda
     search: (req,res) =>{
         //capturo el string que busca el usuaria que viaja por la url
-        const {search}= req.params.search
+        const {search}= req.query.search
         db.Product.findAll({where:{name: {[Op.like]:'%'+search+'%'}}})
             .then((products) => {
                 return res.render(path.join(__dirname,'../views/listProducts'), { products: products });
