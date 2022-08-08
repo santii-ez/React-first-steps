@@ -23,20 +23,20 @@
 			        </div>
 		        </div>
             <div class="col-12 formulario-login">
-              
-            <form action="/product/edit/<%= productToEdit.id %>?_method=put" method="post" enctype="multipart/form-data" class="newProductForm">
+              <% productToEdit.forEach (item => { %> 
+            <form action="/product/edit/<%= item.id %>?_method=put" method="post" enctype="multipart/form-data" class="newProductForm">
                 <!-- Nombre del Producto -->
                 <div class="form-group row">
                     <label for="name"><h4 class="titleNewProduct">Nombre del producto </h4></label>
                     <div class="col-sm-12">
-                        <input type="text" name="name" id="name" class="form-control input-textarea" placeholder="Ej. Galaxy S22" value="<%= productToEdit.name %>" >
+                        <input type="text" name="name" id="name" class="form-control input-textarea" placeholder="Ej. Galaxy S22" value="<%= item.name %>" >
                     </div>
                   </div>
                   <!-- descripcion - textarea -->
                   <div class="form-group row">
                     <label for="description"><h4 class="titleNewProduct">Descripción</h4></label>
                     <div class="col-sm-12">
-                        <textarea class="form-control input-textarea"  name="description" id="description" rows="3"><%= productToEdit.description %></textarea>
+                        <textarea class="form-control input-textarea"  name="description" id="description" rows="3"><%= item.description %></textarea>
                     </div>
                   </div>
                   <!-- imagen -->
@@ -47,25 +47,28 @@
                     </div>
                   </div>
                   <!-- categoria -->
+                                    
+                   
                     <div class="form-group row">
                       <h4 class="titleNewProduct"> Categoría </h4>
                     </div>
                       <div class="col-sm-12 form-check-inline input-category ">
                         <div class="form-check padding-left-grow-1">                          
-                          <input class="form-check-input" type="radio" name="category" value="phones" <% if (productToEdit.category == "phones") { %><%= 'checked' %><% }%>>
+                          <input class="form-check-input" type="radio" name="category" value="phones" <% if (item.category == "phones") { %><%= 'checked' %><% }%>>
                           <label class="form-check-label" for="category">  
                             Celulares                                                     
                           </label>
                         </div>
+                       
 
                         <div class="form-check padding-left-grow-1">
-                          <input class="form-check-input" type="radio" name="category" value="tablets" <% if (productToEdit.category == "tablets") { %><%= 'checked' %><% }%>>
+                          <input class="form-check-input" type="radio" name="category" value="tablets" <% if (item.category == "tablets") { %><%= 'checked' %><% }%>>
                           <label class="form-check-label" for="category">
                             Tablet
                           </label>
                         </div>
                         <div class="form-check padding-left-grow-1">
-                          <input class="form-check-input" type="radio"  name="category" value="laptops" <% if (productToEdit.category == "laptops") { %><%= 'checked' %><% }%>>
+                          <input class="form-check-input" type="radio"  name="category" value="laptops" <% if (item.category == "laptops") { %><%= 'checked' %><% }%>>
                           <label class="form-check-label" for="category">
                             Laptop
                           </label>
@@ -74,11 +77,11 @@
                       </div>
                       <div class="form-group row">
                         <label for="brand"><h4 class="titleNewProduct"> Marca </h4></label>
-                        <% let marcas = ["Iphone", "Samsung", "Motorola", "Huawei", "OnePlus", "Xiaomi"] %> 
+                        <% let marcas = ["Iphone", "Apple", "Samsung", "Motorola", "Huawei", "OnePlus", "Xiaomi"] %> 
                         <select name="brand" id="brand" class="form-control">
                             <option >Elige la marca </option>
                           <% marcas.forEach(brand => { %> 
-                            <option  value="<%= brand %>" <% if (productToEdit.marca == brand) { %><%= 'selected' %><% }%>><%= brand %> </option>
+                            <option  value="<%= brand %>" <% if (item.brand == brand) { %><%= 'selected' %><% }%>><%= brand %> </option>
                             <% }) %>
                         </select>                        
                       </div>
@@ -88,7 +91,7 @@
                         <select name="section" id="section" class="form-control">
                             <option >Elige una sección </option>
                           <% section.forEach(section => { %> 
-                            <option  value="<%= section %>" <% if (productToEdit.section == section) { %><%= 'selected' %><% }%>><%= section %> </option>
+                            <option  value="<%= section %>" <% if (item.section == section) { %><%= 'selected' %><% }%>><%= section %> </option>
                             <% }) %>
                         </select>
                       </div>
@@ -96,12 +99,12 @@
                       <div class="price-discount form-group">
                         <div class="col-6 col-md-6">
                           <label  for="price" class="newProductLabel"> <h4 class="titleNewProduct"> Precio $ </h4>   </label>
-                          <input type="number" name="price" class="newProductInput" min="1" step="any" value="<%= productToEdit.price %>">
+                          <input type="number" name="price" class="newProductInput" min="1" step="any" value="<%= item.price_product %>">
                       </div>
                    
                       <div class="col-6 col-md-6">
                           <label  for="price" class="newProductLabel"> <h4 class="titleNewProduct">Descuento </h4></label>
-                          <input type="number" name="discount" class="newProductInput" step=".01" value="<%= productToEdit.discount %>">
+                          <input type="number" name="discount" class="newProductInput" step=".01" value="<%= item.discount %>">
                       </div>
 
                       </div>
@@ -113,6 +116,7 @@
                     </div>
                   </div>
                   </form>
+                  <% }) %>
             </div>
         </div>
         </section>

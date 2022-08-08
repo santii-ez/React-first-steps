@@ -19,7 +19,9 @@
             </form>
         </div>  
         <div class="carrito-compra">
-            <a href="/product/productCart" target="blank" title=" Tus Compras"><i class="fa-solid fa-cart-shopping"></i></a>           
+            <a href="/product/productCart" target="blank" id="cart-icon" title=" Tus Compras">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>           
         </div>
         <!-- Por ahora no tiene funcionalidad este icono de admin. Definir si va o no va -->
             <!-- <div class="user-login">
@@ -29,7 +31,7 @@
         <% if (locals.usuario){ %>
             <!--Cuando ha iniciado secion-->
             <div class="user-img">
-                <img  src="/images/users/<%=locals.usuario.avatar %>"  alt="usuario">
+                <img  src="/images/users/<%=locals.usuario.image_product %>"  alt="usuario">
             </div>
             <div class="user-login">
                 <a href="/user/logout"  title="Logout"><i class="fa-solid fa-right-from-bracket"></i></a>
@@ -52,9 +54,9 @@
                         <li><a href='/product/create'>Crear Producto</a></li> 
                     <% } %>
                     <li><a href='/product'>Todos Los Productos</a></li>
-                    <li><a href='/product'>Celulares</a></li> 
-                    <li><a href='/product'>Tablets</a></li> 
-                    <li><a href='/product'>Laptops</a></li> 
+                    <li><a href='/phones'>Celulares</a></li> 
+                    <li><a href='/tablets'>Tablets</a></li> 
+                    <li><a href='/laptops'>Laptops</a></li> 
                     <li><a href='#'>Servicio Técnico</a></li>
                 </ul>
             </nav>

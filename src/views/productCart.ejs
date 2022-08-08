@@ -10,64 +10,39 @@
       <%- include('./partials/header') %>
         
       <!-- MAIN -->
-    <main class="main-carrito">
+    <main class="main-carrito container-detail">
           <div class="shopping-cart">
             <a href="/product/productCart" target="blank" title=" Tus Compras"><i class="fa-solid fa-cart-shopping" ></i></a>
             <h1>Mi Carrito</h1>
           </div>
           <Section class="cart-container">
-            <article class="article-margin-padding cart-items">
-              <div class="img-items">
-                <img src="images/Celulares/1.jpg" alt="imagen-item-1">
-              </div>
-              <div class="description-item">
-                <h4 class="description">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
-                  <div class="counter"> 
-                    <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
-                    <div class=number>2</div>
-                   <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
-                  </div>
-                  <div class="price">
-                    <div class="amount">$ 50.00</div>
-                    <div class="remove-button"><button type="button">Remove</button></div>
-                  </div>
-              </div>
-            </article>
-            <article class="article-margin-padding cart-items">
-              <div class="img-items">
-                <img src="images/Celulares/1.jpg" alt="imagen-item-1">
-              </div>
-              <div class="description-item">
-                <h4 class="description">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
-                  <div class="counter"> 
-                    <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
-                    <div class=number>2</div>
-                   <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
-                  </div>
-                  <div class="price">
-                    <div class="amount">$ 50.00</div>
-                    <div class="remove-button"><button type="button">Remove</button></div>
-                  </div>
-              </div>
-            </article>
-            <article class=" article-margin-padding cart-items">
-              <div class="img-items">
-                <img src="images/Celulares/1.jpg" alt="imagen-item-1">
-              </div>
-              <div class="description-item">
-                <h4 class="description">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
-                  <div class="counter"> 
-                    <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
-                    <div class=number>2</div>
-                   <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
-                  </div>
-                  <div class="price">
-                    <div class="amount">$ 50.00</div>
-                    <div class="remove-button"><button type="button">Remove</button></div>
-                  </div>
-              </div>
-            </article>
+                        
           </Section>
+          
+          <!-- template carrito -->
+
+          <template id="template-carrito">
+            <article class="article-margin-padding cart-items">
+            <div class="img-items">
+              <img src="images/Celulares/1.jpg" alt="imagen-item-1">
+            </div>
+            <div class="description-item">
+              <h4 class="description h4-carrito">Motorola Moto E7 Plus - Smartphone 64GB, 4GB RAM, Dual Sim, Navy Blue</h4>
+                <div class="counter"> 
+                  <div class="btn"><i class="fa-solid fa-circle-minus"></i></i></div>
+                  <span class=number>0</span>
+                 <div class="btn"><i class="fa-solid fa-circle-plus"></i></div>
+                </div>
+                <div class="price">
+                  <div class="amount">$ 50.00</div>
+                  <div class="remove-button"><button type="button" class="remove">Remove</button></div>
+                </div>
+            </div>
+          </article>
+          </template>
+
+          
+        <!-- fin template carrito -->
           <section class="discount-checkout">
             <article class="article-margin-padding discount">
               <div>
@@ -76,20 +51,24 @@
               <div class="discount-container">
                 <form>
                   <label for="discount">
-                    <input class="discount-box" type="text" name="discount" id="discount" />
+                    <input class="discount-box" type="text" name="discount" id="discount-input" />
                   </label>
-                    <input class="discount-button" type="submit" value="Aplicar"/>
+                    <input class="discount-button" type="submit" id="discount-button" value="Aplicar"/>
                 </form>
               </div>
             </article>
             <article class="article-margin-padding checkout">
               <div class="subtotal-box">
                 <div class="flex-grow-70"><h4 class="subtotal">Subtotal</h4></div>
-                <div><h4 class="price-total">100.00</h4></div>
+                <div><h4 class="price-total" id="subtotal">0</h4></div>
+              </div>
+              <div class="subtotal-box discount-code-box" id="discount-code-box">
+                <div class="flex-grow-70"><h4 class="subtotal h4-discount">Codigo de Descuento</h4></div>
+                <div><h4 class="price-total" id="discount">0</h4></div>
               </div>
               <div class="total-box">
                 <div class="flex-grow-70"><h4 class="total">Total</h4></div>
-                <div><h4 class="price-total">100.00</h4></div>
+                <div><h4 class="price-total" id="total">0</h4></div>
               </div>
               <div class="checkout-buttom"><button>Finalizar Compra</button></div>
               <div class="checkout-continue"><button>Continuar Comprando</button></div>              
@@ -170,5 +149,7 @@
           </div>
           <div class="data-fiscal-container"><a href="https://www.afip.gob.ar" target="_blank" title="AFIP"><img src="images/data-fiscal.jpg" alt="data-fiscal"/></a></div>
         </footer>
+        <script src="/js/productCart.js"></script>
     </body>
+    
 </html>
