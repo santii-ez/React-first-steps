@@ -68,8 +68,8 @@ const controllers = {
         
         editProduct: async (req, res) => {
             let product = await db.Product.findByPk(req.params.id)
-        let oldImage = product.image_product
-        let updateProduct = await db.Product.update(
+            let oldImage = product.image_product
+            let updateProduct = await db.Product.update(
                 {
                     name: req.body.name,
                     description:req.body.description,

@@ -1,4 +1,3 @@
-// window.addEventListener('load', function () {
 
 const container = document.querySelector('.cart-container')
 const subtotal = document.getElementById('subtotal')
@@ -158,4 +157,3 @@ button.addEventListener('click', (e) => {
    
 })
 
-// })

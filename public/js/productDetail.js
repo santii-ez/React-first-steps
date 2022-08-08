@@ -10,8 +10,8 @@ window.addEventListener('load', function () {
     let contador = 1
     let id = window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1)
     
-      
 
+// Contador
 
     container.addEventListener('click', (e) => {
     
@@ -25,12 +25,12 @@ window.addEventListener('load', function () {
         e.stopPropagation()
     })
 
+    // accion de comprar 
+
     container.addEventListener('click', (e) => {
     
         if(e.target.classList.contains('btn-primary')) {
-            setCarrito(container)
-            
-
+            setCarrito(container)  
         }
         e.stopPropagation()
     })

@@ -1,0 +1,29 @@
+Prioridad @high:
+    ☐ Las tarjetas en la vista Index.ejs tienen que llevar al detalle de producto.
+    ☐ Unificar nombres (debe ser en ingles y deben ser claros).
+    ☐ El delete password del userController no esta funcionando.
+    ✔ Al crear un producto, la session se cierra y el admin tiene que volver a loggearse. @done(22-08-08 21:09)
+    ☐ Cuando la busqueda (search) no devuelve ningun producto, se debe enviar un mensaje en la vista productList.ejs 
+    ☐ Corregir tarjetas con respecto a su tamaño y al de la imagen.
+    ☐ Mejorar CSS en general.
+        Vista:
+            ☐ index.ejs
+            ☐ productList.ejs
+            ☐ productCart.ejs
+            ☐ logIn.ejs
+
+Prioridad @low:
+    ☐ Formato del href ('lo mas buscado', 'celulares', etc). Sacar subrayado en vista index.ejs
+    ☐ El h1 de la vista productList.ejs debe cambiar segun corresponda a 'todos los productos', 'celulares', etc.
+    ☐ Repasar en el productController si conviene buscar por section o category.
+    ☐ Mejorar la base de datos.
+    ☐ Sacar atributo _blank en el logo y donde sea innecesario.
+    ☐ Centrar barra de busqueda al viewport.
+
+
+--------------------------COMANDOS--------------------------
+Commandos:
+    ☐ Press Cmd/Ctrl+Enter to add a new todo
+    ✔ Press Alt+D to mark a todo as done
+    ✘ Press Alt+C to mark a todo as cancelled
+    ☐ Press Alt+S to mark a todo as started @started(17-11-03 10:42)

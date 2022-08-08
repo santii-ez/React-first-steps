@@ -3,8 +3,6 @@ const path = require ('path');
 const { validationResult }= require('express-validator');
 const bcrypt = require('bcryptjs');
 const multer = require('multer');
-const { userInfo } = require('os');
-const users = require('../models/User');
 const db = require('../database/models')
 
 
