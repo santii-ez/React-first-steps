@@ -18,7 +18,5 @@ window.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle('active')
     })
 
-  card.addEventListener('mouseover', function(){
-    card.classList.toggle('opacity')
-  })
+  
 })
