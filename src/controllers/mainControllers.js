@@ -12,9 +12,9 @@ const controller = {
     index : async(req, res)=>{
             let article = ["article01", "article02", "article03", "article04"];
             let searchedProducts = await db.Product.findAll({ where : {section:'lo mas buscado'}});
-            let phones = await db.Product.findAll({ where : {section:'celulares'}});
-            let tablets = await db.Product.findAll({ where : {section:'tablets'}}); 
-            let laptops = await db.Product.findAll({ where : {section:'laptops'}}); 
+            let phones = await db.Product.findAll({ where : {category:'phones'}});
+            let tablets = await db.Product.findAll({ where : {category:'tablets'}}); 
+            let laptops = await db.Product.findAll({ where : {category:'laptops'}}); 
             return   res.render(path.join(__dirname,'../views/index'), {article: article, searchedProducts: shuffle(searchedProducts), phones: shuffle(phones), tablets :shuffle(tablets), laptops: shuffle(laptops)})
     },
     //lista de lo más buscado
