@@ -21,6 +21,7 @@
                         <br>
                         <input class= "input-formulario" type="email" name="correo" id="correo" placeholder="abc@hotmail.com" minlength="5" maxlength="30"  value="<%= typeof old != 'undefined' ? old.correo : '' %>">
                         <br>
+                        <div class="text-danger" id="nameError"></div>
                         <% if(typeof(errors) != 'undefined' && errors.correo){%>
                             <span class="text-danger"> 
                               <%= errors.correo.msg %>
@@ -145,6 +146,6 @@
 
     <!-- FOOTER -->
     <%- include('./partials/footer') %>
-
+<script src="/js/validaciones.js"></script>
  </body>
 </html>

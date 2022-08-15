@@ -1,0 +1,36 @@
+Validacion de Login:
+    email:
+        ✔ No vacio @done(22-08-15 15:40)
+        ☐ Sea email
+    contraseña:
+        ☐ No vacio
+        ☐ Al menos 6 caracteres
+
+Validacion de Register:
+    firstName:
+        ☐ No vacio
+        ☐ Al menos 3 caracteres
+    lastName:
+        ☐ No vacio
+        ☐ Al menos 3 caracteres
+    email:
+        ☐ No vacio
+        ☐ Sea email
+    contraseña:
+        ☐ No vacio
+        ☐ Al menos 6 caracteres
+        ☐ Que tenga mayuscula y numeros
+    confirmContraseña:
+        ☐ No vacio
+        ☐ Al menos 6 caracteres
+        ☐ Que tenga mayuscula y numeros
+    imagen:
+        ☐ No vacio
+        ☐ formato (JPEG, etc)
+
+        --------------------------COMANDOS--------------------------
+Commandos:
+    ☐ Press Cmd/Ctrl+Enter to add a new todo
+    ✔ Press Alt+D to mark a todo as done
+    ✘ Press Alt+C to mark a todo as cancelled
+    ☐ Press Alt+S to mark a todo as started @started(17-11-03 10:42)
