@@ -33,6 +33,7 @@
                     <label class="label-bold" for="contrasena">Contraseña
                         <input class= "input-formulario"  type="password" name="contrasena" id="contrasena" placeholder="Contraseña" >
                         <br>
+                        <div class="text-danger" id="contrasenaError"></div>
                         <% if(typeof(errors) != 'undefined' && errors.contrasena){%>
                             <span class="text-danger">
                               <%= errors.contrasena.msg %>
@@ -49,7 +50,7 @@
                     </label>
 
                    
-                    <input  class='submit-login' type="submit" value="Ingresar">
+                    <input  class='submit-login' type="submit" value="Ingresar" id="submitLogIn">
                     <input  class='submit-login' type="submit" value="Ingresar con Facebook">
                     <input  class='submit-login' type="submit" value="Ingresar con Google">
                     

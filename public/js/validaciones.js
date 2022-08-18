@@ -1,25 +1,34 @@
 window.addEventListener('load', function(){
-    let form = document.querySelector('#login')
-    let button = document.querySelector('.submit-login')
-    let nameError = document.querySelector('#nameError')
-    let correo = document.querySelector('#correo')
+  //queySelectors
+  let correo = document.querySelector('#correo');
+  let nameError = document.querySelector('#nameError');
+  let contrasena = document.querySelector('#contrasena');
+  let contrasenaError = document.querySelector('#contrasenaError');
 
-    console.log(form.correo.value)
+  //on time validations
+  let errores = {};
+  let regExp = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-  button.addEventListener('click', function(event) {
-      event.preventDefault();
-      let errores = {};
-      
-
-    if(correo.value.length < 1) {
-        errores.correo = 'Este campo debe estar completo'
-    }
-
-    if(Object.keys(errores).length >= 1) {
-        nameError.innerHTML = (errores.correo) ? errores.correo : '';
-
+  //email
+  correo.addEventListener('blur', () => {
+    if(correo.value == '') {
+      errores.correo = 'Este campo es obligatorio';
+      nameError.innerHTML = errores.correo;
+    } else if(!correo.value.match(regExp)) {
+      errores.correo = 'Correo invalido'
+      nameError.innerHTML = errores.correo;
     } else {
-        form.submit()
+      nameError.innerHTML = '';
     }
-  })
-})
+  });
+
+  //contrasena
+  contrasena.addEventListener('blur', () => {
+    if(contrasena.value == '') {
+      errores.contrasena = 'Este campo es obligatorio'
+      contrasenaError.innerHTML = errores.contrasena;
+    } else {
+      contrasenaError.innerHTML = '';
+    }
+  });
+});
