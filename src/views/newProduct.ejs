@@ -23,12 +23,16 @@
 			        </div>
 		        </div>
             <div class="col-12 formulario-login">
-            <form action="/product/store" method="post" enctype="multipart/form-data" class="newProductForm">
+            <form action="/product/store" method="post" enctype="multipart/form-data" class="newProductForm" id="formNewProduct">
                 <!-- Nombre del Producto -->
                 <div class="form-group row">
                     <label for="name"><h4 class="titleNewProduct">Nombre del producto </h4></label>
                     <div class="col-sm-12">
                         <input type="text" name="name" id="name" class="form-control input-textarea" placeholder="Ej. Galaxy S22">
+                    </div>
+                    <div class="ml-0 mr-0 mx-auto">
+                      <br>
+                      <h4 class="text-danger" id="titleError"></h4>
                     </div>
                   </div>
                   <!-- descripcion - textarea -->
@@ -37,12 +41,20 @@
                     <div class="col-sm-12">
                         <textarea class="form-control input-textarea"  name="description" id="description" rows="3"></textarea>
                     </div>
+                    <div class="ml-0 mr-0 mx-auto">
+                      <br>
+                      <h4 class="text-danger" id="descriptionError"></h4>
+                    </div>
                   </div>
                   <!-- imagen -->
                   <div class="form-group row">
                     <label for="images"><h4 class="titleNewProduct">Ingrese la imágen</h4></label>
                     <div class="col-sm-12">
                         <input type="file" name="images" class="form-control input-textarea"  id="images">
+                    </div>
+                    <div class="ml-0 mr-0 mx-auto">
+                      <br>
+                      <h4 class="text-danger" id="imagesError"></h4>
                     </div>
                   </div>
                   <!-- categoria -->
@@ -74,35 +86,51 @@
                        
                       </div>
                       <div class="form-group row">
-                        <label for="inputState"><h4 class="titleNewProduct"> Marca </h4></label>
+                        <label for="brandNewProduct"><h4 class="titleNewProduct"> Marca </h4></label>
                         <% let marcas = ["Iphone","Apple","Samsung", "Motorola", "Huawei", "OnePlus", "Xiaomi"] %> 
-                        <select name="brand" id="inputState" class="form-control">
+                        <select name="brand" id="brandNewProduct" class="form-control">
                             <option >Elige la marca </option>
                           <% marcas.forEach(item => { %> 
                             <option  value="<%= item %>"><%= item %> </option>
                             <% }) %>
                         </select>
+                        <div class="ml-0 mr-0 mx-auto">
+                          <br>
+                          <h4 class="text-danger" id="brandError"></h4>
+                        </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputState"><h4 class="titleNewProduct"> Sección </h4></label>
+                        <label for="sectionNewProduct"><h4 class="titleNewProduct"> Sección </h4></label>
                         <% let section = ["lo mas buscado", "celulares", "laptops", "tablets"] %> 
-                        <select name="section" id="inputState" class="form-control">
+                        <select name="section" id="sectionNewProduct" class="form-control">
                             <option >Elige una sección </option>
                           <% section.forEach(item => { %> 
                             <option  value="<%= item %>"><%= item %> </option>
                             <% }) %>
                         </select>
+                        <div class="ml-0 mr-0 mx-auto">
+                          <br>
+                          <h4 class="text-danger" id="sectionError"></h4>
+                        </div>
                       </div>
 
                       <div class="price-discount form-group">
                         <div class="col-6 col-md-6">
                           <label  for="price" class="newProductLabel"> <h4 class="titleNewProduct"> Precio $ </h4>   </label>
-                          <input type="number" name="price" class="newProductInput" min="1" step="any">
+                          <input type="number" name="price" id="priceNewProduct" class="newProductInput" min="1" step="any">
+                          <div class="ml-0 mr-0 mx-auto">
+                            <br>
+                            <h4 class="text-danger" id="priceError"></h4>
+                          </div>
                       </div>
                    
                       <div class="col-6 col-md-6">
                           <label  for="price" class="newProductLabel"> <h4 class="titleNewProduct">Descuento </h4></label>
-                          <input type="number" name="discount" class="newProductInput" step=".01">
+                          <input type="number" name="discount" id="discountNewProduct" class="newProductInput" step=".01">
+                          <div class="ml-0 mr-0 mx-auto">
+                            <br>
+                            <h4 class="text-danger" id="discountError"></h4>
+                          </div>
                       </div>
 
                       </div>
@@ -120,5 +148,6 @@
     </main>
     <!-- FOOTER -->
     <%- include('./partials/footer') %>
+    <script src="/js/newProduct.js"></script>
 </body>
 </html>
